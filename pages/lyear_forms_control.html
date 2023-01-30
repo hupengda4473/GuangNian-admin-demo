@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>表单控件 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">表单控件</div></header>
+        <div class="card-body">
+
+          <p>使用自定义样式、大小调整、焦点状态等对文本表单控件（如 <code>&lt;input&gt;</code>s 和 <code>&lt;textarea&gt;</code>s）进行升级。</p>
+
+          <h6>示例</h6>
+          <div class="border-example">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">邮箱地址</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">示例文本区域</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </div>
+          <pre>&lt;div class="mb-3"&gt;
+  &lt;label for="exampleFormControlInput1" class="form-label"&gt;邮箱地址&lt;/label&gt;
+  &lt;input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+  &lt;label for="exampleFormControlTextarea1" class="form-label"&gt;示例文本区域&lt;/label&gt;
+  &lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="3"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</pre>
+
+          <h6>尺寸</h6>
+          <p>使用 <code>.form-control-lg</code> 和 <code>.form-control-sm</code> 等类设置高度。</p>
+
+          <div class="border-example">
+            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg 示例">
+            <input class="form-control" type="text" placeholder="默认输入框" aria-label="默认输入框示例">
+            <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm 示例">
+          </div>
+          <pre>&lt;input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg 示例"&gt;
+&lt;input class="form-control" type="text" placeholder="默认输入框" aria-label="默认输入框示例"&gt;
+&lt;input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm 示例"&gt;</pre>
+
+          <h6>已禁用</h6>
+          <p>在输入上添加 <code>disabled</code> 布尔属性，使其外观变灰并删除指针事件。</p>
+
+          <div class="border-example">
+            <input class="form-control" type="text" placeholder="禁用输入框" aria-label="禁用输入框示例" disabled>
+            <input class="form-control" type="text" value="禁用只读输入框" aria-label="禁用只读输入框示例" disabled readonly>
+          </div>
+          <pre>&lt;input class="form-control" type="text" placeholder="禁用输入框" aria-label="禁用输入框示例" disabled&gt;
+&lt;input class="form-control" type="text" value="禁用只读输入框" aria-label="禁用只读输入框示例" disabled readonly&gt;</pre>
+
+          <h6>只读</h6>
+          <p>在输入上添加只读布尔属性以防止修改输入的值。</p>
+
+          <div class="border-example">
+            <input class="form-control" type="text" value="此处为只读输入..." aria-label="只读输入框示例" readonly>
+          </div>
+          <pre>&lt;input class="form-control" type="text" value="此处为只读输入..." aria-label="只读输入框示例" readonly&gt;</pre>
+
+          <h6>只读纯文本</h6>
+          <p>如果您想将表单中的 <code>&lt;input readonly&gt;</code> 元素设置为纯文本样式，请使用 <code>.form-control-plaintext</code> 类删除默认表单字段样式并保留正确的边距和填充。</p>
+
+          <div class="border-example">
+            <div class="mb-3 row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">邮箱</label>
+              <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputPassword" class="col-sm-2 col-form-label">密码</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword">
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="mb-3 row"&gt;
+  &lt;label for="staticEmail" class="col-sm-2 col-form-label"&gt;邮箱&lt;/label&gt;
+  &lt;div class="col-sm-10"&gt;
+    &lt;input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mb-3 row"&gt;
+  &lt;label for="inputPassword" class="col-sm-2 col-form-label"&gt;密码&lt;/label&gt;
+  &lt;div class="col-sm-10"&gt;
+    &lt;input type="password" class="form-control" id="inputPassword"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <div class="border-example">
+            <form class="row g-3">
+              <div class="col-auto">
+                <label for="staticEmail2" class="visually-hidden">邮箱</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+              </div>
+              <div class="col-auto">
+                <label for="inputPassword2" class="visually-hidden">密码</label>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="密码">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">确认身份</button>
+              </div>
+            </form>
+          </div>
+          <pre>&lt;form class="row g-3"&gt;
+  &lt;div class="col-auto"&gt;
+    &lt;label for="staticEmail2" class="visually-hidden"&gt;邮箱&lt;/label&gt;
+    &lt;input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-auto"&gt;
+    &lt;label for="inputPassword2" class="visually-hidden"&gt;密码&lt;/label&gt;
+    &lt;input type="password" class="form-control" id="inputPassword2" placeholder="密码"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-auto"&gt;
+    &lt;button type="submit" class="btn btn-primary mb-3"&gt;确认身份&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+          <h6>文件输入</h6>
+          <div class="border-example">
+            <div class="mb-3">
+              <label for="formFile" class="form-label">默认文件输入示例</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">多文件输入示例</label>
+              <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+            <div class="mb-3">
+              <label for="formFileDisabled" class="form-label">禁用文件输入示例</label>
+              <input class="form-control" type="file" id="formFileDisabled" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="formFileSm" class="form-label">小一号文件输入示例</label>
+              <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+            <div>
+              <label for="formFileLg" class="form-label">大一号文件输入示例</label>
+              <input class="form-control form-control-lg" id="formFileLg" type="file">
+            </div>
+          </div>
+          <pre>&lt;div class="mb-3"&gt;
+  &lt;label for="formFile" class="form-label"&gt;默认文件输入示例&lt;/label&gt;
+  &lt;input class="form-control" type="file" id="formFile"&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+  &lt;label for="formFileMultiple" class="form-label"&gt;多文件输入示例&lt;/label&gt;
+  &lt;input class="form-control" type="file" id="formFileMultiple" multiple&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+  &lt;label for="formFileDisabled" class="form-label"&gt;禁用文件输入示例&lt;/label&gt;
+  &lt;input class="form-control" type="file" id="formFileDisabled" disabled&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+  &lt;label for="formFileSm" class="form-label"&gt;小一号文件输入示例&lt;/label&gt;
+  &lt;input class="form-control form-control-sm" id="formFileSm" type="file"&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;label for="formFileLg" class="form-label"&gt;大一号文件输入示例&lt;/label&gt;
+  &lt;input class="form-control form-control-lg" id="formFileLg" type="file"&gt;
+&lt;/div&gt;</pre>
+
+          <h6>颜色</h6>
+
+          <div class="border-example">
+            <label for="exampleColorInput" class="form-label">颜色选择器</label>
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#33cabb" title="选择你的颜色">
+          </div>
+          <pre>&lt;label for="exampleColorInput" class="form-label"&gt;颜色选择器&lt;/label&gt;
+&lt;input type="color" class="form-control form-control-color" id="exampleColorInput" value="#33cabb" title="选择你的颜色"&gt;</pre>
+
+          <h6>数据列表</h6>
+          <p>数据列表允许您创建一组 <code>&lt;option&gt;</code>，可以从 <code>&lt;input&gt;</code> 中访问（并自动完成）。这些类似于 <code>&lt;select&gt;</code> 元素，但有更多的菜单样式限制和差异。虽然大多数浏览器和操作系统都包含对 <code>&lt;datalist&gt;</code> 元素的一些支持，但它们的样式充其量是不一致的。</p>
+
+          <p>详细了解对 <a href="https://caniuse.com/datalist" target="_blank">datalist</a> 元素的支持。</p>
+
+          <div class="border-example">
+            <label for="exampleDataList" class="form-label">数据列表示例</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="输入搜索...">
+            <datalist id="datalistOptions">
+              <option value="北京">
+              <option value="上海">
+              <option value="广州">
+              <option value="深圳">
+              <option value="重庆">
+            </datalist>
+          </div>
+          <pre>&lt;label for="exampleDataList" class="form-label"&gt;数据列表示例&lt;/label&gt;
+&lt;input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="输入搜索..."&gt;
+&lt;datalist id="datalistOptions"&gt;
+  &lt;option value="北京"&gt;
+  &lt;option value="上海"&gt;
+  &lt;option value="广州"&gt;
+  &lt;option value="深圳"&gt;
+  &lt;option value="重庆"&gt;
+&lt;/datalist&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

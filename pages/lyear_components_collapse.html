@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>折叠 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">折叠</div></header>
+        <div class="card-body">
+
+          <p>使用一些类和我们的 JavaScript 插件来切换项目中内容的可见性。</p>
+
+          <h5>它是怎么工作的</h5>
+          <p>折叠 JavaScript 插件用于显示和隐藏内容。 按钮或锚点用作映射到您切换的特定元素的触发器。 折叠一个元素会将 <code>height</code> 从其当前值设置为 <code>0</code>。 鉴于 CSS 处理动画的方式，您不能在 <code>.collapse</code> 元素上使用 <code>padding</code>。 相反，将类用作独立的包装元素。</p>
+          <div class="callout callout-info mb-3">该组件的动画效果依赖于 <code>prefers-reduced-motion</code> 媒体查询。</div>
+
+          <h5>示例</h5>
+          <p>单击下面的按钮以通过类更改显示和隐藏另一个元素：</p>
+          <ul>
+            <li><code>.collapse</code> 隐藏内容</li>
+            <li><code>.collapsing</code> 在过渡期间应用</li>
+            <li><code>.collapse.show</code> 显示内容</li>
+          </ul>
+          <p>通常，我们建议使用具有 <code>data-bs-target</code> 属性的按钮。 虽然从语义角度不推荐，但您也可以使用带有 <code>href</code> 属性（和 <code>role="button"</code>）的链接。在这两种情况下，<code>data-bs-toggle="collapse"</code> 都是必需的。</p>
+          <div class="border-example">
+            <p>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                href链接
+              </a>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                带有 data-bs-target 的按钮
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                《冰魄寒光剑》讲述武当派北支掌门之子桂华生在西域的传奇经历和其与华玉公主的爱情故事。
+              </div>
+            </div>
+          </div>
+          <pre>&lt;p&gt;
+  &lt;a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"&gt;
+    href链接
+  &lt;/a&gt;
+  &lt;button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"&gt;
+    带有 data-bs-target 的按钮
+  &lt;/button&gt;
+&lt;/p&gt;
+&lt;div class="collapse" id="collapseExample"&gt;
+  &lt;div class="card card-body"&gt;
+    《冰魄寒光剑》讲述武当派北支掌门之子桂华生在西域的传奇经历和其与华玉公主的爱情故事。
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h5>水平的</h5>
+          <p>折叠插件还支持水平折叠。 添加 <code>.collapse-horizontal</code> 修饰符类以转换 <code>width</code> 而不是 <code>height</code> 并在立即数上设置 <code>width</code> 子元素。 随意编写您自己的自定义 Sass、使用内联样式或使用我们的宽度实用程序。</p>
+          <div class="callout callout-info mb-3">请注意，虽然下面的示例设置了 <code>min-height</code> 以避免在我们的文档中过度重绘，但这并不是明确要求的。 <strong>只需要子元素上的<code>width</code>。</strong></div>
+
+          <div class="border-example">
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                切换宽度折叠
+              </button>
+            </p>
+            <div style="min-height: 120px;">
+              <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                <div class="card card-body" style="width: 300px;">
+                  《冰川天女传》主要讲述的是清乾隆年间朝廷欲护送喇嘛教圣物金本巴瓶至西藏拉萨，江湖各路人物各有目的聚集西藏。从而引出唐经天与冰川天女之间的爱情故事。
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;p&gt;
+  &lt;button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"&gt;
+    切换宽度折叠
+  &lt;/button&gt;
+&lt;/p&gt;
+&lt;div style="min-height: 120px;"&gt;
+  &lt;div class="collapse collapse-horizontal" id="collapseWidthExample"&gt;
+    &lt;div class="card card-body" style="width: 300px;"&gt;
+      《冰川天女传》主要讲述的是清乾隆年间朝廷欲护送喇嘛教圣物金本巴瓶至西藏拉萨，江湖各路人物各有目的聚集西藏。从而引出唐经天与冰川天女之间的爱情故事。
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h5>多个目标</h5>
+          <p><code>&lt;button&gt;</code> 或 <code>&lt;a&gt;</code> 可以通过在其 <code>href</code> 或 <code> 中使用选择器引用多个元素来显示和隐藏多个元素 data-bs-target</code> 属性。
+          多个 <code>&lt;button&gt;</code> 或 <code>&lt;a&gt;</code> 可以显示和隐藏一个元素，如果它们各自用它们的 <code>href</code> 或 <code>data 引用它 -bs-target</code> 属性</p>
+          <div class="border-example">
+            <p>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">切换第一个元素</a>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">切换第二个元素</button>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">切换两个元素</button>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                  <div class="card card-body">
+                    《云海玉弓缘》主要讲述了清朝中期，江湖浪子金世遗的传奇经历和与厉胜男、谷之华之间的爱恨情仇故事。
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                  <div class="card card-body">
+                    《冰河洗剑录》讲述了江南与邹绛霞的孩子江海天的感情和江湖故事。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;p&gt;
+  &lt;a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"&gt;切换第一个元素&lt;/a&gt;
+  &lt;button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"&gt;切换第二个元素&lt;/button&gt;
+  &lt;button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"&gt;切换两个元素&lt;/button&gt;
+&lt;/p&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col"&gt;
+    &lt;div class="collapse multi-collapse" id="multiCollapseExample1"&gt;
+      &lt;div class="card card-body"&gt;
+        《云海玉弓缘》主要讲述了清朝中期，江湖浪子金世遗的传奇经历和与厉胜男、谷之华之间的爱恨情仇故事。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    &lt;div class="collapse multi-collapse" id="multiCollapseExample2"&gt;
+      &lt;div class="card card-body"&gt;
+        《冰河洗剑录》讲述了江南与邹绛霞的孩子江海天的感情和江湖故事。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h5>可访问性</h5>
+          <p>请务必将 <code>aria-expanded</code> 添加到控制元素。此属性将与控件相关联的可折叠元素的当前状态明确传达给屏幕阅读器和类似的辅助技术。如果可折叠元素默认关闭，则控制元素上的属性应具有 <code>aria-expanded="false"</code> 的值。如果您已使用 <code>show</code> 类将可折叠元素设置为默认打开，请改为在控件上设置 <code>aria-expanded="true"</code>。该插件将根据可折叠元素是否已打开或关闭（通过 JavaScript，或者因为用户触发了另一个也绑定到同一个可折叠元素的控件元素）来自动切换控件上的此属性。如果控制元素的 HTML 元素不是按钮（例如，<code>&lt;a&gt;</code> 或 <code>&lt;div&gt;</code>），则属性 <code>role=&quot; button"</code> 应该被添加到元素中。</p>
+          <p>如果您的控件元素针对单个可折叠元素 - 即 <code>data-bs-target</code> 属性指向 <code>id</code> 选择器 - 您应该添加 <code>aria-controls 控制元素的 </code> 属性，包含可折叠元素的 <code>id</code>。 现代屏幕阅读器和类似的辅助技术利用此属性为用户提供额外的快捷方式，以直接导航到可折叠元素本身。</p>
+
+          <h5>用法</h5>
+          <p>折叠插件利用几个类来处理繁重的工作：</p>
+          <ul>
+            <li><code>.collapse</code> 隐藏内容</li>
+            <li><code>.collapse.show</code> 显示内容</li>
+            <li><code>.collapsing</code> 在过渡开始时添加，并在过渡结束时删除</li>
+          </ul>
+
+          <h6>通过数据属性</h6>
+          <p>只需向元素添加 <code>data-bs-toggle="collapse"</code> 和 <code>data-bs-target</code> 即可自动分配对一个或多个可折叠元素的控制。 <code>data-bs-target</code> 属性接受一个 CSS 选择器来应用折叠。 请务必将类 <code>collapse</code> 添加到可折叠元素。 如果您希望它默认打开，请添加附加类 <code>show</code>。</p>
+          <p>要将手风琴式的组管理添加到可折叠区域，请添加数据属性 <code>data-bs-parent="#selector"</code>。 有关详细信息，请参阅手风琴页面。</p>
+
+          <h6>通过 JavaScript</h6>
+          <p>手动启用：</p>
+          <pre>var collapseElementList = Array.prototype.slice.call(document.querySelectorAll('.collapse'))
+var collapseList = collapseElementList.map(function (collapseEl) {
+  return new bootstrap.Collapse(collapseEl)
+})</pre>
+
+          <h6>选项</h6>
+          <p>选项可以通过数据属性或 JavaScript 传递。 对于数据属性，将选项名称附加到 <code>data-bs-</code>，如 <code>data-bs-parent=""</code>。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width: 100px;">名称</th>
+                <th style="width: 50px;">类型</th>
+                <th style="width: 50px;">默认</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>parent</code></td>
+                <td>selector | jQuery object | DOM element </td>
+                <td><code>false</code></td>
+                <td>如果提供了 parent，则在显示此可折叠项时，将关闭指定父项下的所有可折叠元素。（类似于传统的手风琴行为 - 这取决于 <code>card</code> 类）。 该属性必须在目标可折叠区域上设置。</td>
+              </tr>
+              <tr>
+                <td><code>toggle</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>在调用时切换可折叠元素</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>方法</h6>
+          <div class="callout callout-danger mb-3">
+            <strong>异步方法和转换</strong>
+            <p>所有 API 方法都是<strong>异步</strong>并启动<strong>transition</strong>。 它们会在过渡开始后但<strong>在过渡结束之前</strong>返回给调用者。 此外，<strong>转换组件上的方法调用将被忽略</strong>。</p>
+          </div>
+
+          <p>将您的内容激活为可折叠元素。 接受可选选项<code>object</code>。</p>
+          <p>您可以使用构造函数创建折叠实例，例如：</p>
+          <pre>var myCollapse = document.getElementById('myCollapse')
+var bsCollapse = new bootstrap.Collapse(myCollapse, {
+  toggle: false
+})</pre>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>方法</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>toggle</code></td>
+                <td>将可折叠元素切换为显示或隐藏。 <strong>在可折叠元素实际显示或隐藏之前返回调用者</strong>（即在<code>shown.bs.collapse</code>或<code>hidden.bs.collapse</code>之前 事件发生）。</td>
+              </tr>
+              <tr>
+                <td><code>show</code></td>
+                <td>显示可折叠元素。 <strong>在可折叠元素实际显示之前返回调用者</strong>（例如，在 <code>shown.bs.collapse</code> 事件发生之前）。</td>
+              </tr>
+              <tr>
+                <td><code>hide</code></td>
+                <td>隐藏可折叠元素。 <strong>在可折叠元素实际隐藏之前返回调用者</strong>（例如，在 <code>hidden.bs.collapse</code> 事件发生之前）。</td>
+              </tr>
+              <tr>
+                <td><code>dispose</code></td>
+                <td>破坏元素的折叠。 （删除 DOM 元素上存储的数据）</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>getInstance</code>
+                </td>
+                <td>
+                  允许您获取与 DOM 元素关联的折叠实例的静态方法，您可以像这样使用它：<code>bootstrap.Collapse.getInstance(element)</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>getOrCreateInstance</code>
+                </td>
+                <td>
+                  静态方法，它返回与 DOM 元素关联的折叠实例，或者在未初始化的情况下创建一个新实例。你可以像这样使用它：<code>bootstrap.Collapse.getOrCreateInstance(element)</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>事件</h6>
+          <p>Bootstrap 的折叠类公开了一些用于挂钩折叠功能的事件。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width: 150px;">事件类型</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>show.bs.collapse</code></td>
+                <td>此事件在调用 <code>show</code> 实例方法时立即触发。</td>
+              </tr>
+              <tr>
+                <td><code>shown.bs.collapse</code></td>
+                <td>当折叠元素对用户可见时触发此事件（将等待 CSS 转换完成）。</td>
+              </tr>
+              <tr>
+                <td><code>hide.bs.collapse</code></td>
+                <td>当调用 <code>hide</code> 方法时，会立即触发此事件。</td>
+              </tr>
+              <tr>
+                <td><code>hidden.bs.collapse</code></td>
+                <td>当对用户隐藏折叠元素时会触发此事件（将等待 CSS 转换完成）。</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre>var myCollapsible = document.getElementById('myCollapsible')
+myCollapsible.addEventListener('hidden.bs.collapse', function () {
+  // do something...
+})</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

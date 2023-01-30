@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>延伸链接 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">延伸链接</div></header>
+        <div class="card-body">
+
+          <p>通过 CSS “延伸（stretching）”嵌套的链接，从而使任何 HTML 元素或 Bootstrap 组件变为可点击的。</p>
+          <p>为链接添加 <code>.stretched-link</code> 类以使 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block" target="_blank">包含该链接的块级元素</a> 通过 <code>::after</code> 伪元素变成可点击的区域。在大多数情况下，这意味着如果某个设置了 <code>position: relative;</code> 属性的元素包含一个带有 <code>.stretched-link</code> 类的链接的话，改元素将变成可点击的区域。请注意，鉴于 <a href="https://www.w3.org/TR/CSS21/visuren.html#propdef-position" target="_blank">CSS <code>position</code> 的工作原理</a>，<code>.stretched-link</code> 类不能与大多数表格元素混合使用。</p>
+          <p>Bootsrap 中的卡片（card）组件默认被设置了 <code>position: relative</code> 属性，因此在这种情况下，你可以安全地向卡片（card）组件中所包含的链接添加 <code>.stretched-link</code> 类，并且无需修改 HTML 代码。</p>
+          <p>延伸链接（stretched link）不支持多个链接和点击目标。但是，如果需要的话，你可以通过添加一些 <code>position</code> 和 <code>z-index</code> 样式来实现。</p>
+          <div class="border-example">
+            <div class="card" style="width: 18rem;">
+              <img src="../images/img-placeholder.png" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <h5 class="card-title">《大唐新语》</h5>
+                <p class="card-text">又名《唐新语》、《大唐世说新语》、《唐世说新语》、《世说》、《大唐新话》等，是一部笔记小说集。撰者唐代刘肃，生卒年、籍贯、字号均不详。</p>
+                <a href="#" class="btn btn-primary stretched-link">阅读详细</a>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="card" style="width: 18rem;"&gt;
+  &lt;img src="../images/img-placeholder.png" class="card-img-top" alt="..."&gt;
+
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;《大唐新语》&lt;/h5&gt;
+    &lt;p class="card-text"&gt;又名《唐新语》、《大唐世说新语》、《唐世说新语》、《世说》、《大唐新话》等，是一部笔记小说集。撰者唐代刘肃，生卒年、籍贯、字号均不详。&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary stretched-link"&gt;阅读详细&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>大部分自定义组件默认情况下都没有设置 <code>position: relative</code> 属性，因此需要需要自己添加 <code>.position-relative</code> 类，以防止链接溢出到父元素外。</p>
+          <div class="border-example">
+            <div class="d-flex position-relative">
+              <img src="../images/img-placeholder.png" class="flex-shrink-0 me-3" width="144" height="144" alt="...">
+
+              <div>
+                <h5 class="mt-0">《天工开物》</h5>
+                <p>《天工开物》是世界上第一部关于农业和手工业生产的综合性著作，是中国古代一部综合性的科学技术著作，有人也称它是一部百科全书式的著作，作者是明朝科学家宋应星。外国学者称它为“中国17世纪的工艺百科全书”。</p>
+                <a href="#" class="stretched-link">阅读详细</a>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="d-flex position-relative"&gt;
+  &lt;img src="../images/img-placeholder.png" class="card-img-top" width="144" height="144" alt="..."&gt;
+
+  &lt;div&gt;
+    &lt;h5 class="mt-0"&gt;《天工开物》&lt;/h5&gt;
+    &lt;p&gt;《天工开物》是世界上第一部关于农业和手工业生产的综合性著作，是中国古代一部综合性的科学技术著作，有人也称它是一部百科全书式的著作，作者是明朝科学家宋应星。外国学者称它为“中国17世纪的工艺百科全书”。&lt;/p&gt;
+    &lt;a href="#" class="stretched-link"&gt;阅读详细&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          <div class="border-example">
+            <div class="row g-0 bg-light position-relative">
+              <div class="col-md-6 mb-md-0 p-md-4">
+                <img src="../images/img-placeholder.png" class="w-100" height="200" alt="...">
+              </div>
+              <div class="col-md-6 p-4 ps-md-0">
+                <h5 class="mt-0">《大唐西域记》</h5>
+                <p>又称《西域记》，12卷。玄奘述，辩机撰文。本书系玄奘奉唐太宗敕命而著，贞观二十年（646）成书。书中综叙了贞观元年（一说贞观三年）至贞观十九年玄奘西行之见闻。记述了玄奘所亲历110个及得之传闻的28个城邦、地区、国家之概况，有疆域、气候、山川、风土、人情、语言、宗教、佛寺以及大量的历史传说、神话故事等。</p>
+                <a href="#" class="stretched-link">阅读详细</a>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="row g-0 bg-light position-relative"&gt;
+  &lt;div class="col-md-6 mb-md-0 p-md-4"&gt;
+    &lt;img src="../images/img-placeholder.png" class="w-100" height="200" alt="..."&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6 p-4 ps-md-0"&gt;
+    &lt;h5 class="mt-0"&gt;《大唐西域记》&lt;/h5&gt;
+    &lt;p&gt;又称《西域记》，12卷。玄奘述，辩机撰文。本书系玄奘奉唐太宗敕命而著，贞观二十年（646）成书。书中综叙了贞观元年（一说贞观三年）至贞观十九年玄奘西行之见闻。记述了玄奘所亲历110个及得之传闻的28个城邦、地区、国家之概况，有疆域、气候、山川、风土、人情、语言、宗教、佛寺以及大量的历史传说、神话故事等。&lt;/p&gt;
+    &lt;a href="#" class="stretched-link"&gt;阅读详细&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>识别包含块</h6>
+          <p>如果延伸链接（stretched link）不起作用，则可能是 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block" target="_blank">包含该链接的块级元素</a> 导致的。以下 CSS 属性可以让包含延伸链接（stretched link）的元素变为块级元素：</p>
+          <ul>
+            <li>为 <code>position</code> 设置 <code>static</code> 以外的值</li>
+            <li>为 <code>transform</code> 或 <code>perspective</code> 设置 <code>none</code> 以外的值</li>
+            <li>为 <code>will-change</code> 设置为 <code>transform</code> 或 <code>perspective</code></li>
+            <li>为 <code>filter</code> 设置 <code>none</code> 以外的值，或者为 <code>will-change</code> 设置为 <code>filter</code> （仅适用于 Firefox 浏览器）</li>
+          </ul>
+          <div class="border-example">
+            <div class="card" style="width: 18rem;">
+              <img src="../images/img-placeholder.png" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <h5 class="card-title">《荆楚岁时记》</h5>
+                <p class="card-text">记录中国古代楚地（以江汉为中心的地区）岁时节令风物故事的笔记体文集，由南北朝梁宗懔(约501～565)撰。全书凡37篇，记载了自元旦至除夕的24节令和时俗。有注，传为隋代杜公瞻作。注中引用经典俗传计68部80余条，说明各种风俗的来源，偶尔也记载北方的节令时俗。</p>
+                <p class="card-text">
+                  <a href="#" class="stretched-link text-danger" style="position: relative;">拉伸链接在这里不起作用，因为链接中添加了<code>position:relative</code></a>
+                </p>
+                <p class="card-text bg-light" style="transform: rotate(0);">
+                  这个 <a href="#" class="text-warning stretched-link">拉伸链接</a> 将只分布在 <code>p</code>-标记上，因为对其应用了转换。
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="card" style="width: 18rem;"&gt;
+  &lt;img src="../images/img-placeholder.png" class="card-img-top" alt="..."&gt;
+
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;《荆楚岁时记》&lt;/h5&gt;
+    &lt;p class="card-text"&gt;记录中国古代楚地（以江汉为中心的地区）岁时节令风物故事的笔记体文集，由南北朝梁宗懔(约501～565)撰。全书凡37篇，记载了自元旦至除夕的24节令和时俗。有注，传为隋代杜公瞻作。注中引用经典俗传计68部80余条，说明各种风俗的来源，偶尔也记载北方的节令时俗。&lt;/p&gt;
+    &lt;p class="card-text"&gt;
+      &lt;a href="#" class="stretched-link text-danger" style="position: relative;"&gt;拉伸链接在这里不起作用，因为链接中添加了 &lt;code&gt;position: relative&lt;/code&gt;&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p class="card-text bg-light" style="transform: rotate(0);"&gt;
+      这个 &lt;a href="#" class="text-warning stretched-link"&gt;拉伸链接&lt;/a&gt; 将只分布在 &lt;code&gt;p&lt;/code&gt;-标记上，因为对其应用了转换。
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

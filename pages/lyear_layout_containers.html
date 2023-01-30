@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>容器 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">容器</div></header>
+        <div class="card-body">
+
+          <p>容器是 Bootstrap 中最基本的布局元素，在使用默认网格系统时是必需的。容器用于容纳、填充和（有时）集中其中的内容。虽然容器可以嵌套，但大多数布局不需要嵌套容器。</p>
+          <p>Bootstrap附带三种不同的容器：</p>
+          <ul>
+            <li><code>.container</code>，它在每个响应拐点处设置最大宽度。</li>
+            <li><code>.container-fluid</code>，在所有拐点处为 <code>width: 100%</code>。</li>
+            <li><code>.container-{breakpoint}</code>，直到指定的拐点 <code>width：100%</code>。</li>
+          </ul>
+          <p>下表显示了每个容器的最大宽度与原始宽度的比较。集装箱和集装箱。容器流体穿过每个断点。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <td class="border-dark"></td>
+                <th scope="col">
+                  Extra small<br>
+                  <span class="fw-normal">&lt;576px</span>
+                </th>
+                <th scope="col">
+                  Small<br>
+                  <span class="fw-normal">≥576px</span>
+                </th>
+                <th scope="col">
+                  Medium<br>
+                  <span class="fw-normal">≥768px</span>
+                </th>
+                <th scope="col">
+                  Large<br>
+                  <span class="fw-normal">≥992px</span>
+                </th>
+                <th scope="col">
+                  X-Large<br>
+                  <span class="fw-normal">≥1200px</span>
+                </th>
+                <th scope="col">
+                  XX-Large<br>
+                  <span class="fw-normal">≥1400px</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="fw-normal"><code>.container</code></th>
+                <td class="text-muted">100%</td>
+                <td>540px</td>
+                <td>720px</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal"><code>.container-sm</code></th>
+                <td class="text-muted">100%</td>
+                <td>540px</td>
+                <td>720px</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal"><code>.container-md</code></th>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td>720px</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal"><code>.container-lg</code></th>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal"><code>.container-xl</code></th>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal"><code>.container-xxl</code></th>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <th scope="row" class="fw-normal"><code>.container-fluid</code></th>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+                <td class="text-muted">100%</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h6>默认容器</h6>
+          <p>我们默认的 <code>.container</code> 类是一个响应性强、固定宽度的容器，这意味着它的最大宽度在每个断点处都会发生变化。</p>
+          <pre>&lt;div class="container"&gt;
+  &lt;!-- Content here --&gt;
+&lt;/div&gt;</pre>
+
+          <h6>响应式容器</h6>
+          <p>响应式容器允许您指定一个100%宽的类，直到达到指定的拐点，然后我们为每个更高的拐点应用最大宽度。例如：在到达 <code>sm</code> 拐点之前，<code>.container-sm</code> 的宽度为100%，在该拐点处，它将与 <code>md</code>、<code>lg</code>、<code>xl</code> 和 <code>xxl</code> 一起放大。</p>
+          <pre>&lt;div class="container-sm"&gt;100% wide until small breakpoint&lt;/div&gt;
+&lt;div class="container-md"&gt;100% wide until medium breakpoint&lt;/div&gt;
+&lt;div class="container-lg"&gt;100% wide until large breakpoint&lt;/div&gt;
+&lt;div class="container-xl"&gt;100% wide until extra large breakpoint&lt;/div&gt;
+&lt;div class="container-xxl"&gt;100% wide until extra extra large breakpoint&lt;/div&gt;</pre>
+
+          <h6>流体容器</h6>
+          <p>使用 <code>.container-fluid</code> 用于全宽容器，跨越视口的整个宽度。</p>
+          <pre>&lt;div class="container-fluid"&gt;
+  ...
+&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>面包屑导航 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">面包屑导航</div></header>
+        <div class="card-body">
+
+          <p>面包屑导航（Breadcrumb）用于指示当前页面在导航层级中的位置，并通过 CSS 为各导航条目之间自动添加分隔符。</p>
+          <h6>示例</h6>
+          <p>通过使用带有链接列表项（<code>&lt;li&gt;</code> 元素）的有序（<code>&lt;ol&gt;</code> 元素）或无序列表（<code>&lt;ul&gt;</code> 元素）来创建一个具有最少样式的面包屑导航（breadcrumb）组件。使用我们提供的工具类可以根据需要添加其它样式。</p>
+          <div class="border-example">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">首页</li>
+              </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">首页</a></li>
+                <li class="breadcrumb-item active" aria-current="page">用户管理</li>
+              </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">首页</a></li>
+                <li class="breadcrumb-item"><a href="#">用户管理</a></li>
+                <li class="breadcrumb-item active" aria-current="page">用户列表</li>
+              </ol>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;首页&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;用户管理&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;用户管理&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;用户列表&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+
+          <h6>改变分隔符</h6>
+          <p>分隔符是通过 CSS 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before" target="_blank">::before</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content" target="_blank">content</a> 两个属性自动添加的。如果需要的话，可以通过修改本地的自定义 CSS 属性 <code>--bs-breadcrumb-divider</code> 或 Sass 变量 <code>$breadcrumb-divider</code>（以及对应 RTL 的变量 <code>$breadcrumb-divider-flipped</code>）对其进行修改。我们默认使用 Sass 变量，因为它是自定义属性的后备。这样操作后，你就拥有了一个新的全局分隔符，并且任何时候都无需重新编译 CSS。</p>
+          <div class="border-example">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">首页</a></li>
+                <li class="breadcrumb-item active" aria-current="page">用户管理</li>
+              </ol>
+            </nav>
+          </div>
+          <pre>&lt;nav style="--bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;用户管理&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+
+          <p>当通过 Sass 变量修改分隔符时，可以使用 Sass 中的 <a href="https://sass-lang.com/documentation/modules/string#quote" target="_blank">quote</a> 函数（此函数用于生成字符串两侧的引号）。例如，使用 <code>&gt;</code> 字符作为分隔符的话，你可以这样做：</p>
+          <pre>$breadcrumb-divider: quote(">");</pre>
+
+          <p>也可以使用 <strong>嵌入式 SVG 图标</strong> 作为分隔符。覆盖对应的自定义 CSS 属性或 Sass 变量即可。</p>
+          <div class="border-example">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">首页</a></li>
+                <li class="breadcrumb-item active" aria-current="page">用户管理</li>
+              </ol>
+            </nav>
+          </div>
+          <pre>&lt;nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;用户管理&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+          <pre>$breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");</pre>
+
+          <p>你还可以通过设置 <code>--bs-breadcrumb-divider: '';</code> （为自定义 CSS 属性设置空字符串）或者 Sass 变量 <code>$breadcrumb-divider: none;</code> 来删除分隔符。</p>
+          <div class="border-example">
+            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">首页</a></li>
+                <li class="breadcrumb-item active" aria-current="page">用户管理</li>
+              </ol>
+            </nav>
+          </div>
+          <pre>&lt;nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;用户管理&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+          <pre>$breadcrumb-divider: none;</pre>
+
+          <h6>可访问性</h6>
+          <p>由于面包屑导航（breadcrumb）组件提供了导航功能，因此，最好添加一个有意义的标签（例如 <code>aria-label=&quot;breadcrumb&quot;</code>）来描述 <code>&lt;nav&gt;</code> 元素中提供的导航的类型，并且为最后一个条目添加 <code>aria-current=&quot;page&quot;</code> 以表示其代表的是当前页面。</p>
+          <p>有关更多信息，请参见 <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb" target="_blank">WAI-ARIA Authoring Practices for the breadcrumb pattern</a>。</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

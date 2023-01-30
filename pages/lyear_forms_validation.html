@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>验证 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">验证</div></header>
+        <div class="card-body">
+
+          <p>通过 HTML5 表单验证，通过浏览器默认行为或自定义样式和 JavaScript，为您的用户提供有价值的、可操作的反馈。</p>
+
+          <div class="callout callout-warning mb-3">我们知道目前无法访问客户端自定义验证样式和工具提示，因为它们没有暴露于辅助技术。在我们研究解决方案时，我们建议使用服务器端选项或默认浏览器验证方法。</div>
+
+          <h6>怎么运行的</h6>
+          <p>下面是表单验证如何与 Bootstrap 一起工作：</p>
+          <ul>
+            <li>HTML 表单验证通过 CSS 的两个伪类 <code>:invalid</code> 和 <code>:valid</code> 应用。它适用于 <code>&lt;input&gt;</code>、<code>&lt;select&gt;</code> 和 <code>&lt;textarea&gt;</code> 元素。</li>
+            <li>Bootstrap 将 <code>:invalid</code> 和 <code>:valid</code> 样式限定为父 <code>.was-validated</code> 类，通常应用于 <code>&lt;form&gt;</code>。否则，任何没有值的必填字段在页面加载时显示为无效。这样，您可以选择何时激活它们（通常在尝试提交表单之后）。</li>
+            <li>要重置表单的外观（例如，在使用 AJAX 进行动态表单提交的情况下），请在提交后再次从 <code>&lt;form&gt;</code> 中删除 <code>.was-validated</code> 类。</li>
+            <li>作为后备，可以使用 <code>.is-invalid</code> 和 <code>.is-valid</code> 类代替伪类进行服务器端验证。它们不需要 <code>.was-validated</code> 父类。</li>
+            <li>由于 CSS 工作方式的限制，如果没有自定义 JavaScript 的帮助，我们（目前）无法将样式应用于 DOM 中表单控件之前的 <code>&lt;label&gt;</code>。</li>
+            <li>所有现代浏览器都支持约束验证 API，这是一系列用于验证表单控件的 JavaScript 方法。</li>
+            <li>反馈消息可以使用浏览器默认设置（每个浏览器不同，并且无法通过 CSS 设置样式）或我们的自定义反馈样式以及额外的 HTML 和 CSS。</li>
+            <li>您可以在 JavaScript 中使用 <code>setCustomValidity</code> 提供自定义有效性消息。</li>
+          </ul>
+          <p>考虑到这一点，请考虑以下演示，了解我们的自定义表单验证样式、可选的服务器端类和浏览器默认设置。</p>
+
+          <h6>自定义样式</h6>
+          <p>对于自定义 Bootstrap 表单验证消息，您需要将 novalidate 布尔属性添加到您的 <code>&lt;form&gt;</code>。这将禁用浏览器默认反馈工具提示，但仍提供对 JavaScript 中表单验证 API 的访问。尝试提交以下表格；我们的 JavaScript 将拦截提交按钮并将反馈转发给您。尝试提交时，您会看到应用于表单控件的 <code>:invalid</code> 和 <code>:valid</code> 样式。</p>
+
+          <p>自定义反馈样式应用自定义颜色、边框、焦点样式和背景图标以更好地传达反馈。 <code>&lt;select&gt;</code> 的背景图标仅适用于 <code>.form-select</code>，不适用于 <code>.form-control</code>。</p>
+          <div class="border-example">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">姓名</label>
+                <input type="text" class="form-control" id="validationCustom01" value="张辽" required>
+                <div class="valid-feedback">
+                  正确
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">字</label>
+                <input type="text" class="form-control" id="validationCustom02" value="文远" required>
+                <div class="valid-feedback">
+                  正确
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">用户名</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    请选择一个用户名。
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">城市</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                  请提供一个正确的城市。
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">武器</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">请选择...</option>
+                  <option>...</option>
+                </select>
+                <div class="invalid-feedback">
+                  请选择你日常使用的武器。
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">邮编</label>
+                <input type="text" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                  请填写正确的邮编。
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    同意条款和条件
+                  </label>
+                  <div class="invalid-feedback">
+                    你必须在提交前同意。
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">提交表单</button>
+              </div>
+            </form>
+          </div>
+          <pre>&lt;form class="row g-3 needs-validation" novalidate&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationCustom01" class="form-label"&gt;姓名&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationCustom01" value="张辽" required&gt;
+    &lt;div class="valid-feedback"&gt;
+      正确
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationCustom02" class="form-label"&gt;字&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationCustom02" value="文远" required&gt;
+    &lt;div class="valid-feedback"&gt;
+      正确
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationCustomUsername" class="form-label"&gt;用户名&lt;/label&gt;
+    &lt;div class="input-group has-validation"&gt;
+      &lt;span class="input-group-text" id="inputGroupPrepend"&gt;@&lt;/span&gt;
+      &lt;input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required&gt;
+      &lt;div class="invalid-feedback"&gt;
+        请选择一个用户名。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;label for="validationCustom03" class="form-label"&gt;城市&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationCustom03" required&gt;
+    &lt;div class="invalid-feedback"&gt;
+      请提供一个正确的城市。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3"&gt;
+    &lt;label for="validationCustom04" class="form-label"&gt;武器&lt;/label&gt;
+    &lt;select class="form-select" id="validationCustom04" required&gt;
+      &lt;option selected disabled value=""&gt;请选择...&lt;/option&gt;
+      &lt;option&gt;...&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class="invalid-feedback"&gt;
+      请选择你日常使用的武器。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3"&gt;
+    &lt;label for="validationCustom05" class="form-label"&gt;邮编&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationCustom05" required&gt;
+    &lt;div class="invalid-feedback"&gt;
+      请填写正确的邮编。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;div class="form-check"&gt;
+      &lt;input class="form-check-input" type="checkbox" value="" id="invalidCheck" required&gt;
+      &lt;label class="form-check-label" for="invalidCheck"&gt;
+        同意条款和条件
+      &lt;/label&gt;
+      &lt;div class="invalid-feedback"&gt;
+        你必须在提交前同意。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;提交表单&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+          <p>使用到的JS</p>
+          <pre>// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()</pre>
+
+          <h6>浏览器默认值</h6>
+          <p>对自定义验证反馈消息或编写 JavaScript 来更改表单行为不感兴趣？一切都好，您可以使用浏览器默认设置。尝试提交下面的表格。根据您的浏览器和操作系统，您会看到略有不同的反馈风格。</p>
+
+          <p>虽然这些反馈样式无法使用 CSS 设置样式，但您仍然可以通过 JavaScript 自定义反馈文本。</p>
+          <div class="border-example">
+            <form class="row g-3">
+              <div class="col-md-4">
+                <label for="validationDefault01" class="form-label">姓名</label>
+                <input type="text" class="form-control" id="validationDefault01" value="张辽" required>
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">字</label>
+                <input type="text" class="form-control" id="validationDefault02" value="文远" required>
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">用户名</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                  <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault03" class="form-label">城市</label>
+                <input type="text" class="form-control" id="validationDefault03" required>
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">武器</label>
+                <select class="form-select" id="validationDefault04" required>
+                  <option selected disabled value="">请选择...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault05" class="form-label">邮编</label>
+                <input type="text" class="form-control" id="validationDefault05" required>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                  <label class="form-check-label" for="invalidCheck2">
+                    同意条款和条件
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">提交表单</button>
+              </div>
+            </form>
+          </div>
+          <pre>&lt;form class="row g-3"&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationDefault01" class="form-label"&gt;姓名&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationDefault01" value="张辽" required&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationDefault02" class="form-label"&gt;字&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationDefault02" value="文远" required&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationDefaultUsername" class="form-label"&gt;用户名&lt;/label&gt;
+    &lt;div class="input-group"&gt;
+      &lt;span class="input-group-text" id="inputGroupPrepend2"&gt;@&lt;/span&gt;
+      &lt;input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;label for="validationDefault03" class="form-label"&gt;城市&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationDefault03" required&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3"&gt;
+    &lt;label for="validationDefault04" class="form-label"&gt;武器&lt;/label&gt;
+    &lt;select class="form-select" id="validationDefault04" required&gt;
+      &lt;option selected disabled value=""&gt;请选择...&lt;/option&gt;
+      &lt;option&gt;...&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3"&gt;
+    &lt;label for="validationDefault05" class="form-label"&gt;邮编&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationDefault05" required&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;div class="form-check"&gt;
+      &lt;input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required&gt;
+      &lt;label class="form-check-label" for="invalidCheck2"&gt;
+        同意条款和条件
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;提交表单&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+          <h6>服务器端</h6>
+          <p>我们建议使用客户端验证，但如果您需要服务器端验证，您可以使用 <code>.is-invalid</code> 和 <code>.is-valid</code> 指示无效和有效的表单字段。请注意，这些类也支持 <code>.invalid-feedback</code>。</p>
+
+          <p>对于无效字段，使用 <code>aria-describeby</code> 确保无效的反馈/错误消息与相关表单字段相关联（注意此属性允许引用多个 id，以防字段已指向其他表单文本）。</p>
+
+          <p>要解决边框半径问题，输入组需要额外的 <code>.has-validation</code> 类。</p>
+          <div class="border-example">
+            <form class="row g-3">
+              <div class="col-md-4">
+                <label for="validationServer01" class="form-label">姓名</label>
+                <input type="text" class="form-control is-valid" id="validationServer01" value="张辽" required>
+                <div class="valid-feedback">
+                  正确
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationServer02" class="form-label">字</label>
+                <input type="text" class="form-control is-valid" id="validationServer02" value="文远" required>
+                <div class="valid-feedback">
+                  正确
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationServerUsername" class="form-label">用户名</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                  <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                  <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    请选择一个用户名。
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationServer03" class="form-label">城市</label>
+                <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                  请提供一个正确的城市。
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationServer04" class="form-label">武器</label>
+                <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                  <option selected disabled value="">请选择...</option>
+                  <option>...</option>
+                </select>
+                <div id="validationServer04Feedback" class="invalid-feedback">
+                  请选择你日常使用的武器。
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationServer05" class="form-label">邮编</label>
+                <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                <div id="validationServer05Feedback" class="invalid-feedback">
+                  请填写正确的邮编。
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                  <label class="form-check-label" for="invalidCheck3">
+                    同意条款和条件
+                  </label>
+                  <div id="invalidCheck3Feedback" class="invalid-feedback">
+                    你必须在提交前同意。
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">提交表单</button>
+              </div>
+            </form>
+          </div>
+          <pre>&lt;form class="row g-3"&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationServer01" class="form-label"&gt;姓名&lt;/label&gt;
+    &lt;input type="text" class="form-control is-valid" id="validationServer01" value="张辽" required&gt;
+    &lt;div class="valid-feedback"&gt;
+      正确
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationServer02" class="form-label"&gt;字&lt;/label&gt;
+    &lt;input type="text" class="form-control is-valid" id="validationServer02" value="文远" required&gt;
+    &lt;div class="valid-feedback"&gt;
+      正确
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;label for="validationServerUsername" class="form-label"&gt;用户名&lt;/label&gt;
+    &lt;div class="input-group has-validation"&gt;
+      &lt;span class="input-group-text" id="inputGroupPrepend3"&gt;@&lt;/span&gt;
+      &lt;input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required&gt;
+      &lt;div id="validationServerUsernameFeedback" class="invalid-feedback"&gt;
+        请选择一个用户名。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;label for="validationServer03" class="form-label"&gt;城市&lt;/label&gt;
+    &lt;input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required&gt;
+    &lt;div id="validationServer03Feedback" class="invalid-feedback"&gt;
+      请提供一个正确的城市。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3"&gt;
+    &lt;label for="validationServer04" class="form-label"&gt;武器&lt;/label&gt;
+    &lt;select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required&gt;
+      &lt;option selected disabled value=""&gt;请选择...&lt;/option&gt;
+      &lt;option&gt;...&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div id="validationServer04Feedback" class="invalid-feedback"&gt;
+      请选择你日常使用的武器。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3"&gt;
+    &lt;label for="validationServer05" class="form-label"&gt;邮编&lt;/label&gt;
+    &lt;input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required&gt;
+    &lt;div id="validationServer05Feedback" class="invalid-feedback"&gt;
+      请填写正确的邮编。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;div class="form-check"&gt;
+      &lt;input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required&gt;
+      &lt;label class="form-check-label" for="invalidCheck3"&gt;
+        同意条款和条件
+      &lt;/label&gt;
+      &lt;div id="invalidCheck3Feedback" class="invalid-feedback"&gt;
+        你必须在提交前同意。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;提交表单&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+          <h6>支持的元素</h6>
+          <p>验证样式可用于以下表单控件和组件：</p>
+          <ul>
+            <li><code>&lt;input&gt;</code>s 和 <code>&lt;textarea&gt;</code>s 带有 <code>.form-control</code>（在输入组中最多包括一个 <code>.form-control</code>）</li>
+            <li><code>&lt;select&gt;</code>s 与 <code>.form-select</code></li>
+            <li><code>.form-checks</code></li>
+          </ul>
+          <div class="border-example">
+            <form class="was-validated">
+              <div class="mb-3">
+                <label for="validationTextarea" class="form-label">文本域</label>
+                <textarea class="form-control is-invalid" id="validationTextarea" placeholder="必填示例文本区域" required></textarea>
+                <div class="invalid-feedback">
+                  请在文本区输入消息。
+                </div>
+              </div>
+
+              <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                <label class="form-check-label" for="validationFormCheck1">选中此复选框</label>
+                <div class="invalid-feedback">无效反馈文本示例</div>
+              </div>
+
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+                <label class="form-check-label" for="validationFormCheck2">切换此单选框</label>
+              </div>
+              <div class="form-check mb-3">
+                <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+                <label class="form-check-label" for="validationFormCheck3">或切换其他单选框</label>
+                <div class="invalid-feedback">更多示例无效反馈文本</div>
+              </div>
+
+              <div class="mb-3">
+                <select class="form-select" required aria-label="下拉选择示例">
+                  <option value="">打开此选择菜单</option>
+                  <option value="1">三宝太监西洋记</option>
+                  <option value="2">三略</option>
+                  <option value="3">上古神话演义</option>
+                </select>
+                <div class="invalid-feedback">示例无效的选择反馈</div>
+              </div>
+
+              <div class="mb-3">
+                <input type="file" class="form-control" aria-label="上传示例" required>
+                <div class="invalid-feedback">无效的表单文件反馈示例</div>
+              </div>
+
+              <div class="mb-3">
+                <button class="btn btn-primary" type="submit" disabled>提交表单</button>
+              </div>
+            </form>
+          </div>
+          <pre>&lt;form class="was-validated"&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label for="validationTextarea" class="form-label"&gt;文本域&lt;/label&gt;
+    &lt;textarea class="form-control is-invalid" id="validationTextarea" placeholder="必填示例文本区域" required&gt;&lt;/textarea&gt;
+    &lt;div class="invalid-feedback"&gt;
+      请在文本区输入消息。
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check mb-3"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="validationFormCheck1" required&gt;
+    &lt;label class="form-check-label" for="validationFormCheck1"&gt;选中此复选框&lt;/label&gt;
+    &lt;div class="invalid-feedback"&gt;无效反馈文本示例&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-check"&gt;
+    &lt;input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required&gt;
+    &lt;label class="form-check-label" for="validationFormCheck2"&gt;切换此单选框&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check mb-3"&gt;
+    &lt;input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required&gt;
+    &lt;label class="form-check-label" for="validationFormCheck3"&gt;或切换其他单选框&lt;/label&gt;
+    &lt;div class="invalid-feedback"&gt;更多示例无效反馈文本&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mb-3"&gt;
+    &lt;select class="form-select" required aria-label="下拉选择示例"&gt;
+      &lt;option value=""&gt;打开此选择菜单&lt;/option&gt;
+      &lt;option value="1"&gt;三宝太监西洋记&lt;/option&gt;
+      &lt;option value="2"&gt;三略&lt;/option&gt;
+      &lt;option value="3"&gt;上古神话演义&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class="invalid-feedback"&gt;示例无效的选择反馈&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mb-3"&gt;
+    &lt;input type="file" class="form-control" aria-label="上传示例" required&gt;
+    &lt;div class="invalid-feedback"&gt;无效的表单文件反馈示例&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mb-3"&gt;
+    &lt;button class="btn btn-primary" type="submit" disabled&gt;提交表单&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+          <h6>工具提示</h6>
+          <p>如果您的表单布局允许，您可以将 <code>.{valid|invalid}-feedback</code> 类交换为 <code>.{valid|invalid}-tooltip</code> 类，以在样式化的工具提示中显示验证反馈。确保有一个带有 <code>position: relative</code> 的父级用于工具提示定位。在下面的示例中，我们的列类已经具有此功能，但您的项目可能需要其他设置。</p>
+          <div class="border-example">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltip01" class="form-label">姓名</label>
+                <input type="text" class="form-control" id="validationTooltip01" value="张辽" required>
+                <div class="valid-tooltip">
+                  正确
+                </div>
+              </div>
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltip02" class="form-label">字</label>
+                <input type="text" class="form-control" id="validationTooltip02" value="文远" required>
+                <div class="valid-tooltip">
+                  正确
+                </div>
+              </div>
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltipUsername" class="form-label">用户名</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                  <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                  <div class="invalid-tooltip">
+                    请选择一个用户名。
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 position-relative">
+                <label for="validationTooltip03" class="form-label">城市</label>
+                <input type="text" class="form-control" id="validationTooltip03" required>
+                <div class="invalid-tooltip">
+                  请提供一个正确的城市。
+                </div>
+              </div>
+              <div class="col-md-3 position-relative">
+                <label for="validationTooltip04" class="form-label">武器</label>
+                <select class="form-select" id="validationTooltip04" required>
+                  <option selected disabled value="">请选择...</option>
+                  <option>...</option>
+                </select>
+                <div class="invalid-tooltip">
+                  请选择你日常使用的武器。
+                </div>
+              </div>
+              <div class="col-md-3 position-relative">
+                <label for="validationTooltip05" class="form-label">邮编</label>
+                <input type="text" class="form-control" id="validationTooltip05" required>
+                <div class="invalid-tooltip">
+                  请填写正确的邮编。
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">提交表单</button>
+              </div>
+            </form>
+          </div>
+          <pre>&lt;form class="row g-3 needs-validation" novalidate&gt;
+  &lt;div class="col-md-4 position-relative"&gt;
+    &lt;label for="validationTooltip01" class="form-label"&gt;姓名&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationTooltip01" value="张辽" required&gt;
+    &lt;div class="valid-tooltip"&gt;
+      正确
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4 position-relative"&gt;
+    &lt;label for="validationTooltip02" class="form-label"&gt;字&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationTooltip02" value="文远" required&gt;
+    &lt;div class="valid-tooltip"&gt;
+      正确
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4 position-relative"&gt;
+    &lt;label for="validationTooltipUsername" class="form-label"&gt;用户名&lt;/label&gt;
+    &lt;div class="input-group has-validation"&gt;
+      &lt;span class="input-group-text" id="validationTooltipUsernamePrepend"&gt;@&lt;/span&gt;
+      &lt;input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required&gt;
+      &lt;div class="invalid-tooltip"&gt;
+        请选择一个用户名。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6 position-relative"&gt;
+    &lt;label for="validationTooltip03" class="form-label"&gt;城市&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationTooltip03" required&gt;
+    &lt;div class="invalid-tooltip"&gt;
+      请提供一个正确的城市。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3 position-relative"&gt;
+    &lt;label for="validationTooltip04" class="form-label"&gt;武器&lt;/label&gt;
+    &lt;select class="form-select" id="validationTooltip04" required&gt;
+      &lt;option selected disabled value=""&gt;请选择...&lt;/option&gt;
+      &lt;option&gt;...&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class="invalid-tooltip"&gt;
+      请选择你日常使用的武器。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-3 position-relative"&gt;
+    &lt;label for="validationTooltip05" class="form-label"&gt;邮编&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="validationTooltip05" required&gt;
+    &lt;div class="invalid-tooltip"&gt;
+      请填写正确的邮编。
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;提交表单&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript">
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+</body>
+</html>

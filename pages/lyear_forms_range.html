@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>范围 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">范围</div></header>
+        <div class="card-body">
+
+          <p>使用 <code>.form-range</code> 创建自定义 <code>&lt;input type="range"&gt;</code> 控件。 轨道（背景）和拇指（值）的样式都在浏览器中显示相同。 由于只有 Firefox 支持从拇指的左侧或右侧“填充”其轨迹以直观地指示进度，因此我们目前不支持它。</p>
+          <div class="border-example">
+            <label for="customRange1" class="form-label">示例</label>
+            <input type="range" class="form-range" id="customRange1">
+          </div>
+          <pre>&lt;label for="customRange1" class="form-label"&gt;示例&lt;/label&gt;
+&lt;input type="range" class="form-range" id="customRange1"&gt;</pre>
+
+          <h6>禁用</h6>
+          <p>在输入上添加 <code>disabled</code> 布尔属性，使其外观变灰并删除指针事件。</p>
+          <div class="border-example">
+            <label for="disabledRange" class="form-label">禁用示例</label>
+            <input type="range" class="form-range" id="disabledRange" disabled>
+          </div>
+          <pre>&lt;label for="disabledRange" class="form-label"&gt;禁用示例&lt;/label&gt;
+&lt;input type="range" class="form-range" id="disabledRange" disabled&gt;</pre>
+
+          <h6>最小值和最大值</h6>
+          <p>范围输入具有 <code>min</code> 和 <code>max</code> 的隐含值，分别为 <code>0</code> 和 <code>100</code>。 您可以为那些使用 <code>min</code> 和 <code>max</code> 属性的值指定新值。</p>
+          <div class="border-example">
+            <label for="customRange2" class="form-label">示例</label>
+            <input type="range" class="form-range" min="0" max="5" id="customRange2">
+          </div>
+          <pre>&lt;label for="customRange2" class="form-label"&gt;示例&lt;/label&gt;
+&lt;input type="range" class="form-range" min="0" max="5" id="customRange2"&gt;</pre>
+
+          <h6>步长</h6>
+          <p>默认情况下，范围输入“捕捉”到整数值。 要更改此设置，您可以指定步长值。 在下面的示例中，我们使用 <code>step="0.5"</code> 将步数加倍。</p>
+          <div class="border-example">
+            <label for="customRange3" class="form-label">示例</label>
+            <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+          </div>
+          <pre>&lt;label for="customRange3" class="form-label"&gt;示例&lt;/label&gt;
+&lt;input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

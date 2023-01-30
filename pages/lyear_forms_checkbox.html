@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>复选框 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">复选框</div></header>
+        <div class="card-body">
+
+          <div class="border-example">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                默认的复选框
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                默认选中的复选框
+              </label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"&gt;
+  &lt;label class="form-check-label" for="flexCheckDefault"&gt;
+    默认的复选框
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked&gt;
+  &lt;label class="form-check-label" for="flexCheckChecked"&gt;
+    默认选中的复选框
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>不确定的</h6>
+          <p>当通过 <code>JavaScript</code> 手动设置复选框时，可以使用 <code>:indeterminate</code> 伪类（没有可用的 HTML 属性来指定它）。</p>
+          <div class="border-example">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                不确定的复选框
+              </label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"&gt;
+  &lt;label class="form-check-label" for="flexCheckIndeterminate"&gt;
+    不确定的复选框
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+
+         <p>如果你正使用 jQuery，可以用下面方法：</p>
+         <pre>$('#your-checkbox').prop('indeterminate', true)</pre>
+
+          <h6>禁用</h6>
+          <p>添加 <code>disabled</code> 属性，关联的 <code>&lt;label&gt;</code> 会自动设置样式以匹配较浅的颜色，以帮助指示输入的状态。</p>
+          <div class="border-example">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+              <label class="form-check-label" for="flexCheckDisabled">
+                禁用复选框
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+              <label class="form-check-label" for="flexCheckCheckedDisabled">
+                禁用选中的复选框
+              </label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled&gt;
+  &lt;label class="form-check-label" for="flexCheckDisabled"&gt;
+    禁用复选框
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled&gt;
+  &lt;label class="form-check-label" for="flexCheckCheckedDisabled"&gt;
+    禁用选中的复选框
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>默认（堆叠）</h6>
+          <p>默认情况下，任何数量的直接同级复选框都将垂直堆叠并以 <code>.form-check</code> 适当间隔。</p>
+          <div class="border-example">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                默认复选框
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+              <label class="form-check-label" for="defaultCheck2">
+                禁用复选框
+              </label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="defaultCheck1"&gt;
+  &lt;label class="form-check-label" for="defaultCheck1"&gt;
+    默认复选框
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled&gt;
+  &lt;label class="form-check-label" for="defaultCheck2"&gt;
+    禁用复选框
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>内联的</h6>
+          <p>通过将 <code>.form-check-inline</code> 添加到任何 <code>.form-check</code> 将复选框或复选框分组到同一水平行。</p>
+          <div class="border-example">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+              <label class="form-check-label" for="inlineRadio3">3 (禁用)</label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check form-check-inline"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"&gt;
+  &lt;label class="form-check-label" for="inlineRadio1"&gt;1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check form-check-inline"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"&gt;
+  &lt;label class="form-check-label" for="inlineRadio2"&gt;2&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check form-check-inline"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled&gt;
+  &lt;label class="form-check-label" for="inlineRadio3"&gt;3 (禁用)&lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>不使用 <code>label</code></h6>
+          <div class="border-example">
+            <div>
+              <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            </div>
+          </div>
+          <pre>&lt;div&gt;
+  &lt;input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."&gt;
+&lt;/div&gt;</pre>
+
+          <h6>复选框切换按钮</h6>
+          <div class="border-example">
+            <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+            <label class="btn btn-primary" for="btn-check">单切换</label>
+
+            <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+            <label class="btn btn-primary" for="btn-check-2">选中</label>
+
+            <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
+            <label class="btn btn-primary" for="btn-check-3">禁用</label>
+          </div>
+          <pre>&lt;input type="checkbox" class="btn-check" id="btn-check" autocomplete="off"&gt;
+&lt;label class="btn btn-primary" for="btn-check"&gt;单切换&lt;/label&gt;
+
+&lt;input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off"&gt;
+&lt;label class="btn btn-primary" for="btn-check-2"&gt;选中&lt;/label&gt;
+
+&lt;input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled&gt;
+&lt;label class="btn btn-primary" for="btn-check-3"&gt;禁用&lt;/label&gt;</pre>
+
+          <h6>边框样式</h6>
+          <div class="border-example">
+            <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label>
+
+            <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label>
+          </div>
+          <pre>&lt;input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"&gt;
+&lt;label class="btn btn-outline-primary" for="btn-check-outlined"&gt;单切换&lt;/label&gt;
+
+&lt;input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off"&gt;
+&lt;label class="btn btn-outline-secondary" for="btn-check-2-outlined"&gt;选中&lt;/label&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">不同颜色的复选框</div></header>
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input form-check-blue" type="checkbox" id="formCheckBoxBlue" checked>
+            <label class="form-check-label" for="formCheckBoxBlue">
+              蓝色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-indigo" type="checkbox" id="formCheckBoxIndigo" checked>
+            <label class="form-check-label" for="formCheckBoxIndigo">
+              靛蓝的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-purple" type="checkbox" id="formCheckBoxPurple" checked>
+            <label class="form-check-label" for="formCheckBoxPurple">
+              紫色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-pink" type="checkbox" id="formCheckBoxPink" checked>
+            <label class="form-check-label" for="formCheckBoxPink">
+              粉红的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-red" type="checkbox" id="formCheckBoxRed" checked>
+            <label class="form-check-label" for="formCheckBoxRed">
+              红色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-orange" type="checkbox" id="formCheckBoxOrange" checked>
+            <label class="form-check-label" for="formCheckBoxOrange">
+              橙色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-yellow" type="checkbox" id="formCheckBoxYellow" checked>
+            <label class="form-check-label" for="formCheckBoxYellow">
+              黄色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-green" type="checkbox" id="formCheckBoxGreen" checked>
+            <label class="form-check-label" for="formCheckBoxGreen">
+              绿色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-cyan" type="checkbox" id="formCheckBoxCyan" checked>
+            <label class="form-check-label" for="formCheckBoxCyan">
+              青色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-brown" type="checkbox" id="formCheckBoxBrown" checked>
+            <label class="form-check-label" for="formCheckBoxBrown">
+              棕色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-gray" type="checkbox" id="formCheckBoxGray" checked>
+            <label class="form-check-label" for="formCheckBoxGray">
+              灰色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-dark" type="checkbox" id="formCheckBoxDark" checked>
+            <label class="form-check-label" for="formCheckBoxDark">
+              黑色的复选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-teal" type="checkbox" id="formCheckBoxTeal" checked>
+            <label class="form-check-label" for="formCheckBoxTeal">
+              蓝绿色的复选框
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript">
+$('#flexCheckIndeterminate').prop('indeterminate', true);
+</script>
+</body>
+</html>

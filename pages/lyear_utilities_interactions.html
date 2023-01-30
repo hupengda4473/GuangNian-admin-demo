@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>交互 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">交互</div></header>
+        <div class="card-body">
+
+          <p>改变用户与网站内容交互方式的实用程序类。</p>
+
+          <h6>文本选择</h6>
+          <p>更改用户与其交互时选择内容的方式。</p>
+          <div class="border-example">
+            <p class="user-select-all">当用户单击时，该段落将被完全选中。</p>
+            <p class="user-select-auto">本段具有默认选择行为。</p>
+            <p class="user-select-none">当用户单击时，该段落将不可选择。</p>
+          </div>
+          <pre>&lt;p class="user-select-all"&gt;当用户单击时，该段落将被完全选中。&lt;/p&gt;
+&lt;p class="user-select-auto"&gt;本段具有默认选择行为。&lt;/p&gt;
+&lt;p class="user-select-none"&gt;当用户单击时，该段落将不可选择。&lt;/p&gt;</pre>
+
+          <h6>指针事件</h6>
+          <p>Bootstrap 提供 <code>.pe-none</code> 和 <code>.pe-auto</code> 类来防止或添加元素交互。</p>
+          <div class="border-example">
+            <p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">这个链接</a> 不能点击。</p>
+            <p><a href="#" class="pe-auto">这个链接</a> 可以点击（这是默认行为）。</p>
+            <p class="pe-none"><a href="#" tabindex="-1" aria-disabled="true">这个链接</a> 无法点击，因为 <code>pointer-events</code> 属性是从其父级继承的。 然而, <a href="#" class="pe-auto">这个链接</a> 有一个 <code>pe-auto</code> 类，可以点击。</p>
+          </div>
+          <pre>&lt;p&gt;&lt;a href="#" class="pe-none" tabindex="-1" aria-disabled="true"&gt;这个链接&lt;/a&gt; 不能点击。&lt;/p&gt;
+&lt;p&gt;&lt;a href="#" class="pe-auto"&gt;这个链接&lt;/a&gt; 可以点击（这是默认行为）。&lt;/p&gt;
+&lt;p class="pe-none"&gt;&lt;a href="#" tabindex="-1" aria-disabled="true"&gt;这个链接&lt;/a&gt; 无法点击，因为 &lt;code&gt;pointer-events&lt;/code&gt; 属性是从其父级继承的。 然而, &lt;a href="#" class="pe-auto"&gt;这个链接&lt;/a&gt; 有一个 &lt;code&gt;pe-auto&lt;/code&gt; 类，可以点击。&lt;/p&gt;</pre>
+
+          <p><code>.pe-none</code> 类（以及它设置的 <code>pointer-events</code> CSS 属性）仅阻止与指针（鼠标、触控笔、触摸）的交互。默认情况下，带有 <code>.pe-none</code> 的链接和控件对于键盘用户仍然是可聚焦和可操作的。为了确保它们即使对于键盘用户也完全无效，您可能需要添加更多属性，例如 <code>tabindex="-1"</code> （以防止他们接收键盘焦点）和 <code>aria-disabled="true"</code> （以传达他们的事实被有效地禁用辅助技术），并且可能使用 JavaScript 来完全阻止它们的可操作性。</p>
+
+          <p>如果可能，更简单的解决方案是：</p>
+          <ul>
+            <li>对于表单控件，添加禁用的 HTML 属性。</li>
+            <li>对于链接，删除 <code>href</code> 属性，使其成为非交互式锚或占位符链接。</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

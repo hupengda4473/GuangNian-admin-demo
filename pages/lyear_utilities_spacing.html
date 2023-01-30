@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>边距 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">边距</div></header>
+        <div class="card-body">
+
+          <p>Bootstrap 包括各种速记响应边距、填充和间隙实用程序类，用于修改元素的外观。</p>
+
+          <h6>Margin 和 Padding</h6>
+          <p>使用速记类将响应友好的 <code>margin</code> 或 <code>padding</code> 分配给元素或其边的子集。包括对单个属性、所有属性以及垂直和水平属性的支持。类是从默认的 Sass 映射构建的，范围从 <code>.25rem</code> 到 <code></code>。</p>
+
+          <p>使用 CSS 网格布局模块？考虑使用 gap 实用程序。</p>
+
+          <h6>符号</h6>
+          <p>适用于所有断点（从 <code>xs</code> 到 <code>xxl</code>）的间距实用程序中没有断点缩写。这是因为这些类是从 <code>min-width: 0</code> 及以上应用的，因此不受媒体查询的约束。但是，其余断点确实包含断点缩写。</p>
+
+          <p>这些类的命名格式为 <code>{property}{sides}-{size}</code>（用于 <code>xs</code>）和 <code>{property}{sides}-{breakpoint}-{size}</code>（用于 <code>sm</code>、<code>md</code>、<code>lg</code>、<code>xl</code> 和 <code>xxl</code>）。</p>
+
+          <p>其中 property 是以下之一：</p>
+          <ul>
+            <li><code>m</code> - 对于设置 <code>margin</code> 的类</li>
+            <li><code>p</code> - 用于设置 <code>padding</code> 的类</li>
+          </ul>
+          <p>其中 sides 是以下之一：</p>
+          <ul>
+            <li><code>t</code> - 用于设置 <code>margin-top</code> 或 <code>padding-top</code> 的类</li>
+            <li><code>b</code> - 对于设置 <code>margin-bottom</code> 或 <code>padding-bottom</code> 的类</li>
+            <li><code>s</code> - （start）用于在 LTR 中设置 <code>margin-left</code> 或 <code>padding-left</code>，在 RTL 中设置 <code>margin-right</code> 或 <code>padding-right</code> 的类</li>
+            <li><code>e</code> - (end) 用于在 LTR 中设置 <code>margin-right</code> 或 <code>padding-right</code> ，在 RTL 中设置 <code>margin-left</code> 或 <code>padding-left</code> 的类</li>
+            <li><code>x</code> - 对于同时设置 <code>*-left</code> 和 <code>*-right</code> 的类</li>
+            <li><code>y</code> - 对于同时设置 <code>*-top</code> 和 <code>*-bottom</code> 的类</li>
+            <li>空白 - 用于在元素的所有 4 个边上设置 <code>margin</code> 或 <code>padding</code> 的类</li>
+          </ul>
+          <p>其中 size 是以下之一：</p>
+          <ul>
+            <li><code>0</code> - 对于通过将其设置为 0 来消除边距或填充的类</li>
+            <li><code>1</code> - （默认情况下）用于将 <code>margin</code> 或 <code>padding</code> 设置为 <code>$spacer * .25</code> 的类</li>
+            <li><code>2</code> - （默认情况下）用于将 <code>margin</code> 或 <code>padding</code> 设置为 <code>$spacer * .5</code> 的类</li>
+            <li><code>3</code> - （默认情况下）用于将 <code>margin</code> 或 <code>padding</code> 设置为 <code>$spacer</code> 的类</li>
+            <li><code>4</code> - （默认情况下）用于将 <code>margin</code> 或 <code>padding</code> 设置为 <code>$spacer * 1.5</code> 的类</li>
+            <li><code>5</code> - （默认情况下）用于将 <code>margin</code> 或 <code>padding</code> 设置为 <code>$spacer * 3</code> 的类</li>
+            <li><code>auto</code> - 对于将 <code>margin</code> 设置为 auto 的类</li>
+          </ul>
+          <p>（您可以通过向 <code>$spacers</code> Sass 映射变量添加条目来添加更多大小。）</p>
+          <h6>例子</h6>
+          <p>以下是这些类的一些代表性示例：</p>
+          <pre>.mt-0 {
+  margin-top: 0 !important;
+}
+
+.ms-1 {
+  margin-left: ($spacer * .25) !important;
+}
+
+.px-2 {
+  padding-left: ($spacer * .5) !important;
+  padding-right: ($spacer * .5) !important;
+}
+
+.p-3 {
+  padding: $spacer !important;
+}</pre>
+
+          <h6>水平居中</h6>
+          <p>此外，Bootstrap 还包含一个 <code>.mx-auto</code> 类，用于通过将水平边距设置为 auto 来水平居中固定宽度的块级内容（即具有 <code>display: block</code> 和 <code>width</code> 的内容）。</p>
+          <div class="border-example">
+            <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
+              中心元素
+            </div>
+          </div>
+          <pre>&lt;div class="mx-auto" style="width: 200px;"&gt;
+  中心元素
+&lt;/div&gt;</pre>
+
+          <h6>负边距</h6>
+          <p>在 CSS 中，<code>margin</code> 属性可以使用负值（<code>padding</code>不能）。这些负边距默认是禁用的，但可以在 Sass 中通过设置 <code>$enable-negative-margins: true</code> 来启用。</p>
+
+          <p>语法几乎与默认的正 <code>margin</code> 实用程序相同，但在请求的大小之前添加了 <code>n</code>。这是一个与 <code>.mt-1</code> 相反的示例类：</p>
+          <pre>.mt-n1 {
+  margin-top: -0.25rem !important;
+}</pre>
+
+          <h6>差距</h6>
+          <p>使用 <code>display:grid</code> 时，您可以在父网格容器上使用间隙实用程序。这可以节省向单个网格项目（显示的子项：网格容器）添加边距实用程序的麻烦。 <code>Gap</code> 实用程序默认是响应式的，并且是通过我们的实用程序 API 生成的，基于 <code>$spacers</code> Sass 映射。</p>
+          <div class="border-example">
+            <div class="d-grid gap-3">
+              <div class="p-2 bg-light border">网格项 1</div>
+              <div class="p-2 bg-light border">网格项 2</div>
+              <div class="p-2 bg-light border">网格项 3</div>
+            </div>
+          </div>
+          <pre>&lt;div class="d-grid gap-3"&gt;
+  &lt;div class="p-2 bg-light border"&gt;网格项 1&lt;/div&gt;
+  &lt;div class="p-2 bg-light border"&gt;网格项 2&lt;/div&gt;
+  &lt;div class="p-2 bg-light border"&gt;网格项 3&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>支持包括所有 Bootstrap 网格断点的响应选项，以及 <code>$spacers</code> 映射 (<code>0</code>-<code>5</code>) 中的六种尺寸。没有 <code>.gap-auto</code> 实用程序类，因为它实际上与 <code>.gap-0</code> 相同。</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

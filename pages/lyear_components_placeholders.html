@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>占位符 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">占位符</div></header>
+        <div class="card-body">
+
+          <p>为您的组件或页面使用加载占位符以指示某些内容可能仍在加载。</p>
+
+          <h5>关于</h5>
+          <p>占位符可用于增强应用程序的体验。 它们仅使用 HTML 和 CSS 构建，这意味着您不需要任何 JavaScript 来创建它们。 但是，您将需要一些自定义 JavaScript 来切换它们的可见性。 它们的外观、颜色和尺寸可以通过我们的实用程序类轻松定制。</p>
+
+          <h5>例子</h5>
+          <p>在下面的示例中，我们采用一个典型的卡片组件并使用占位符重新创建它以创建“加载卡片”。 两者之间的大小和比例相同。</p>
+          <div class="border-example d-flex justify-content-around">
+            <div class="card" style="width: 18rem;">
+              <img src="../images/gallery/1.jpg" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <h5 class="card-title">《蓝公案》</h5>
+                <p class="card-text">名《鹿洲公案》、《公案偶记》，作者是清代循吏蓝鼎元，共两卷二十四则。主要叙述了作者处理政务，审判案件，破除迷信的经历，有较高的史学价值。</p>
+                <a href="#" class="btn btn-primary">阅读详细</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;" aria-hidden="true">
+              <img src="../images/gallery/2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                  <span class="placeholder col-6"></span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                  <span class="placeholder col-7"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-4"></span>
+                  <span class="placeholder col-6"></span>
+                  <span class="placeholder col-8"></span>
+                </p>
+                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="card" style="width: 18rem;"&gt;
+  &lt;img src="../images/gallery/1.jpg" class="card-img-top" alt="..."&gt;
+
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;《蓝公案》&lt;/h5&gt;
+    &lt;p class="card-text"&gt;名《鹿洲公案》、《公案偶记》，作者是清代循吏蓝鼎元，共两卷二十四则。主要叙述了作者处理政务，审判案件，破除迷信的经历，有较高的史学价值。&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;阅读详细&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="card" style="width: 18rem;" aria-hidden="true"&gt;
+  &lt;img src="../images/gallery/2.jpg" class="card-img-top" alt="..."&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title placeholder-glow"&gt;
+      &lt;span class="placeholder col-6"&gt;&lt;/span&gt;
+    &lt;/h5&gt;
+    &lt;p class="card-text placeholder-glow"&gt;
+      &lt;span class="placeholder col-7"&gt;&lt;/span&gt;
+      &lt;span class="placeholder col-4"&gt;&lt;/span&gt;
+      &lt;span class="placeholder col-4"&gt;&lt;/span&gt;
+      &lt;span class="placeholder col-6"&gt;&lt;/span&gt;
+      &lt;span class="placeholder col-8"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h5>这个怎么运作</h5>
+          <p>使用 <code>.placeholder</code> 类和网格列类（例如 <code>.col-6</code>）创建占位符以设置宽度。 它们可以替换元素内的文本或作为修饰符类添加到现有组件中。</p>
+          <p>我们通过 <code>::before</code> 对 <code>.btns</code> 应用额外的样式以确保高度得到尊重。 您可以根据需要将此模式扩展到其他情况，或添加一个 <code>&nbsp;</code> 在元素内反映实际文本在其位置呈现时的高度。</p>
+          <div class="border-example">
+            <p aria-hidden="true">
+              <span class="placeholder col-6"></span>
+            </p>
+
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></a>
+          </div>
+          <pre>&lt;p aria-hidden="true"&gt;
+  &lt;span class="placeholder col-6"&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"&gt;&lt;/a&gt;</pre>
+
+          <div class="callout callout-info mb-3">使用 <code>aria-hidden="true"</code> 仅表示该元素应该对屏幕阅读器隐藏。 占位符的加载行为取决于作者将如何实际使用占位符样式、他们计划如何更新内容等。可能需要一些 JavaScript 代码来交换占位符的状态并通知 AT 用户更新。</div>
+
+          <h6>宽度</h6>
+          <p>您可以通过网格列类、宽度实用程序或内联样式更改 <code>width</code>。</p>
+          <div class="border-example">
+            <span class="placeholder col-6"></span>
+            <span class="placeholder w-75"></span>
+            <span class="placeholder" style="width: 25%;"></span>
+          </div>
+          <pre>&lt;span class="placeholder col-6"&gt;&lt;/span&gt;
+&lt;span class="placeholder w-75"&gt;&lt;/span&gt;
+&lt;span class="placeholder" style="width: 25%;"&gt;&lt;/span&gt;</pre>
+          <h6>颜色</h6>
+          <p>默认情况下，<code>placeholder</code> 使用 <code>currentColor</code>。 这可以用自定义颜色或实用程序类覆盖。</p>
+          <div class="border-example">
+            <span class="placeholder col-12"></span>
+
+            <span class="placeholder col-12 bg-primary"></span>
+            <span class="placeholder col-12 bg-secondary"></span>
+            <span class="placeholder col-12 bg-success"></span>
+            <span class="placeholder col-12 bg-danger"></span>
+            <span class="placeholder col-12 bg-warning"></span>
+            <span class="placeholder col-12 bg-info"></span>
+            <span class="placeholder col-12 bg-light"></span>
+            <span class="placeholder col-12 bg-dark"></span>
+          </div>
+          <pre>&lt;span class="placeholder col-12"&gt;&lt;/span&gt;
+
+&lt;span class="placeholder col-12 bg-primary"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 bg-secondary"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 bg-success"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 bg-danger"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 bg-warning"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 bg-info"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 bg-light"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 bg-dark"&gt;&lt;/span&gt;</pre>
+          <h6>大小</h6>
+          <p><code>.placeholder</code> 的大小取决于父元素的排版样式。 使用大小修饰符自定义它们：<code>.placeholder-lg</code>、<code>.placeholder-sm</code> 或 <code>.placeholder-xs</code>。</p>
+          <div class="border-example">
+            <span class="placeholder col-12 placeholder-lg"></span>
+            <span class="placeholder col-12"></span>
+            <span class="placeholder col-12 placeholder-sm"></span>
+            <span class="placeholder col-12 placeholder-xs"></span>
+          </div>
+          <pre>&lt;span class="placeholder col-12 placeholder-lg"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 placeholder-sm"&gt;&lt;/span&gt;
+&lt;span class="placeholder col-12 placeholder-xs"&gt;&lt;/span&gt;</pre>
+          <h6>动画</h6>
+          <p>使用 <code>.placeholder-glow</code> 或 <code>.placeholder-wave</code> 为占位符设置动画，以更好地传达对正在<em>主动</em>加载的内容的感知。</p>
+          <div class="border-example">
+            <p class="placeholder-glow">
+              <span class="placeholder col-12"></span>
+            </p>
+
+            <p class="placeholder-wave">
+              <span class="placeholder col-12"></span>
+            </p>
+          </div>
+          <pre>&lt;p class="placeholder-glow"&gt;
+  &lt;span class="placeholder col-12"&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p class="placeholder-wave"&gt;
+  &lt;span class="placeholder col-12"&gt;&lt;/span&gt;
+&lt;/p&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

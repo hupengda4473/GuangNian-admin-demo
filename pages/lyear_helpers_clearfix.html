@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>清除浮动 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">清除浮动</div></header>
+        <div class="card-body">
+
+          <p>通过添加 clearfix 工具类，可以快速轻松地清除容器中浮动的内容。</p>
+          <p><strong>为父级元素</strong> 添加 <code>.clearfix</code> 类可以很容易地清除内部的浮动。还可以作为 mixin 使用。</p>
+          <p>在 HTML 中的使用方式如下：</p>
+          <pre>&lt;div class="clearfix"&gt;...&lt;/div&gt;</pre>
+
+          <p>引用该 mixin 的源码：</p>
+          <pre>@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}</pre>
+          <p>在 SCSS 中作为 mixin 使用：</p>
+          <pre>.element {
+  @include clearfix;
+}</pre>
+          <p>下面的示例展示了 <code>.clearfix</code> 的用法。如果没有 <code>.clearfix</code> ，父级 <code>&lt;div&gt;</code> 元素是无法覆盖住两个按钮的，从而导致布局被破坏。</p>
+          <div class="border-example">
+            <div class="bg-info clearfix">
+              <button type="button" class="btn btn-secondary float-start">向左浮动（float）的示例按钮</button>
+              <button type="button" class="btn btn-secondary float-end">向右浮动（float）的示例按钮</button>
+            </div>
+          </div>
+          <pre>&lt;div class="bg-info clearfix"&gt;
+  &lt;button type="button" class="btn btn-secondary float-start"&gt;向左浮动（float）的示例按钮&lt;/button&gt;
+  &lt;button type="button" class="btn btn-secondary float-end"&gt;向右浮动（float）的示例按钮&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

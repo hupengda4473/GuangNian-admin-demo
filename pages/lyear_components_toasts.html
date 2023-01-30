@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>通知消息 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">通知消息</div></header>
+        <div class="card-body">
+
+          <p>通过 toast、轻量级且易于自定义的警报消息向您的访问者推送通知。</p>
+
+          <p>Toast 是轻量级通知，旨在模仿移动和桌面操作系统已经普及的推送通知。它们是用 flexbox 构建的，因此它们很容易对齐和定位。</p>
+
+          <h6>概述</h6>
+          <p>使用 toast 插件时要知道的事情：</p>
+          <ul>
+            <li>出于性能原因，Toast 是可选的，因此您必须自己初始化它们。</li>
+            <li>如果您不指定 <code>autohide: false</code>，Toast 将自动隐藏。</li>
+          </ul>
+          <p>该组件的动画效果依赖于 prefers-reduced-motion 媒体查询。请参阅我们可访问性文档的减少运动部分。</p>
+
+          <h6>基本的</h6>
+          <p>为了鼓励可扩展和可预测的 toast，我们建议使用 header 和 body。 Toast 标题使用 <code>display: flex</code>，由于我们的 <code>margin</code> 和 <code>flexbox</code> 实用程序，可以轻松对齐内容。</p>
+          <p>Toast 可以根据您的需要灵活使用，并且所需的标记非常少。至少，我们需要一个元素来包含您的 “toasted” 内容，并强烈建议使用关闭按钮。</p>
+          <div class="border-example">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11分钟之前</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                《隋唐演义》既是中国古代一部白话小说，也是一部演绎历史风云、歌颂的经典传奇英雄之作。
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+  &lt;div class="toast-header"&gt;
+    &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+    &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+    &lt;small&gt;11分钟之前&lt;/small&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="toast-body"&gt;
+    《隋唐演义》既是中国古代一部白话小说，也是一部演绎历史风云、歌颂的经典传奇英雄之作。
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <div class="callout callout-warning mb-3">以前，我们的脚本动态添加了 <code>.hide</code> 类来完全隐藏 toast（使用 <code>display:none</code>，而不仅仅是使用 <code>opacity:0</code>）。现在不再需要了。但是，为了向后兼容，我们的脚本将继续切换类（即使实际上没有必要），直到下一个主要版本。</div>
+
+          <h6>在线示例</h6>
+          <p>单击下面的按钮以显示默认隐藏的 toast（与我们的实用程序一起位于右下角）。</p>
+          <div class="border-example">
+            <button type="button" class="btn btn-primary" id="liveToastBtn">显示 toast</button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                  <strong class="me-auto">Bootstrap</strong>
+                  <small>11分钟之前</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  《历代诗话》，古代中国诗歌理论著作，诗话丛书。清代何文焕辑。
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;button type="button" class="btn btn-primary" id="liveToastBtn"&gt;显示 toast&lt;/button&gt;
+
+&lt;div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11"&gt;
+  &lt;div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+      &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+      &lt;small&gt;11分钟之前&lt;/small&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+      《历代诗话》，古代中国诗歌理论著作，诗话丛书。清代何文焕辑。
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>我们使用以下 JavaScript 来触发我们的 toast 在线演示：</p>
+          <pre>var toastTrigger = document.getElementById('liveToastBtn')
+var toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', function () {
+    var toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}</pre>
+
+          <h6>半透明</h6>
+          <p>Toast 有点半透明，可以与下面的东西融为一体。</p>
+          <div class="border-example bg-dark">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-muted">11分钟之前</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                又名《真仙传道集》或《钟吕传道记》。五代，施肩吾整理。
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+  &lt;div class="toast-header"&gt;
+    &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+    &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+    &lt;small class="text-muted"&gt;11分钟之前&lt;/small&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="toast-body"&gt;
+    又名《真仙传道集》或《钟吕传道记》。五代，施肩吾整理。
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>堆叠</h6>
+          <p>您可以通过将 toast 包装在 toast 容器中来堆叠，这将垂直增加一些间距。</p>
+          <div class="border-example">
+            <div class="toast-container">
+              <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                  <strong class="me-auto">Bootstrap</strong>
+                  <small class="text-muted">刚刚</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  《管子》基本上是稷下道家推尊管仲之作的集结。即以此为稷下之学的管子学派。
+                </div>
+              </div>
+
+              <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                  <strong class="me-auto">Bootstrap</strong>
+                  <small class="text-muted">2秒前</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  《绣花大盗》是武侠小说家古龙-陆小凤系列的第二个的故事。
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="toast-container"&gt;
+  &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+      &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+      &lt;small class="text-muted"&gt;刚刚&lt;/small&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+      《管子》基本上是稷下道家推尊管仲之作的集结。即以此为稷下之学的管子学派。
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+      &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+      &lt;small class="text-muted"&gt;2秒前&lt;/small&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+      《绣花大盗》是武侠小说家古龙-陆小凤系列的第二个的故事。
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>自定义内容</h6>
+          <p>通过删除子组件、使用实用程序调整它们或添加您自己的标记来自定义您的 toast。在这里，我们通过删除默认的 <code>.toast-header</code>、从 Bootstrap Icons 添加自定义隐藏图标并使用一些 <code>flexbox</code> 实用程序来调整布局，创建了一个更简单的 toast。</p>
+          <div class="border-example">
+            <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="d-flex">
+                <div class="toast-body">
+                《古今词话》是清初一部辑录类词话。
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+  &lt;div class="d-flex"&gt;
+    &lt;div class="toast-body"&gt;
+    《古今词话》是清初一部辑录类词话。
+    &lt;/div&gt;
+    &lt;button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>或者，您还可以向 toast 添加其他控件和组件。</p>
+          <div class="border-example">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-body">
+                《吴越春秋》，东汉赵晔撰，是一部记述春秋时期吴、越两国史事为主的史学著作。
+                <div class="mt-2 pt-2 border-top">
+                  <button type="button" class="btn btn-primary btn-sm">行动起来</button>
+                  <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">关闭</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+  &lt;div class="toast-body"&gt;
+    《吴越春秋》，东汉赵晔撰，是一部记述春秋时期吴、越两国史事为主的史学著作。
+    &lt;div class="mt-2 pt-2 border-top"&gt;
+      &lt;button type="button" class="btn btn-primary btn-sm"&gt;行动起来&lt;/button&gt;
+      &lt;button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast"&gt;关闭&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>配色方案</h6>
+          <p>在上述示例的基础上，您可以使用我们的颜色和背景实用程序创建不同的吐司配色方案。在这里，我们将 <code>.bg-primary</code> 和 <code>.text-white</code> 添加到 <code>.toast</code>，然后将 <code>.btn-close-white</code> 添加到关闭按钮。对于清晰的边缘，我们使用 <code>.border-0</code> 删除默认边框。</p>
+          <div class="border-example">
+            <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="d-flex">
+                <div class="toast-body">
+                  《唐国史补》又称《国史补》，为中唐人李肇所撰。
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+  &lt;div class="d-flex"&gt;
+    &lt;div class="toast-body"&gt;
+      《唐国史补》又称《国史补》，为中唐人李肇所撰。
+    &lt;/div&gt;
+    &lt;button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>放置</h6>
+          <p>根据需要使用自定义 CSS 放置 toast。右上角通常用于通知，顶部中间也是如此。如果您一次只显示一个 toast，请将定位样式放在 <code>.toast</code> 上。</p>
+          <div class="border-example form-floating">
+            <form>
+              <div class="mb-3">
+                <label for="selectToastPlacement">Toast 放置方式</label>
+                <select class="form-select mt-2" id="selectToastPlacement">
+                  <option value="" selected>选择一个位置...</option>
+                  <option value="top-0 start-0">左上角</option>
+                  <option value="top-0 start-50 translate-middle-x">顶部中心</option>
+                  <option value="top-0 end-0">右上角</option>
+                  <option value="top-50 start-0 translate-middle-y">中左</option>
+                  <option value="top-50 start-50 translate-middle">水平垂直正中</option>
+                  <option value="top-50 end-0 translate-middle-y">中右</option>
+                  <option value="bottom-0 start-0">左下角</option>
+                  <option value="bottom-0 start-50 translate-middle-x">底部中心</option>
+                  <option value="bottom-0 end-0">右下角</option>
+                </select>
+              </div>
+            </form>
+            <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative border-example-toasts">
+              <div class="toast-container position-absolute p-3" id="toastPlacement">
+                <div class="toast">
+                  <div class="toast-header">
+                    <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11分钟前</small>
+                  </div>
+                  <div class="toast-body">
+                    《靖康传信录》由李纲著，出自《旧唐书卷六十二列传第十二》。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;form&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label for="selectToastPlacement"&gt;Toast 放置方式&lt;/label&gt;
+    &lt;select class="form-select mt-2" id="selectToastPlacement"&gt;
+      &lt;option value="" selected&gt;选择一个位置...&lt;/option&gt;
+      &lt;option value="top-0 start-0"&gt;左上角&lt;/option&gt;
+      &lt;option value="top-0 start-50 translate-middle-x"&gt;顶部中心&lt;/option&gt;
+      &lt;option value="top-0 end-0"&gt;右上角&lt;/option&gt;
+      &lt;option value="top-50 start-0 translate-middle-y"&gt;中左&lt;/option&gt;
+      &lt;option value="top-50 start-50 translate-middle"&gt;水平垂直正中&lt;/option&gt;
+      &lt;option value="top-50 end-0 translate-middle-y"&gt;中右&lt;/option&gt;
+      &lt;option value="bottom-0 start-0"&gt;左下角&lt;/option&gt;
+      &lt;option value="bottom-0 start-50 translate-middle-x"&gt;底部中心&lt;/option&gt;
+      &lt;option value="bottom-0 end-0"&gt;右下角&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;div aria-live="polite" aria-atomic="true" class="bg-dark position-relative border-example-toasts"&gt;
+  &lt;div class="toast-container position-absolute p-3" id="toastPlacement"&gt;
+    &lt;div class="toast"&gt;
+      &lt;div class="toast-header"&gt;
+        &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+        &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+        &lt;small&gt;11分钟前&lt;/small&gt;
+      &lt;/div&gt;
+      &lt;div class="toast-body"&gt;
+        《靖康传信录》由李纲著，出自《旧唐书卷六十二列传第十二》。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>对于生成更多通知的系统，请考虑使用包装元素，以便它们可以轻松堆叠。</p>
+          <div class="border-example bg-dark border-example-toasts p-0">
+            <div aria-live="polite" aria-atomic="true" class="position-relative">
+              <div class="toast-container position-absolute top-0 end-0 p-3">
+
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small class="text-muted">刚刚</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    《青红帮演义》讲述青红帮发展的历史。
+                  </div>
+                </div>
+
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small class="text-muted">2秒钟之前</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    《随园诗话》是袁枚的诗歌美学和诗歌理论著作。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div aria-live="polite" aria-atomic="true" class="position-relative"&gt;
+  &lt;!-- 定位: --&gt;
+  &lt;!-- - `.toast-container` 用于 toast 之间留间隔 --&gt;
+  &lt;!-- - `.position-absolute`, `top-0` & `end-0` 把 toast 定位到右上角 --&gt;
+  &lt;!-- - `.p-3` 防止 toast 粘在容器边缘  --&gt;
+  &lt;div class="toast-container position-absolute top-0 end-0 p-3"&gt;
+
+    &lt;!-- 然后把 toast 放进去 --&gt;
+    &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+      &lt;div class="toast-header"&gt;
+        &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+        &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+        &lt;small class="text-muted"&gt;刚刚&lt;/small&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="toast-body"&gt;
+        《青红帮演义》讲述青红帮发展的历史。
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+      &lt;div class="toast-header"&gt;
+        &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+        &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+        &lt;small class="text-muted"&gt;2秒钟之前&lt;/small&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="toast-body"&gt;
+        《随园诗话》是袁枚的诗歌美学和诗歌理论著作。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>您还可以使用 flexbox 实用程序来水平和/或垂直对齐 toast。</p>
+          <div class="border-example bg-dark border-example-toasts d-flex">
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+              <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <svg class="rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#33cabb" width="100%" height="100%"></rect></svg>
+                  <strong class="me-auto">Bootstrap</strong>
+                  <small>11分钟之前</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  《陶庵梦忆》为明朝散文家张岱所著。
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;!-- 用于对齐 toast 的 Flexbox 容器 --&gt;
+&lt;div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100"&gt;
+
+  &lt;!-- 然后在里面放toast --&gt;
+  &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;img src="../..." class="rounded me-2" alt="..."&gt;
+      &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+      &lt;small&gt;11分钟之前&lt;/small&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+      《陶庵梦忆》为明朝散文家张岱所著。
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>可访问性</h6>
+          <p>Toast 旨在对您的访问者或用户造成小干扰，因此为了帮助那些使用屏幕阅读器和类似辅助技术的人，您应该将 Toast 包装在 aria-live 区域中。屏幕阅读器会自动宣布对活动区域的更改（例如注入/更新 toast 组件），而无需移动用户的焦点或以其他方式打断用户。此外，包括 <code>aria-atomic="true"</code> 以确保始终将整个 toast 宣布为单个（原子）单元，而不是仅仅宣布更改的内容（如果您只更新 toast 的部分内容，这可能会导致问题，或者如果稍后显示相同的 toast 内容）。如果所需的信息对流程很重要，例如对于表单中的错误列表，然后使用警报组件而不是 toast。</p>
+
+          <p>请注意，在生成或更新 toast 之前，活动区域需要存在于标记中。如果同时动态生成两者并注入到页面中，一般不会被辅助技术公布。</p>
+
+          <p>您还需要根据内容调整 <code>role</code> 和 <code>aria-live</code> 级别。如果是错误等重要消息，请使用 <code>role="alert"</code> <code>aria-live="assertive"</code>，否则使用 <code>role="status"</code> <code>aria-live="polite"</code> 属性。</p>
+
+          <p>随着您显示的内容发生变化，请务必更新延迟超时，以便用户有足够的时间阅读 toast。</p>
+
+          <pre>&lt;div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000"&gt;
+  &lt;div role="alert" aria-live="assertive" aria-atomic="true"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>使用 <code>autohide: false</code> 时，您必须添加一个关闭按钮以允许用户关闭 toast。</p>
+          <div class="callout callout-warning">上面的示例都是用的img(实际效果中是svg)，这里header上用了字体图标，是为了展示其用法。</div>
+          <div class="border-example">
+            <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+              <div class="toast-header">
+                <i class="mdi mdi-information-outline me-2 fs-5 text-info"></i>
+                <strong class="me-auto">消息</strong>
+                <small>11分钟之前</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                元修《辽史》共116卷，包括本纪30卷，志32卷，表8卷，列传45卷，以及国语解1卷。
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false"&gt;
+  &lt;div class="toast-header"&gt;
+    &lt;i class="mdi mdi-information-outline me-2 fs-5 text-info"&gt;&lt;/i&gt;
+    &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+    &lt;small&gt;11分钟之前&lt;/small&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="toast-body"&gt;
+    元修《辽史》共116卷，包括本纪30卷，志32卷，表8卷，列传45卷，以及国语解1卷。
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>虽然从技术上讲，可以在 toast 中添加可聚焦/可操作的控件（例如附加按钮或链接），但您应该避免为自动隐藏 toast 执行此操作。即使您为 toast 设置了较长的延迟超时时间，键盘和辅助技术用户也可能会发现很难及时到达 toast 以采取行动（因为 toast 在显示时没有获得焦点）。如果您绝对必须有进一步的控制，我们建议使用带有 <code>autohide: false</code> 的 toast。</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">用法</div></header>
+        <div class="card-body">
+          <p>通过 JavaScript 初始化 toast：</p>
+          <pre>var toastElList = Array.prototype.slice.call(document.querySelectorAll('.toast'))
+var toastList = toastElList.map(function (toastEl) {
+  return new bootstrap.Toast(toastEl, option)
+})</pre>
+
+          <h6>触发器</h6>
+          <p>可以使用 toast 中按钮上的 <code>data</code> 属性来实现解除，如下所示：</p>
+          <pre>&lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;</pre>
+
+          <p>或使用 <code>data-bs-target</code> 在 toast 外部的按钮上，如下所示：</p>
+          <pre>&lt;button type="button" class="btn-close" data-bs-dismiss="toast" data-bs-target="#my-toast" aria-label="Close"&gt;&lt;/button&gt;</pre>
+
+          <h6>选项</h6>
+          <p>选项可以通过数据属性或 JavaScript 传递。对于数据属性，将选项名称附加到 <code>data-bs-</code>，如 <code>data-bs-animation=""</code>。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width: 100px;">名称</th>
+                <th style="width: 100px;">类型</th>
+                <th style="width: 50px;">默认值</th>
+                <th>说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>animation</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>对 toast 应用 CSS 淡入淡出过渡</td>
+              </tr>
+              <tr>
+                <td><code>autohide</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>自动隐藏 toast</td>
+              </tr>
+              <tr>
+                <td><code>delay</code></td>
+                <td>number</td>
+                <td>
+                  <code>5000</code>
+                </td>
+                <td>延迟隐藏 toast (ms)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h6>方法</h6>
+          <div class="callout callout-danger mb-3">
+            <strong>异步方法和转换</strong>
+            <p>所有 API 方法都是异步的并开始一个转换。他们在转换开始但在结束之前立即返回给调用者。此外，过渡组件上的方法调用将被忽略。</p>
+          </div>
+
+          <p><strong>show</strong></p>
+          <p>显示元素的 toast。在 toast 实际显示之前（即在 <code>shown.bs.toast</code> 事件发生之前）返回给调用者。你必须手动调用这个方法，而不是你的 toast 不会显示。</p>
+          <pre>toast.show()</pre>
+
+          <p><strong>hide</strong></p>
+          <p>隐藏元素的 toast。在 toast 实际被隐藏之前（即在 <code>hidden.bs.toast</code> 事件发生之前）返回给调用者。如果您将自动隐藏设置为 <code>false</code>，则必须手动调用此方法。</p>
+          <pre>toast.hide()</pre>
+
+          <p><strong>dispose</strong></p>
+          <p>隐藏元素的 toast。您的 toast 将保留在 DOM 上，但不会再显示。</p>
+          <pre>toast.dispose()</pre>
+
+          <p><strong>getInstance</strong></p>
+          <p>允许您获取与 DOM 元素关联的 toast 实例的静态方法</p>
+          <pre>var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getInstance(myToastEl) // Returns a Bootstrap toast instance</pre>
+
+          <p><strong>getOrCreateInstance</strong></p>
+          <p>静态方法，允许您获取与 DOM 元素关联的 toast 实例，或创建一个新实例以防它未初始化</p>
+          <pre>var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootstrap toast instance</pre>
+
+          <h6>事件</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width: 150px;">时间类型</th>
+                <th>说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>show.bs.toast</code></td>
+                <td>此事件在调用 <code>show</code> 实例方法时立即触发。</td>
+              </tr>
+              <tr>
+                <td><code>shown.bs.toast</code></td>
+                <td>当 toast 对用户可见时触发此事件。</td>
+              </tr>
+              <tr>
+                <td><code>hide.bs.toast</code></td>
+                <td>当调用 <code>hide</code> 实例方法时，会立即触发此事件。</td>
+              </tr>
+              <tr>
+                <td><code>hidden.bs.toast</code></td>
+                <td>当 toast 完成对用户隐藏时触发此事件。</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre>var myToastEl = document.getElementById('myToast')
+myToastEl.addEventListener('hidden.bs.toast', function () {
+  // do something...
+})</pre>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript">
+// 因为是演示，这里默认直接对toast显示
+$.each($(".toast").not('#liveToast'), function (a, v) {
+    var b = new bootstrap.Toast(v, {
+        autohide: !1
+    });
+
+    b.show();
+})
+
+// 点击展示js
+var toastTrigger = document.getElementById('liveToastBtn')
+var toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+    toastTrigger.addEventListener('click', function () {
+        var toast = new bootstrap.Toast(toastLiveExample)
+
+        toast.show()
+    })
+}
+
+// toast位置select选择问题
+a = document.getElementById('toastPlacement'),
+a && document.getElementById('selectToastPlacement').addEventListener('change', function() {
+    a.dataset.originalClass || (a.dataset.originalClass = a.className),
+    a.className = a.dataset.originalClass + ' ' + this.value
+});
+</script>
+</body>
+</html>

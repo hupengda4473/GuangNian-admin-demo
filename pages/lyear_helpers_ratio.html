@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>比例 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">比例</div></header>
+        <div class="card-body">
+
+          <p>使用生成的伪元素使元素保持您选择的纵横比。 非常适合根据父项的宽度响应式处理视频或幻灯片嵌入。</p>
+
+          <h6>关于</h6>
+          <p>使用比率助手来管理外部内容的纵横比，例如 <code>&lt;iframe&gt;</code>s、<code>&lt;embed&gt;</code>s、<code>&lt;video&gt;</code>s 和 <code>&lt;object&gt;</code>s。 这些助手也可以用于任何标准的 HTML 子元素（例如，<code>&lt;div&gt;</code> 或 <code>&lt;img&gt;</code>）。 样式从父 <code>.ratio</code> 类直接应用到子类。</p>
+
+          <p>纵横比在 Sass 映射中声明并通过 CSS 变量包含在每个类中，这也允许自定义纵横比。</p>
+
+          <div class="callout callout-warning mb-3">专家提示！ 您的 <code>&lt;iframe&gt;</code> 上不需要 <code>frameborder="0"</code>，因为我们会在 Reboot 中为您覆盖它。</div>
+
+          <h6>示例</h6>
+          <p>使用 <code>.ratio</code> 和纵横比类将任何嵌入（如 <code>&lt;iframe&gt;</code>）包装在父元素中。 由于我们的通用选择器 <code>.ratio > *</code>，直接子元素会自动调整大小。</p>
+          <div class="border-example">
+            <div class="ratio ratio-16x9">
+              <iframe src='https://player.youku.com/embed/XNDkxMjY3MTg0MA==' frameborder=0 'allowfullscreen'></iframe>
+            </div>
+          </div>
+          <pre>&lt;div class="ratio ratio-16x9"&gt;
+  &lt;iframe src='https://player.youku.com/embed/XNDkxMjY3MTg0MA==' frameborder=0 'allowfullscreen'&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+
+          <h6>纵横比</h6>
+          <p>可以使用修饰符类自定义纵横比。 默认情况下，提供以下比率类：</p>
+          <div class="border-example border-example-ratios">
+            <div class="ratio ratio-1x1">
+              <div>1x1</div>
+            </div>
+            <div class="ratio ratio-4x3">
+              <div>4x3</div>
+            </div>
+            <div class="ratio ratio-16x9">
+              <div>16x9</div>
+            </div>
+            <div class="ratio ratio-21x9">
+              <div>21x9</div>
+            </div>
+          </div>
+          <pre>&lt;div class="ratio ratio-1x1"&gt;
+  &lt;div&gt;1x1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-4x3"&gt;
+  &lt;div&gt;4x3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-16x9"&gt;
+  &lt;div&gt;16x9&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-21x9"&gt;
+  &lt;div&gt;21x9&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>自定义比率</h6>
+          <p>每个 <code>.ratio-*</code> 类在选择器中都包含一个 CSS 自定义属性（或 CSS 变量）。 您可以覆盖此 CSS 变量，通过您自己的一些快速计算来动态创建自定义纵横比。</p>
+
+          <p>例如，要创建 2x1 纵横比，请在 <code>.ratio</code> 上设置 <code>--bs-aspect-ratio: 50%</code>。</p>
+          <div class="border-example border-example-ratios">
+            <div class="ratio" style="--bs-aspect-ratio: 50%;">
+              <div>2x1</div>
+            </div>
+          </div>
+          <pre>&lt;div class="ratio" style="--bs-aspect-ratio: 50%;"&gt;
+  &lt;div&gt;2x1&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>这个 CSS 变量可以很容易地跨断点修改纵横比。 以下是开始的 4x3，但在中断点处更改为自定义 2x1。</p>
+          <pre>.ratio-4x3 {
+  @include media-breakpoint-up(md) {
+    --bs-aspect-ratio: 50%; // 2x1
+  }
+}</pre>
+          <div class="border-example border-example-ratios">
+            <div class="ratio ratio-4x3">
+              <div>4x3, then 2x1</div>
+            </div>
+          </div>
+          <pre>&lt;div class="ratio ratio-4x3"&gt;
+  &lt;div&gt;4x3, then 2x1&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

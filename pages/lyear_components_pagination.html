@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>分页 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">分页</div></header>
+        <div class="card-body">
+
+          <p>分页（pagination）是用于指示一系列相关的内容存在于多个页面中的组件。本文档和示例用于讲解该分页（pagination）组件。</p>
+          <h6>概述</h6>
+          <p>我们让分页（pagination）占据了一大块区域来放置相互关联的链接，这让链接更醒目并且易于扩充，除了这些好处，还为链接提供了较大的点击区域。分页（Pagination）是利用 HTML 的列表元素构建的，因此屏幕阅读器可以识别并读出链接的数量。并且列表元素外面还用 <code>&lt;nav&gt;</code> 元素进行了包裹，以便让屏幕阅读器和其他辅助技术能够将其识别为导航区域。</p>
+          <p>此外，由于页面上可能会有多个这样的导航区域，因此建议为 <code>&lt;nav&gt;</code> 设置一个用于描述其用途的 <code>aria-label</code> 属性。例如，如果分页（pagination）组件用于链接一组搜索结果，则设置 <code>aria-label=&quot;Search results pages&quot;</code> 比较合适。</p>
+          <div class="border-example">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">上一页</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="Page navigation example"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;上一页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;下一页&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+          <h6>使用图标</h6>
+          <p>想用图标或符号来代替某些分页链接的文字吗？请确保使用 <code>aria</code> 属性来为屏幕阅读器提供适当的支持。</p>
+          <div class="border-example">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="Page navigation example"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#" aria-label="Previous"&gt;
+        &lt;span aria-hidden="true"&gt;&laquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#" aria-label="Next"&gt;
+        &lt;span aria-hidden="true"&gt;&raquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+          <h6>禁用和激活状态</h6>
+          <p>可根据不同情况对分页链接（pagination links）进行自定义。使用 <code>.disabled</code> 来显示不可点击的链接；使用 <code>.active</code> 来表示当前页面。</p>
+          <p>虽然 <code>.disabled</code> 类使用 <code>pointer-events: none</code> 属性来 <em>尝试</em> 封印 <code>&lt;a&gt;</code> 元素的链接功能，但是该 CSS 属性并未标准化，并且对键盘导航不起作用。因此，你应该为被禁用的链接添加 <code>tabindex=&quot;-1&quot;</code> 属性，并自己编写 JavaScript 代码来完全封印其功能。</p>
+          <div class="border-example">
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <a class="page-link">上一页</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">下一页</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="..."&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item disabled"&gt;
+      &lt;a class="page-link"&gt;上一页&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active" aria-current="page"&gt;
+      &lt;a class="page-link" href="#"&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#"&gt;下一页&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+          <p>你可以通过将激活（active）或禁用（disabled）的链接替换为 <code>&lt;span&gt;</code> 标签，或者如果是 上一页/下一页 箭头的话，可以去掉 <code>&lt;a&gt;</code> 标签,从而删除该链接对单击功能的支持并防止获得键盘焦点，同时还能保留需要的样式。</p>
+          <div class="border-example">
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <span class="page-link">上一页</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">下一页</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="..."&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item disabled"&gt;
+      &lt;span class="page-link"&gt;上一页&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active" aria-current="page"&gt;
+      &lt;span class="page-link"&gt;2&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#"&gt;下一页&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+          <h6>尺寸</h6>
+          <p>喜欢大的还是小的分页？通过添加 <code>.pagination-lg</code> 或 <code>.pagination-sm</code> 可以设置其尺寸。</p>
+          <div class="border-example">
+            <nav aria-label="...">
+              <ul class="pagination pagination-lg">
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">1</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="..."&gt;
+  &lt;ul class="pagination pagination-lg"&gt;
+    &lt;li class="page-item active" aria-current="page"&gt;
+      &lt;span class="page-link"&gt;1&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+          <div class="border-example">
+            <nav aria-label="...">
+              <ul class="pagination pagination-sm">
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">1</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="..."&gt;
+  &lt;ul class="pagination pagination-sm"&gt;
+    &lt;li class="page-item active" aria-current="page"&gt;
+      &lt;span class="page-link"&gt;1&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+          <h6>对齐</h6>
+          <p>利用flexbox 工具类可以更改分页组件的对齐方式。</p>
+          <div class="border-example">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link">上一页</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">下一页</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="Page navigation example"&gt;
+  &lt;ul class="pagination justify-content-center"&gt;
+    &lt;li class="page-item disabled"&gt;
+      &lt;a class="page-link"&gt;上一页&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#"&gt;下一页&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+          <div class="border-example">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                  <a class="page-link">上一页</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">下一页</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <pre>&lt;nav aria-label="Page navigation example"&gt;
+  &lt;ul class="pagination justify-content-end"&gt;
+    &lt;li class="page-item disabled"&gt;
+      &lt;a class="page-link"&gt;上一页&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#"&gt;下一页&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

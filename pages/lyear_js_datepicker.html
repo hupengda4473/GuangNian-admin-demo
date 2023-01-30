@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>日期选取器 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<!--日期选择器css-->
+<link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+<!--时间日期选择器css-->
+<link rel="stylesheet" type="text/css" href="js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">日期选取器</div></header>
+        <div class="card-body">
+
+          <p>插件使用Bootstrap-datepicker 1.9，插件只有中文简体和繁体的配置文件，如需其他语言的请自行下载，github地址：<a href="https://github.com/uxsolutions/bootstrap-datepicker" target="_blank">https://github.com/uxsolutions/bootstrap-datepicker</a>，<a href="https://bootstrap-datepicker.readthedocs.io/en/latest/" target="_blank">点击查看文档</a>。</p>
+          <p>给需要用到日期选择器的输入框增加 <code>data-provide="datepicker"</code> 。</p>
+          <div class="mb-3">
+            <input type="text" class="form-control" data-provide="datepicker" data-autoclose="true" />
+          </div>
+          <p><code>data-date-highlight="true"</code> 则可以让日期选择器凸显当前日期。</p>
+          <div class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" data-provide="datepicker" data-today-highlight="true" data-autoclose="false" />
+              <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+            </div>
+          </div>
+
+          <p><code>data-multidate="true"</code> 指定可以选择多个日期。</p>
+          <div class="mb-3">
+            <input type="text" class="form-control" data-provide="datepicker" data-multidate="true" data-autoclose="false" />
+          </div>
+
+          <h6>日期范围选取</h6>
+          <p>给 <code>.input-group</code> 的元素加上 <code>data-provide="datepicker"</code>。</p>
+          <div class="mb-3">
+            <div class="input-group" data-provide="datepicker">
+              <span class="input-group-text">从</span>
+              <input type="text" class="form-control">
+              <span class="input-group-text">至</span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+
+          <h6>单独选择年份</h6>
+          <p class="text-danger">因为和通用初始化有些不一样，这里单独对此做初始化。</p>
+          <div class="mb-3">
+            <input class="form-control" type="text" id="example-datepicker-year" name="example-datepicker-year" data-date-format="yyyy" placeholder="yyyy">
+          </div>
+
+          <p class="m-t-15">单独选择月份</p>
+          <div class="mb-3">
+            <input class="form-control" type="text" id="example-datepicker-month" name="example-datepicker-month" data-date-format="mm" placeholder="mm">
+          </div>
+
+          <p>单独选择天就不演示了，<code>data-date-format="dd"</code>即可。</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">时间日期选择器</div></header>
+        <div class="card-body">
+
+          <p>插件使用bootstrap-datetimepicker 4.17.47，是bootstrap-datepicker项目的一个分支，主要新增了时间的选择，github地址：<a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">http://eonasdan.github.io/bootstrap-datetimepicker/</a>。</p>
+          <p>给需要用到时间日期选择器的输入框，增加 <code>data-provide="datetimepicker"</code>，可修改 <code>data-format</code> 来实现单独使用时间选择。</p>
+          <div class="mb-3">
+            <input class="form-control" type="text" data-provide="datetimepicker" name="datetime" placeholder="请选择具体时间" value="" data-side-by-side="true" data-format="YYYY-MM-DD HH:mm:ss" />
+          </div>
+          <div class="callout callout-info mb-3">
+            使用bootstrap-datetimepicker插件，需要moment.min.js支持。
+          </div>
+
+          <p>只选择使用时分秒，设置 <code>data-format="LTS"</code> 即可。</p>
+          <div class="mb-3">
+            <input class="form-control" type="text" data-provide="datetimepicker" name="datetime" placeholder="请选择具体时间" value="" data-side-by-side="true" data-format="LTS" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!--日期选择器js-->
+<script type="text/javascript" src="../js/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+
+<!--时间日期选择器js-->
+<script type="text/javascript" src="../js/momentjs/moment.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/momentjs/locale/zh-cn.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript">
+    // 单独选择年份
+	jQuery('#example-datepicker-year').each(function() {
+	    var $input = jQuery(this);
+		$input.datepicker({
+            startView: 'decade',
+            endView: 'decade',
+            maxViewMode: 'decade',
+            minViewMode: 'decade',
+			weekStart: 1,
+			autoclose: true,
+			todayHighlight: true,
+			language: 'zh-CN',
+		});
+	});
+    // 单独选择月份
+	jQuery('#example-datepicker-month').each(function() {
+	    var $input = jQuery(this);
+		$input.datepicker({
+            startView: 'month',
+            endView: 'month',
+            maxViewMode: 'year',
+            minViewMode: 'year',
+			weekStart: 1,
+			autoclose: true,
+			todayHighlight: true,
+			language: 'zh-CN',
+		});
+	});
+</script>
+</body>
+</html>

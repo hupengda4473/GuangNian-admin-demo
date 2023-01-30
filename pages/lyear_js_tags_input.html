@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>标签插件 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<!--引入标签插件css-->
+<link type="text/css" rel="stylesheet" href="js/jquery-tagsinput/jquery.tagsinput.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">标签插件</div></header>
+        <div class="card-body">
+
+          <p>本来找到一个bootstrap-tagsinput的插件，可以很久没有更新了，还是基于2.3的版本，只能放弃。</p>
+          <p>插件使用jquery-tagsinput 1.3.6，github地址：<a href="https://github.com/xoxco/jQuery-Tags-Input" target="_blank">https://github.com/xoxco/jQuery-Tags-Input</a></p>
+          <p>可以用 <code>data-height</code> 设置输入框的高度，默认是100px，这里示例初始化默认为100%，方便输入更多的值。</p>
+          <input class="form-control js-tags-input" type="text" id="example-tags" name="tags" placeholder="请输入标签" value="光年,笔下光年">
+          <pre class="mt-3">$(selector).tagsInput({
+   'autocomplete_url': url_to_autocomplete_api,
+   'autocomplete': { option: value, option: value},
+   'height':'100px',
+   'width':'300px',
+   'interactive':true,
+   'defaultText':'add a tag',
+   'onAddTag':callback_function,
+   'onRemoveTag':callback_function,
+   'onChange' : callback_function,
+   'delimiter': [',',';'],   // Or a string with a single delimiter. Ex: ';'
+   'removeWithBackspace' : true,
+   'minChars' : 0,
+   'maxChars' : 0, // if not provided there is no limit
+   'placeholderColor' : '#666666'
+});</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!--引入标签插件js-->
+<script type="text/javascript" src="../js/jquery-tagsinput/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript">
+$('.js-tags-input').each(function() {
+    var $this = $(this);
+    $this.tagsInput({
+		height: $this.data('height') ? $this.data('height') : '100%',
+		width: '100%',
+		defaultText: $this.attr("placeholder"),
+		removeWithBackspace: true,
+		delimiter: [',']
+	});
+});
+</script>
+</body>
+</html>

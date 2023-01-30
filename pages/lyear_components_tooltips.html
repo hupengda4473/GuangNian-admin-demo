@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>工具提示 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">工具提示</div></header>
+        <div class="card-body">
+
+          <p>使用工具提示插件时要知道的事情：</p>
+          <ul>
+            <li>工具提示依赖第三方库 Popper 进行定位。您必须在 <code>bootstrap.js</code> 之前包含 <code>popper.min.js</code> 或使用包含 Popper 的 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> 以使工具提示起作用！</li>
+            <li>出于性能原因，工具提示是可选的，因此您必须自己初始化它们。</li>
+            <li>从不显示具有零长度标题的工具提示。</li>
+            <li>指定 <code>container: 'body'</code> 以避免在更复杂的组件（如我们的输入组、按钮组等）中出现渲染问题。</li>
+            <li>在隐藏元素上触发工具提示将不起作用。</li>
+            <li><code>.disabled</code> 或 <code>disabled</code> 元素的工具提示必须在包装元素上触发。</li>
+            <li>当从跨越多行的超链接触发时，工具提示将居中。使用 <code>white-space: nowrap;</code> 在您的 <code>&lt;a&gt;</code> 上以避免这种行为。</li>
+            <li>在从 DOM 中删除相应元素之前，必须隐藏工具提示。</li>
+            <li>由于阴影 DOM 中的元素，可以触发工具提示。</li>
+          </ul>
+          <h6>例子</h6>
+          <p>将鼠标悬停在下面的链接上以查看工具提示：</p>
+          <div class="border-example mb-3">
+            <p><a href="#" data-bs-toggle="tooltip" title="字处道">杨素</a> 知隋主最惧内，最听妇人言的，每每乘内宴时，称扬晋王贤孝，挑拨 <a href="#" data-bs-toggle="tooltip" title="独孤伽罗，字伽罗，鲜卑族。">独孤皇后</a>。妇人心肠褊窄浅露，便把 <a href="#" data-bs-toggle="tooltip" title="隋炀帝杨广，本名杨英">晋王</a> 好，太子歹，一齐搬将出来。杨素又加上些冷言热语。皇后知他是外廷最信任的，便托他赞成废立，暗地将金宝送来嘱他。杨素初时，还望皇后助他，这时皇后反要他相帮，知事必成。于是不时在 <a href="#" data-bs-toggle="tooltip" title="隋文帝杨坚，字那罗延">隋主</a> 前，搬斗是非；又日令宦官官妾，乘隙进谗，冷一句，热一句，说他不好的去处。</p>
+          </div>
+          <p>将鼠标悬停在下面的按钮上可查看四个工具提示方向：顶部、右侧、底部和左侧。 在 RTL 中使用 Bootstrap 时会镜像方向。</p>
+          <div class="border-example">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="顶部的工具提示">
+              顶部的工具提示
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="右侧的工具提示">
+              右侧的工具提示
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="底部的工具提示">
+              底部的工具提示
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="左侧的工具提示">
+              左侧的工具提示
+            </button>
+          </div>
+          <pre>&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="顶部的工具提示"&gt;
+  顶部的工具提示
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="右侧的工具提示"&gt;
+  右侧的工具提示
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="底部的工具提示"&gt;
+  底部的工具提示
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="左侧的工具提示"&gt;
+  左侧的工具提示
+&lt;/button&gt;</pre>
+
+          <p>并添加了自定义 HTML：</p>
+          <pre>&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"&gt;
+  Tooltip with HTML
+&lt;/button&gt;</pre>
+
+          <p>使用 SVG：</p>
+          <div class="border-example">
+            <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="使用 SVG">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+                <rect width="100%" height="100%" fill="#563d7c"></rect>
+                <circle cx="50" cy="50" r="30" fill="#007bff"></circle>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header"><div class="card-title">用法</div></div>
+      <div class="card-body">
+
+        <p>工具提示插件按需生成内容和标记，默认情况下将工具提示放置在其触发元素之后。</p>
+        <p>通过 JavaScript 触发工具提示：</p>
+        <pre>var exampleEl = document.getElementById('example')
+var tooltip = new bootstrap.Tooltip(exampleEl, options)</pre>
+        <div class="callout callout-warning mb-3">
+          <strong>溢出自动和滚动</strong>
+          <p>当父容器溢出时，工具提示位置尝试自动更改：<code>overflow: auto</code> 或者 <code>overflow: scroll</code> 像我们的 <code>.table-responsive</code> 一样滚动，但仍保持原始位置的定位。 要解决此问题，请将边界选项（用于使用 <code>popperConfig</code> 选项的翻转修饰符）设置为任何 <code>HTMLElement</code> 以覆盖默认值 <code>'clippingParents'</code>，例如 <code>document.body</code>：</p>
+          <pre>var exampleEl = document.getElementById('example')
+var tooltip = new bootstrap.Tooltip(exampleEl, {
+  boundary: document.body // or document.querySelector('#boundary')
+})</pre>
+        </div>
+
+        <h6>标记</h6>
+        <p>工具提示所需的标记只是您希望拥有工具提示的 HTML 元素上的数据属性和标题。 生成的工具提示标记相当简单，尽管它确实需要一个位置（默认情况下，由插件设置为顶部）。</p>
+
+        <div class="callout callout-warning mb-3">
+          <strong>使工具提示适用于键盘和辅助技术用户</strong>
+          <p>您应该只将工具提示添加到传统上可通过键盘聚焦和交互的 HTML 元素（例如链接或表单控件）。 尽管可以通过添加 <code>tabindex="0"</code> 属性使任意 HTML 元素（例如 <code>&lt;span&gt;</code>s）成为焦点，但这会在非交互式元素上为键盘用户添加可能令人讨厌和令人困惑的制表位，目前大多数辅助技术都会这样做 在这种情况下不宣布工具提示。 此外，不要仅仅依靠悬停作为工具提示的触发器，因为这会使键盘用户无法触发工具提示。</p>
+        </div>
+        <pre>&lt;!-- HTML to write --&gt;
+&lt;a href="#" data-bs-toggle="tooltip" title="Some tooltip text!"&gt;Hover over me&lt;/a&gt;
+
+&lt;!-- Generated markup by the plugin --&gt;
+&lt;div class="tooltip bs-tooltip-top" role="tooltip"&gt;
+  &lt;div class="tooltip-arrow"&gt;&lt;/div&gt;
+  &lt;div class="tooltip-inner"&gt;
+    Some tooltip text!
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <h6>禁用元素</h6>
+        <p>具有 <code>disabled</code> 属性的元素不是交互式的，这意味着用户无法聚焦、悬停或单击它们来触发工具提示（或弹出框）。 作为一种解决方法，您需要从包装器 <code>&lt;div&gt;</code> 或 <code>&lt;span&gt;</code> 触发工具提示，理想情况下使用 <code>tabindex="0"</code> 使键盘可聚焦。</p>
+
+        <h6>选项</h6>
+        <p>选项可以通过数据属性或 <code>JavaScript</code> 传递。 对于数据属性，将选项名称附加到 <code>data-bs-</code>，如 <code>data-bs-animation=""</code>。 通过数据属性传递选项时，请确保将选项名称的大小写类型从驼峰式大小写更改为短横线隔开式。 例如，不要使用 <code>data-bs-customClass="beautifier"</code>，而是使用 <code>data-bs-custom-class="beautifier"</code>。</p>
+
+        <div class="callout callout-warning mb-3">请注意，出于安全原因，无法使用数据属性提供 <code>sanitize</code>、<code>sanitizeFn</code> 和 <code>allowList</code> 选项。</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 100px;">名称</th>
+              <th style="width: 100px;">类型</th>
+              <th style="width: 50px;">默认值</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>animation</code></td>
+              <td>boolean</td>
+              <td><code>true</code></td>
+              <td>对工具提示应用 CSS 淡入淡出过渡</td>
+            </tr>
+            <tr>
+              <td><code>container</code></td>
+              <td>string | element | false</td>
+              <td><code>false</code></td>
+              <td>
+                <p>将工具提示附加到特定元素。 例子： <code>container: 'body'</code>。此选项特别有用，因为它允许您将工具提示定位在触发元素附近的文档流中 - 这将防止工具提示在窗口调整大小期间从触发元素浮动。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>delay</code></td>
+              <td>number | object</td>
+              <td><code>0</code></td>
+              <td>
+                <p>延迟显示和隐藏工具提示 (ms) - 不适用于手动触发类型</p>
+                <p>如果提供了一个数字，延迟将应用于隐藏/显示</p>
+                <p>对象结构为：<code>delay: { "show": 500, "hide": 100 }</code></p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>html</code></td>
+              <td>boolean</td>
+              <td><code>false</code></td>
+              <td>
+                <p>允许在工具提示中使用HTML。</p>
+                <p>如果为 <code>true</code>，则在工具提示的 <code>title</code> 将在工具提示中呈现。如果为 <code>false</code>，将使用 <code>innerText</code> 属性将内容插入DOM。</p>
+                <p>如果担心XSS攻击，请使用文本。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>placement</code></td>
+              <td>string | function</td>
+              <td><code>'top'</code></td>
+              <td>
+                <p>如何定位工具提示 - 自动 | 顶部 | 底部 | 左侧 | 右侧。<br>当 <code>auto</code> 被指定时，它会动态地重新定位工具提示。</p>
+                <p>当一个函数用于确定位置时，它会以工具提示 DOM 节点作为其第一个参数，触发元素 DOM 节点作为其第二个参数来调用。 <code>this</code> 上下文设置为工具提示实例。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>selector</code></td>
+              <td>string | false</td>
+              <td><code>false</code></td>
+              <td>如果提供了选择器，则工具提示对象将被委托给指定的目标。 实际上，这也用于将工具提示应用于动态添加的 DOM 元素（<code>jQuery.on</code> 支持）。请参阅 <a href="https://github.com/twbs/bootstrap/issues/4215" target="_blank">这个</a> 和 <a href="https://codepen.io/team/bootstrap /pen/zYBXGwX?editors=1010" target="_blank">一个信息丰富的例子</a>。</td>
+            </tr>
+            <tr>
+              <td><code>template</code></td>
+              <td>string</td>
+              <td><code>'&lt;div class="tooltip" role="tooltip"&gt;&lt;div class="tooltip-arrow"&gt;&lt;/div&gt;&lt;div class="tooltip-inner"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
+              <td>
+                <p>创建工具提示时要使用的基本HTML。</p>
+                <p>工具提示的 <code>title</code> 将被注入 <code>.tooltip-inner</code>。</p>
+                <p><code>.tooltip-arrow</code> 将成为工具提示的箭头。</p>
+                <p>最外层的包装元素应该有 <code>.tooltip</code> 类和 <code>role="tooltip"</code>。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>title</code></td>
+              <td>string | element | function</td>
+              <td><code>''</code></td>
+              <td>
+                <p>如果<code>title</code>属性不存在，则为默认标题值。</p>
+                <p>如果给定了一个函数，将调用它，并将其<code>this</code>引用设置为工具提示所附加的元素。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>trigger</code></td>
+              <td>string</td>
+              <td><code>'hover focus'</code></td>
+              <td>
+                <p>工具提示是如何触发的 - 点击 | 悬停 | 焦点 | 手动的。 您可以传递多个触发器； 用空格分隔它们。</p>
+                <p><code>'manual'</code> 表示工具提示将通过 <code>.show()</code>、<code>.hide()</code> 和 <code>.toggle( )</code> 方法； 此值不能与任何其他触发器组合。</p>
+                <p><code>'hover'</code> 本身将导致无法通过键盘触发的工具提示，并且只有在存在为键盘用户传达相同信息的替代方法时才应使用。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>fallbackPlacements</code></td>
+              <td>array</td>
+              <td><code>['top', 'right', 'bottom', 'left']</code></td>
+              <td>通过提供数组中的展示位置列表（按优先顺序）来定义后备展示位置。 有关更多信息，请参阅 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements" target="_blank">行为文档</a></td>
+            </tr>
+            <tr>
+              <td><code>boundary</code></td>
+              <td>string | element</td>
+              <td><code>'clippingParents'</code></td>
+              <td>工具提示的溢出约束边界（仅适用于 Popper 的 <code>preventOverflow</code> 修饰符）。默认情况下它是 <code>'clippingParents'</code> 并且可以接受 HTMLElement 引用（仅通过 JavaScript）。欲了解更多信息，请参阅 Popper 的 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary" target="_blank">检测溢出文档</a>.</td>
+            </tr>
+            <tr>
+              <td><code>customClass</code></td>
+              <td>string | function</td>
+              <td><code>''</code></td>
+              <td>
+                <p>显示时将类添加到工具提示。 请注意，除了模板中指定的任何类之外，还将添加这些类。 要添加多个类，请用空格分隔它们：<code>'class-1 class-2'</code>。</p>
+                <p>您还可以传递一个函数，该函数应返回包含其他类名的单个字符串。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>sanitize</code></td>
+              <td>boolean</td>
+              <td><code>true</code></td>
+              <td>启用或禁用清理。 如果激活 <code>'template'</code> 和 <code>'title'</code> 选项将被清理。 请参阅我们的 JavaScript 文档中的 sanitizer 部分。</td>
+            </tr>
+            <tr>
+              <td><code>allowList</code></td>
+              <td>object</td>
+              <td>Default value</td>
+              <td>包含允许的属性和标签的对象</td>
+            </tr>
+            <tr>
+              <td><code>sanitizeFn</code></td>
+              <td>null | function</td>
+              <td><code>null</code></td>
+              <td>在这里，您可以提供自己的 sanitize 方法。 如果您更喜欢使用专用库来执行清理，这会很有用。</td>
+            </tr>
+            <tr>
+              <td><code>offset</code></td>
+              <td>array | string | function</td>
+              <td><code>[0, 0]</code></td>
+              <td>
+                <p>工具提示相对于其目标的偏移量。 您可以使用逗号分隔值在数据属性中传递字符串，例如：<code>data-bs-offset="10,20"</code>。</p>
+                <p>当一个函数用于确定偏移量时，调用它时会使用一个包含 popper 位置、引用和 popper rects 作为其第一个参数的对象。 触发元素 DOM 节点作为第二个参数传递。 该函数必须返回一个包含两个数字的数组：<code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1" target="_blank">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1" target="_blank">distance</a>]</code>。</p>
+                <p>有关更多信息，请参阅 Popper 的 <a href="https://popper.js.org/docs/v2/modifiers/offset/#options" target="_blank">offset 文档</a>。</p>
+              </td>
+            </tr>
+            <tr>
+              <td><code>popperConfig</code></td>
+              <td>null | object | function</td>
+              <td><code>null</code></td>
+              <td>
+                <p>更改 Bootstrap 的默认 Popper 配置, 参考 <a href="https://popper.js.org/docs/v2/constructors/#options" target="_blank">Popper 的配置</a>。</p>
+                <p>当一个函数用于创建 Popper 配置时，它会被一个包含 Bootstrap 的默认 Popper 配置的对象调用。 它可以帮助您使用默认设置并将其与您自己的配置合并。 该函数必须为 Popper 返回一个配置对象。</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout callout-info mb-3">
+          <strong>单个工具提示的数据属性</strong>
+          <p>如上所述，可以通过使用数据属性来指定单个工具提示的选项。</p>
+        </div>
+        <p>使用带有 <code>popperConfig</code> 的函数</p>
+        <pre>var tooltip = new bootstrap.Tooltip(element, {
+  popperConfig: function (defaultBsPopperConfig) {
+    // var newPopperConfig = {...}
+    // use defaultBsPopperConfig if needed...
+    // return newPopperConfig
+  }
+})</pre>
+        <h6>方法</h6>
+        <div class="callout callout-danger mb-3">
+          <strong>异步方法和转换</strong>
+          <p>所有 API 方法都是异步的并开始一个转换。 他们在转换开始但在结束之前立即返回给调用者。 此外，过渡组件上的方法调用将被忽略。</p>
+        </div>
+
+        <h6>show</h6>
+        <p>显示元素的工具提示。在工具提示实际显示之前（即在 <code>shown.bs.tooltip</code> 事件发生之前）返回给调用者。这被认为是工具提示的“手动”触发。从不显示具有零长度标题的工具提示。</p>
+        <pre>tooltip.show()</pre>
+
+        <h6>hide</h6>
+        <p>隐藏元素的工具提示。 在工具提示实际被隐藏之前（即在 <code>hidden.bs.tooltip</code> 事件发生之前）返回给调用者。 这被认为是工具提示的“手动”触发。</p>
+        <pre>tooltip.hide()</pre>
+
+        <h6>toggle</h6>
+        <p>切换元素的工具提示。 在工具提示实际显示或隐藏之前返回给调用者（即在 <code>shown.bs.tooltip</code> 或 <code>hidden.bs.tooltip</code> 事件发生之前）。 这被认为是工具提示的“手动”触发。</p>
+        <pre>tooltip.toggle()</pre>
+
+        <h6>dispose</h6>
+        <p>隐藏和销毁元素的工具提示（删除 DOM 元素上存储的数据）。 使用委托（使用选择器选项创建）的工具提示不能在后代触发器元素上单独销毁。</p>
+        <pre>tooltip.dispose()</pre>
+
+        <h6>enable</h6>
+        <p>使元素的工具提示能够显示。 默认情况下启用工具提示。</p>
+        <pre>tooltip.enable()</pre>
+
+        <h6>disable</h6>
+        <p>移除显示元素工具提示的能力。 工具提示只有在重新启用后才能显示。</p>
+        <pre>tooltip.disable()</pre>
+
+        <h6>setContent</h6>
+        <p>提供一种在初始化后更改工具提示内容的方法。</p>
+        <pre>tooltip.setContent({ '.tooltip-inner': 'another title' })</pre>
+
+        <div class="callout callout-info mb-3"><code>setContent</code> 方法接受一个对象参数，其中每个属性键是弹出框模板中的有效字符串选择器，每个相关的属性值可以是 string | element | function | null。</div>
+
+        <h6>toggleEnabled</h6>
+        <p>切换显示或隐藏元素工具提示的能力。</p>
+        <pre>tooltip.toggleEnabled()</pre>
+
+        <h6>update</h6>
+        <p>更新元素工具提示的位置。</p>
+        <pre>tooltip.update()</pre>
+
+        <h6>getInstance</h6>
+        <p>允许您获取与 DOM 元素关联的工具提示实例的静态方法。</p>
+        <pre>var exampleTriggerEl = document.getElementById('example')
+var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance</pre>
+
+        <h6>getOrCreateInstance</h6>
+        <p>静态方法，允许您获取与 DOM 元素关联的工具提示实例，或者在未初始化的情况下创建一个新实例。</p>
+        <pre>var exampleTriggerEl = document.getElementById('example')
+var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance</pre>
+
+        <h6>事件</h6>
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 150px;">事件类型</th>
+              <th>描述</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>show.bs.tooltip</code></td>
+              <td>此事件在调用 <code>show</code> 实例方法时立即触发。</td>
+            </tr>
+            <tr>
+              <td><code>shown.bs.tooltip</code></td>
+              <td>当工具提示对用户可见时触发此事件（将等待 CSS 转换完成）。</td>
+            </tr>
+            <tr>
+              <td><code>hide.bs.tooltip</code></td>
+              <td>当调用 <code>hide</code> 实例方法时，会立即触发此事件。</td>
+            </tr>
+            <tr>
+              <td><code>hidden.bs.tooltip</code></td>
+              <td>当工具提示完成对用户隐藏时触发此事件（将等待 CSS 转换完成）。</td>
+            </tr>
+            <tr>
+              <td><code>inserted.bs.tooltip</code></td>
+              <td>当工具提示模板已添加到 DOM 时，此事件在 <code>show.bs.tooltip</code> 事件之后触发。</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre>var myTooltipEl = document.getElementById('myTooltip')
+var tooltip = new bootstrap.Tooltip(myTooltipEl)
+
+myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
+  // do something...
+})
+
+tooltip.hide()</pre>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>沟槽 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">沟槽</div></header>
+        <div class="card-body">
+
+          <div class="callout callout-danger mb-3">Gutter这个词实在想不到该怎么翻译比较合适，这里直接翻译成沟槽，凑合着看吧。</div>
+
+          <p>沟槽是列之间的内边距，用于响应式空间和对齐 Bootstrap 栅格系统中的内容。</p>
+
+          <h6>水平沟槽</h6>
+          <p><code>.gx-*</code> 类可用于控制水平边距宽度。如果也使用较大的沟槽以避免不必要的溢出，则可能需要调整 <code>.container</code> 或 <code>.container-fluid</code> 父级，使用匹配的内边距实用程序。例如，在以下示例中，我们使用 <code>.px-4</code> 增加了内边距：</p>
+
+          <div class="border-example">
+            <div class="container px-4">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container px-4"&gt;
+  &lt;div class="row gx-5"&gt;
+    &lt;div class="col"&gt;
+     &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>另一种解决方案是使用 <code>.overflow-hidden</code> 类在 <code>.row</code> 周围添加一个包装器：</p>
+          <div class="border-example">
+            <div class="container overflow-hidden">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container overflow-hidden"&gt;
+  &lt;div class="row gx-5"&gt;
+    &lt;div class="col"&gt;
+     &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>垂直沟槽</h6>
+          <p><code>.gy-*</code> 类可用于控制垂直沟槽宽度。与水平沟槽一样，垂直沟槽可能会导致页面末尾的 <code>.row</code> 下方出现一些溢出。如果发生这种情况，请使用 <code>.overflow-hidden</code> 类在 <code>.row</code> 周围添加一个包装器：</p>
+          <div class="border-example">
+            <div class="container overflow-hidden">
+              <div class="row gy-5">
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container overflow-hidden"&gt;
+  &lt;div class="row gy-5"&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>水平和垂直沟槽</h6>
+          <p><code>.g-*</code> 类可用于控制水平沟槽宽度，对于以下示例，我们使用较小的沟槽宽度，因此无需添加 <code>.overflow-hidden</code> 包装类。</p>
+          <div class="border-example">
+            <div class="container">
+              <div class="row g-2">
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 border bg-light">自定义列内边距</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row g-2"&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+      &lt;div class="p-3 border bg-light"&gt;自定义列内边距&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>行列沟槽</h6>
+          <p>沟槽类也可以添加到行列中。在以下示例中，我们使用响应式行列和响应式沟槽类。</p>
+          <div class="border-example">
+            <div class="container">
+              <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border bg-light">行列</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3"&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="p-3 border bg-light"&gt;行列&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>没有沟槽</h6>
+          <p>我们预定义的网格类中的列之间的沟槽可以使用 <code>.g-0</code> 删除。这将删除 <code>.row</code> 的负边距和所有直接子列的水平内边距。</p>
+          <p>需要边缘到边缘的设计？删除父 <code>.container</code> 或 <code>.container-fluid</code> 并将 <code>.mx-0</code> 添加到 <code>.row</code> 以防止溢出。</p>
+          <p>在实践中，它看起来是这样的。请注意，您可以继续将其与所有其他预定义的栅格类（包括列宽、响应层、重新排序等）一起使用。</p>
+          <div class="border-example-row">
+            <div class="row g-0">
+              <div class="col-sm-6 col-md-8">.col-sm-6 .col-md-8</div>
+              <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            </div>
+          </div>
+          <pre>&lt;div class="row g-0"&gt;
+  &lt;div class="col-sm-6 col-md-8"&gt;.col-sm-6 .col-md-8&lt;/div&gt;
+  &lt;div class="col-6 col-md-4"&gt;.col-6 .col-md-4&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

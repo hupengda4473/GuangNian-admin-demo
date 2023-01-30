@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>显示属性 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">显示属性</div></header>
+        <div class="card-body">
+
+          <p class="bd-lead">利用我们提供的 display 工具类可以快速改变组件的 display 属性等，并且支持响应式布局。还包括对一些常见值的支持，以及打印时用来控制 display 属性的一些额外工具类。</p>
+
+          <h6>工作原理</h6>
+          <p>利用我们所提供的支持响应式布局的 display 工具类来改变 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank"><code>display</code> 属性</a>。我们专门在 <code>display</code> 属性的所有可能取值当中选定了一个子集来实现我们 <code>display</code> 工具类。 将这些工具类做不同的组合从而可以实现你所需要的各种效果。</p>
+
+          <h6>Notation</h6>
+          <p>如果 display 属性相关的工具类名称中间没有与断点相关的缩写（即 sm、md、lg、xl 等）的话，则能够影响所有 <a href="/docs/layout/breakpoints/">断点</a>，即 <code>xs</code> 到 <code>xl</code>。这样设定是因为所有这种工具类都对 <code>min-width: 0;</code> 及以上尺寸起作用，因此不受媒体查询的限制。然而，其余针对断点的工具类就会包含断点的缩写。</p>
+          <p>如下所示，这些类遵循以下命名格式：</p>
+          <ul>
+            <li><code>.d-{value}</code> for <code>xs</code></li>
+            <li><code>.d-{breakpoint}-{value}</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>.</li>
+          </ul>
+          <p>其中，<em>value</em> 的取值可以是下面列出的任意一个：</p>
+          <ul>
+            <li><code>none</code></li>
+            <li><code>inline</code></li>
+            <li><code>inline-block</code></li>
+            <li><code>block</code></li>
+            <li><code>grid</code></li>
+            <li><code>table</code></li>
+            <li><code>table-cell</code></li>
+            <li><code>table-row</code></li>
+            <li><code>flex</code></li>
+            <li><code>inline-flex</code></li>
+          </ul>
+          <p>更改 Sass 源文件中的 <code>$displays</code> 变量的定义就可以改变 display 属性的取值范围（也就是上面的列表），当然别忘了重新编译 Sass 源码才能让修改起作用。</p>
+          <p>媒体查询所覆盖的屏幕宽度包括从给定的断点开始并延伸到 <em>更大</em> 的屏幕尺寸。例如，<code>.d-lg-none</code> 将在 <code>lg</code>、<code>xl</code> 和 <code>xxl</code> 屏幕尺寸下设置 <code>display: none;</code> 属性。</p>
+
+          <h6>示例</h6>
+          <div class="border-example">
+            <div class="d-inline p-2 bg-primary text-white">d-inline</div>
+            <div class="d-inline p-2 bg-dark text-white">d-inline</div>
+          </div>
+          <pre>&lt;div class="d-inline p-2 bg-primary text-white"&gt;d-inline&lt;/div&gt;
+&lt;div class="d-inline p-2 bg-dark text-white"&gt;d-inline&lt;/div&gt;</pre>
+          <div class="border-example">
+            <span class="d-block p-2 bg-primary text-white">d-block</span>
+            <span class="d-block p-2 bg-dark text-white">d-block</span>
+          </div>
+          <pre>&lt;span class="d-block p-2 bg-primary text-white"&gt;d-block&lt;/span&gt;
+&lt;span class="d-block p-2 bg-dark text-white"&gt;d-block&lt;/span&gt;</pre>
+
+          <h6>隐藏页面元素</h6>
+          <p>为了更快地采用移动设备优先的方式进行开发，请使用支持响应式布局的 display 工具类来针对设备显示和隐藏页面元素。避免为同一个网站创建多个完全不同的版本，而是应该根据屏幕尺寸隐藏某些页面元素。</p>
+          <p>如需隐藏某个页面元素，只需使用 <code>.d-none</code> 类即可，还可以使用支持响应式布局的 <code>.d-{sm,md,lg,xl,xxl}-none</code> 类。</p>
+          <p>如需在给定的屏幕尺寸范围内显示某个页面元素的话，可以将一个 <code>.d-*-none</code> 类和一个 <code>.d-*-*</code> 类联合使用，例如，<code>.d-none .d-md-block .d-xl-none .d-xxl-none</code> 的效果是：在中等尺寸（medium）和大尺寸（large）的屏幕上显示指定的页面元素，其余尺寸的屏幕上全部隐藏该页面元素。</p>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>屏幕尺寸</th>
+                <th>类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>在所有尺寸的屏幕上隐藏</td>
+                <td><code>.d-none</code></td>
+              </tr>
+              <tr>
+                <td>只在 xs 尺寸的屏幕上隐藏</td>
+                <td><code>.d-none .d-sm-block</code></td>
+              </tr>
+              <tr>
+                <td>只在 sm 尺寸的屏幕上隐藏</td>
+                <td><code>.d-sm-none .d-md-block</code></td>
+              </tr>
+              <tr>
+                <td>只在 md 尺寸的屏幕上隐藏</td>
+                <td><code>.d-md-none .d-lg-block</code></td>
+              </tr>
+              <tr>
+                <td>只在 lg 尺寸的屏幕上隐藏</td>
+                <td><code>.d-lg-none .d-xl-block</code></td>
+              </tr>
+              <tr>
+                <td>只在 xl 尺寸的屏幕上隐藏</td>
+                <td><code>.d-xl-none .d-xxl-block</code></td>
+              </tr>
+              <tr>
+                <td>只在 xxl 尺寸的屏幕上隐藏</td>
+                <td><code>.d-xxl-none</code></td>
+              </tr>
+              <tr>
+                <td>在所有尺寸的屏幕上显示</td>
+                <td><code>.d-block</code></td>
+              </tr>
+              <tr>
+                <td>只在 xs 尺寸的屏幕上显示</td>
+                <td><code>.d-block .d-sm-none</code></td>
+              </tr>
+              <tr>
+                <td>只在 sm 尺寸的屏幕上显示</td>
+                <td><code>.d-none .d-sm-block .d-md-none</code></td>
+              </tr>
+              <tr>
+                <td>只在 md 尺寸的屏幕上显示</td>
+                <td><code>.d-none .d-md-block .d-lg-none</code></td>
+              </tr>
+              <tr>
+                <td>只在 lg 尺寸的屏幕上显示</td>
+                <td><code>.d-none .d-lg-block .d-xl-none</code></td>
+              </tr>
+              <tr>
+                <td>只在 xl 尺寸的屏幕上显示</td>
+                <td><code>.d-none .d-xl-block .d-xxl-none</code></td>
+              </tr>
+              <tr>
+                <td>只在 xxl 尺寸的屏幕上显示</td>
+                <td><code>.d-none .d-xxl-block</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="border-example">
+            <div class="d-lg-none">在 lg 及更大尺寸的屏幕上隐藏</div>
+            <div class="d-none d-lg-block">在小于 lg 尺寸的屏幕上隐藏</div>
+          </div>
+          <pre>&lt;div class="d-lg-none"&gt;在 lg 及更大尺寸的屏幕上隐藏&lt;/div&gt;
+&lt;div class="d-none d-lg-block"&gt;在小于 lg 尺寸的屏幕上隐藏&lt;/div&gt;</pre>
+
+          <h6>针对打印机的 display 工具类</h6>
+          <p>使用针对打印机的 display 工具类来改变页面元素在打印时的 <code>display</code> 值。与支持响应式布局的 <code>.d-*</code> 工具类一样包含了对相同 <code>display</code> 取值的支持。</p>
+          <ul>
+            <li><code>.d-print-none</code></li>
+            <li><code>.d-print-inline</code></li>
+            <li><code>.d-print-inline-block</code></li>
+            <li><code>.d-print-block</code></li>
+            <li><code>.d-print-grid</code></li>
+            <li><code>.d-print-table</code></li>
+            <li><code>.d-print-table-row</code></li>
+            <li><code>.d-print-table-cell</code></li>
+            <li><code>.d-print-flex</code></li>
+            <li><code>.d-print-inline-flex</code></li>
+          </ul>
+          <p>针对打印机和针对屏幕的两组 display 工具类可以一起使用。</p>
+          <div class="border-example">
+            <div class="d-print-none">仅在屏幕上显示（仅在打印时隐藏）</div>
+            <div class="d-none d-print-block">仅在打印时显示（仅在屏幕上隐藏）</div>
+            <div class="d-none d-lg-block d-print-block">在屏幕尺寸小于或等于 lg 时隐藏，但打印时永远都会显示</div>
+          </div>
+          <pre>&lt;div class="d-print-none"&gt;仅在屏幕上显示（仅在打印时隐藏）&lt;/div&gt;
+&lt;div class="d-none d-print-block"&gt;仅在打印时显示（仅在屏幕上隐藏）&lt;/div&gt;
+&lt;div class="d-none d-lg-block d-print-block"&gt;在屏幕尺寸小于或等于 lg 时隐藏，但打印时永远都会显示&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

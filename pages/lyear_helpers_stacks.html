@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>堆叠 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">堆叠</div></header>
+        <div class="card-body">
+
+          <p>建立在我们的 flexbox 实用程序之上的速记助手，使组件布局比以往更快、更容易。</p>
+          <p>Stacks 提供了一种快捷方式，可以应用许多 flexbox 属性在 Bootstrap 中快速轻松地创建布局。 这个概念和实施的所有功劳都归功于开源 <a href="https://almonk.github.io/pylon/" target="_blank">Pylon 项目</a>。</p>
+          <div class="callout callout=warning mb-3">当心！ Safari 最近添加了对带有 flexbox 的间隙实用程序的支持，因此请考虑验证您的预期浏览器支持。 网格布局应该没有问题。 <a href="https://caniuse.com/flexbox-gap" target="_blank">阅读更多</a>。</div>
+
+          <h6>垂直的</h6>
+          <p>使用 <code>.vstack</code> 创建垂直布局。 默认情况下，堆叠的项目是全宽的。 使用 <code>.gap-*</code> 实用程序在项目之间添加空间。</p>
+          <div class="border-example">
+            <div class="vstack gap-3">
+              <div class="bg-light border">第一项</div>
+              <div class="bg-light border">第二项</div>
+              <div class="bg-light border">第三项</div>
+            </div>
+          </div>
+          <pre>&lt;div class="vstack gap-3"&gt;
+  &lt;div class="bg-light border"&gt;第一项&lt;/div&gt;
+  &lt;div class="bg-light border"&gt;第二项&lt;/div&gt;
+  &lt;div class="bg-light border"&gt;第三项&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>水平的</h6>
+          <p>使用 <code>.hstack</code> 进行水平布局。 默认情况下，堆叠的项目垂直居中，并且只占用它们必要的宽度。 使用 <code>.gap-*</code> 实用程序在项目之间添加空间。</p>
+          <div class="border-example">
+            <div class="hstack gap-3">
+              <div class="bg-light border">第一项</div>
+              <div class="bg-light border">第二项</div>
+              <div class="bg-light border">第三项</div>
+            </div>
+          </div>
+          <pre>&lt;div class="hstack gap-3"&gt;
+  &lt;div class="bg-light border"&gt;第一项&lt;/div&gt;
+  &lt;div class="bg-light border"&gt;第二项&lt;/div&gt;
+  &lt;div class="bg-light border"&gt;第三项&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>使用 <code>.ms-auto</code> 等水平边距实用程序作为分隔符：</p>
+          <div class="border-example">
+            <div class="hstack gap-3">
+              <div class="bg-light border">第一项</div>
+              <div class="bg-light border ms-auto">第二项</div>
+              <div class="bg-light border">第三项</div>
+            </div>
+          </div>
+          <pre>&lt;div class="hstack gap-3"&gt;
+  &lt;div class="bg-light border"&gt;第一项&lt;/div&gt;
+  &lt;div class="bg-light border ms-auto"&gt;第二项&lt;/div&gt;
+  &lt;div class="bg-light border"&gt;第三项&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>并使用垂直规则：</p>
+          <div class="border-example">
+            <div class="hstack gap-3">
+              <div class="bg-light border">第一项</div>
+              <div class="bg-light border ms-auto">第二项</div>
+              <div class="vr"></div>
+              <div class="bg-light border">第三项</div>
+            </div>
+          </div>
+          <pre>&lt;div class="hstack gap-3"&gt;
+  &lt;div class="bg-light border"&gt;第一项&lt;/div&gt;
+  &lt;div class="bg-light border ms-auto"&gt;第二项&lt;/div&gt;
+  &lt;div class="vr"&gt;&lt;/div&gt;
+  &lt;div class="bg-light border"&gt;第三项&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>示例</h6>
+          <p>使用 .vstack 堆叠按钮和其他元素：</p>
+          <div class="border-example">
+            <div class="vstack gap-2 col-md-5 mx-auto">
+              <button type="button" class="btn btn-secondary">保存更改</button>
+              <button type="button" class="btn btn-outline-secondary">取消</button>
+            </div>
+          </div>
+          <pre>&lt;div class="vstack gap-2 col-md-5 mx-auto"&gt;
+  &lt;button type="button" class="btn btn-secondary"&gt;保存更改&lt;/button&gt;
+  &lt;button type="button" class="btn btn-outline-secondary"&gt;取消&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+          <p>使用 <code>.hstack</code> 创建一个内联表单：</p>
+          <div class="border-example">
+            <div class="hstack gap-3">
+              <input class="form-control me-auto" type="text" placeholder="在此处添加您的项目..." aria-label="在此处添加您的项目...">
+              <button type="button" class="btn btn-secondary">提交</button>
+              <div class="vr"></div>
+              <button type="button" class="btn btn-outline-danger">重置</button>
+            </div>
+          </div>
+          <pre>&lt;div class="hstack gap-3"&gt;
+  &lt;input class="form-control me-auto" type="text" placeholder="在此处添加您的项目..." aria-label="在此处添加您的项目..."&gt;
+  &lt;button type="button" class="btn btn-secondary"&gt;提交&lt;/button&gt;
+  &lt;div class="vr"&gt;&lt;/div&gt;
+  &lt;button type="button" class="btn btn-outline-danger"&gt;重置&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>列 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">列</div></header>
+        <div class="card-body">
+
+          <p>借助我们的 <code>flexbox</code> 网格系统，了解如何使用少数对齐、排序和偏移选项来修改列。 另外，了解如何使用列类来管理非网格元素的宽度。</p>
+
+          <h5>对齐</h5>
+          <p>使用 <code>flexbox</code> 对齐实用程序来垂直和水平对齐列。</p>
+          <h6>垂直对齐</h6>
+
+          <div class="border-example border-example-row border-example-row-flex-cols">
+            <div class="container">
+              <div class="row align-items-start">
+                <div class="col">
+                  三列之一
+                </div>
+                <div class="col">
+                  三列之一
+                </div>
+                <div class="col">
+                  三列之一
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col">
+                  三列之一
+                </div>
+                <div class="col">
+                  三列之一
+                </div>
+                <div class="col">
+                  三列之一
+                </div>
+              </div>
+              <div class="row align-items-end">
+                <div class="col">
+                  三列之一
+                </div>
+                <div class="col">
+                  三列之一
+                </div>
+                <div class="col">
+                  三列之一
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row align-items-start"&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row align-items-center"&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row align-items-end"&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      三列之一
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <div class="border-example border-example-row border-example-row-flex-cols">
+            <div class="container">
+              <div class="row">
+                <div class="col align-self-start">
+                  三列之一
+                </div>
+                <div class="col align-self-center">
+                  三列之一
+                </div>
+                <div class="col align-self-end">
+                  三列之一
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col align-self-start"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col align-self-center"&gt;
+      三列之一
+    &lt;/div&gt;
+    &lt;div class="col align-self-end"&gt;
+      三列之一
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>水平对齐</h6>
+          <div class="border-example-row">
+          <div class="container">
+            <div class="row justify-content-start">
+              <div class="col-4">
+                两列中的一列
+              </div>
+              <div class="col-4">
+                两列中的一列
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-4">
+                两列中的一列
+              </div>
+              <div class="col-4">
+                两列中的一列
+              </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-4">
+                两列中的一列
+              </div>
+              <div class="col-4">
+                两列中的一列
+              </div>
+            </div>
+            <div class="row justify-content-around">
+              <div class="col-4">
+                两列中的一列
+              </div>
+              <div class="col-4">
+                两列中的一列
+              </div>
+            </div>
+            <div class="row justify-content-between">
+              <div class="col-4">
+                两列中的一列
+              </div>
+              <div class="col-4">
+                两列中的一列
+              </div>
+            </div>
+            <div class="row justify-content-evenly">
+              <div class="col-4">
+                两列中的一列
+              </div>
+              <div class="col-4">
+                两列中的一列
+              </div>
+            </div>
+          </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row justify-content-start"&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row justify-content-center"&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row justify-content-end"&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row justify-content-around"&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row justify-content-between"&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row justify-content-evenly"&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+      两列中的一列
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>列换行</h6>
+          <p>如果单行中放置了超过 12 列，则每组额外的列将作为一个单元换行。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-9">.col-9</div>
+                <div class="col-4">.col-4<br>由于 9 + 4 = 13 &gt; 12, 这个 4-列-宽的 div 将作为一个连续单元换行。</div>
+                <div class="col-6">.col-6<br>后续列沿新行继续。</div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-9"&gt;.col-9&lt;/div&gt;
+    &lt;div class="col-4"&gt;.col-4&lt;br&gt;Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.&lt;/div&gt;
+    &lt;div class="col-6"&gt;.col-6&lt;br&gt;Subsequent columns continue along the new line.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>分栏</h6>
+          <p>在 <code>flexbox</code> 中将列拆分为新行需要一个小技巧：添加一个宽度为 100% 的元素，无论您想将列换行到新行的任何位置。 通常这是通过多个 <code>.rows</code> 来完成的，但并不是每个实现方法都可以解决这个问题。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+                <div class="w-100"></div>
+
+                <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-6 col-sm-3"&gt;.col-6 .col-sm-3&lt;/div&gt;
+    &lt;div class="col-6 col-sm-3"&gt;.col-6 .col-sm-3&lt;/div&gt;
+
+    &lt;!-- 强制下一列换行 --&gt;
+    &lt;div class="w-100"&gt;&lt;/div&gt;
+
+    &lt;div class="col-6 col-sm-3"&gt;.col-6 .col-sm-3&lt;/div&gt;
+    &lt;div class="col-6 col-sm-3"&gt;.col-6 .col-sm-3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>您还可以使用我们的响应式显示实用程序在特定拐点处应用此中断。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+                <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+                <div class="w-100 d-none d-md-block"></div>
+
+                <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+                <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-6 col-sm-4"&gt;.col-6 .col-sm-4&lt;/div&gt;
+    &lt;div class="col-6 col-sm-4"&gt;.col-6 .col-sm-4&lt;/div&gt;
+
+    &lt;!-- 强制下一列在 md 拐点和向上换行 --&gt;
+    &lt;div class="w-100 d-none d-md-block"&gt;&lt;/div&gt;
+
+    &lt;div class="col-6 col-sm-4"&gt;.col-6 .col-sm-4&lt;/div&gt;
+    &lt;div class="col-6 col-sm-4"&gt;.col-6 .col-sm-4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h5>重新排序</h5>
+          <h6>排序类</h6>
+          <p>使用 <code>.order-classes</code> 来控制内容的视觉顺序。 这些类是响应式的，因此您可以通过拐点设置顺序（例如，<code>.order-1</code> <code>.order-md-2</code>）。 包括对所有六个网格层的 1 到 5 的支持。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  第一个在DOM中，没有应用顺序
+                </div>
+                <div class="col order-5">
+                  第二个在DOM中, 顺序更大
+                </div>
+                <div class="col order-1">
+                  第三个在DOM中, 顺序为 1
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;
+      第一个在DOM中，没有应用顺序
+    &lt;/div&gt;
+    &lt;div class="col order-5"&gt;
+      第二个在DOM中, 顺序更大
+    &lt;/div&gt;
+    &lt;div class="col order-1"&gt;
+      第三个在DOM中, 顺序为 1
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>还有响应式 <code>.order-first</code> 和 <code>.order-last</code> 类，它们分别通过应用 <code>order: -1</code> 和 <code>order: 6</code> 来改变元素的顺序。这些类也可以根据需要与编号的 <code>.order-*</code> 类混合使用。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col order-last">
+                  第一个在DOM中, 排序最后
+                </div>
+                <div class="col">
+                  第二个在DOM中, 无序的
+                </div>
+                <div class="col order-first">
+                  第三个在DOM中, 排序第一
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col order-last"&gt;
+      第一个在DOM中, 排序最后
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      第二个在DOM中, 无序的
+    &lt;/div&gt;
+    &lt;div class="col order-first"&gt;
+      第三个在DOM中, 排序第一
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>偏移列</h6>
+          <p>您可以通过两种方式偏移网格列：我们的响应式 <code>.offset-grid</code> 类和我们的边距实用程序。 网格类的大小与列匹配，而边距对于偏移宽度可变的快速布局更有用。</p>
+          <p>偏移类</p>
+          <p>使用 <code>.offset-md-*</code> 类将列向右移动。 这些类将列的左边距增加 <code>*</code> 列。 例如，<code>.offset-md-4</code> 将 <code>.col-md-4</code> 移动到四列。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+                <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &lt;div class="col-md-4 offset-md-4"&gt;.col-md-4 .offset-md-4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-3 offset-md-3"&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+    &lt;div class="col-md-3 offset-md-3"&gt;.col-md-3 .offset-md-3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-6 offset-md-3"&gt;.col-md-6 .offset-md-3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>除了在响应拐点处清除列之外，您可能还需要重置偏移量。 请参阅网格示例中的实际操作。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+                <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-5 col-md-6"&gt;.col-sm-5 .col-md-6&lt;/div&gt;
+    &lt;div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0"&gt;.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-6 col-md-5 col-lg-6"&gt;.col-sm-6 .col-md-5 .col-lg-6&lt;/div&gt;
+    &lt;div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0"&gt;.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <p>边距</p>
+          <p>随着 v4 中向 <code>flexbox</code> 的迁移，您可以使用诸如 <code>.me-auto</code> 之类的边距实用程序来强制兄弟列彼此远离。</p>
+          <div class="border-example-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+                <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+              </div>
+              <div class="row">
+                <div class="col-auto me-auto">.col-auto .me-auto</div>
+                <div class="col-auto">.col-auto</div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &lt;div class="col-md-4 ms-auto"&gt;.col-md-4 .ms-auto&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-3 ms-md-auto"&gt;.col-md-3 .ms-md-auto&lt;/div&gt;
+    &lt;div class="col-md-3 ms-md-auto"&gt;.col-md-3 .ms-md-auto&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-auto me-auto"&gt;.col-auto .me-auto&lt;/div&gt;
+    &lt;div class="col-auto"&gt;.col-auto&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h5>独立列类</h5>
+          <p><code>.col-*</code> 类也可以在 <code>.row</code> 之外使用，以赋予元素特定的宽度。 每当列类用作行的非直接子级时，填充将被省略。</p>
+          <div class="border-example-row">
+            <div class="col-3 bg-light p-3 border">
+              .col-3: 25% 的宽度
+            </div>
+            <div class="col-sm-9 bg-light p-3 border">
+              .col-sm-9: sm 拐点以上 75% 的宽度
+            </div>
+          </div>
+          <pre>&lt;div class="col-3 bg-light p-3 border"&gt;
+  .col-3: 25% 的宽度
+&lt;/div&gt;
+&lt;div class="col-sm-9 bg-light p-3 border"&gt;
+  .col-sm-9: sm 拐点以上 75% 的宽度
+&lt;/div&gt;</pre>
+
+          <p>这些类可以与实用程序一起使用来创建响应式浮动图像。 如果文本较短，请确保将内容包装在 <code>.clearfix</code> 包装器中以清除浮动。</p>
+          <div class="border-example-row">
+            <div class="clearfix">
+              <img src="../images/img-placeholder.png" class="col-md-6 float-md-end mb-3 ms-md-3" height="210" alt="...">
+
+              <p>从来极富、极贵、极畅适田地，说来也使人心快，听来也使人耳快，看来也使人眼快；只是一场冷落败坏根基，都藏在里边，不做千古骂名，定是一番笑话。馆娃宫、铜雀台，惹了多少词人墨客，嗟呀嘲诮。止有草泽英雄，他不在酒色上安身立命，受尽的都是落寞凄其，倒会把这千人弄出来的败局，或是收拾，或是更新，这名姓可常存天地。但他名姓虽是后来彰显，他骨格却也平时定了。</p>
+
+              <p>譬如日月；他本体自是光明，撞在轻烟薄雾中，毕竟光芒射出，苦是人不识得；就到后来称颂他的，形之纸笔，总只说得他建功立业的事情，说不到他微时光景。不知松柏，生来便有参天形势；虎豹小时，便有食牛气概。说来反党新奇。我未题这人，且把他当日遭际的时节，略一铺排。这番勾引那人出来，成一本史书，写不到人间并不曾知得的一种奇谈。可是：器当盘错方知利，刃解宽髀始觉神。由来人定天能胜，为借奇才一起屯。</p>
+
+              <p>从古相沿，剥中有复：虞、夏、周、秦、汉、三国、两晋。晋自五马渡江，天下分而为二：这叫做南北朝。南朝刘裕，篡晋称宋；萧道成篡宋称齐；肃衍篡齐称梁；陈霸先篡梁称陈。虽然各有国号，绍袭正统，名为天子；其实天下微弱，偏安江左。北朝在晋时，中原一带地方，到被汉主刘渊、赵主石勒、秦主苻坚、燕主慕容囗、魏主拓技珪诸胡人据了，叫做五胡乱华，是为北朝。</p>
+            </div>
+          </div>
+          <pre>&lt;div class="clearfix"&gt;
+  &lt;img src="../..." class="col-md-6 float-md-end mb-3 ms-md-3" height="210" alt="..."&gt;
+
+  &lt;p&gt;从来极富、极贵、极畅适田地，说来也使人心快，听来也使人耳快，看来也使人眼快；只是一场冷落败坏根基，都藏在里边，不做千古骂名，定是一番笑话。馆娃宫、铜雀台，惹了多少词人墨客，嗟呀嘲诮。止有草泽英雄，他不在酒色上安身立命，受尽的都是落寞凄其，倒会把这千人弄出来的败局，或是收拾，或是更新，这名姓可常存天地。但他名姓虽是后来彰显，他骨格却也平时定了。&lt;/p&gt;
+
+  &lt;p&gt;譬如日月；他本体自是光明，撞在轻烟薄雾中，毕竟光芒射出，苦是人不识得；就到后来称颂他的，形之纸笔，总只说得他建功立业的事情，说不到他微时光景。不知松柏，生来便有参天形势；虎豹小时，便有食牛气概。说来反党新奇。我未题这人，且把他当日遭际的时节，略一铺排。这番勾引那人出来，成一本史书，写不到人间并不曾知得的一种奇谈。可是：器当盘错方知利，刃解宽髀始觉神。由来人定天能胜，为借奇才一起屯。&lt;/p&gt;
+
+  &lt;p&gt;从古相沿，剥中有复：虞、夏、周、秦、汉、三国、两晋。晋自五马渡江，天下分而为二：这叫做南北朝。南朝刘裕，篡晋称宋；萧道成篡宋称齐；肃衍篡齐称梁；陈霸先篡梁称陈。虽然各有国号，绍袭正统，名为天子；其实天下微弱，偏安江左。北朝在晋时，中原一带地方，到被汉主刘渊、赵主石勒、秦主苻坚、燕主慕容囗、魏主拓技珪诸胡人据了，叫做五胡乱华，是为北朝。&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>网站配置 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<!--tags插件css-->
+<link rel="stylesheet" type="text/css" href="js/jquery-tagsinput/jquery.tagsinput.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">网站配置</div></header>
+        <div class="card-body">
+
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <button class="nav-link active" id="basic-config" data-bs-toggle="tab" data-bs-target="#config" type="button" >基本</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="basic-sys" data-bs-toggle="tab" data-bs-target="#sys" type="button">系统</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="basic-upload" data-bs-toggle="tab" data-bs-target="#upload" type="button">上传</button>
+            </li>
+          </ul>
+
+          <form action="#!" method="post" name="edit-form" class="edit-form">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="config" aria-labelledby="basic-config">
+
+                <div class="mb-3">
+                  <label for="web_site_title" class="form-label">网站标题</label>
+                  <input class="form-control" type="text" id="web_site_title" name="web_site_title" value="光年后台管理系统HTML模板" placeholder="请输入站点标题">
+                  <small class="form-text">调用方式：<code>config('web_site_title')</code></small>
+                </div>
+                <div class="mb-3">
+                  <label for="web_site_logo" class="form-label">LOGO图片</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="web_site_logo" id="web_site_logo" value="/home/images/logo.png">
+                    <button class="btn btn-default" type="button">上传图片</button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="web_site_keywords" class="form-label">站点关键词</label>
+                  <input class="form-control" type="text" id="web_site_keywords" name="web_site_keywords" value="后台系统模板,LightYear Admin Template,html模板,后台模板,管理系统模板" placeholder="请输入站点关键词">
+                  <small class="form-text">网站搜索引擎关键字</small>
+                </div>
+                <div class="mb-3">
+                  <label for="web_site_description" class="form-label">站点描述</label>
+                  <textarea class="form-control" id="web_site_description" rows="5" name="web_site_description" placeholder="请输入站点描述">光年(Light Year Admin v5)后台管理系统模板是一个基于基于Bootstrap v5.1.3的HTML静态页模板。</textarea>
+                  <small class="form-text">网站描述，有利于搜索引擎抓取相关信息</small>
+                </div>
+                <div class="mb-3">
+                  <label for="web_site_copyright" class="form-label">版权信息</label>
+                  <input class="form-control" type="text" id="web_site_copyright" name="web_site_copyright" value="" placeholder="请输入版权信息">
+                  <small class="form-text">调用方式：<code>config('web_site_copyright')</code></small>
+                </div>
+                <div class="mb-3">
+                  <label for="web_site_icp" class="form-label">备案信息</label>
+                  <input class="form-control" type="text" id="web_site_icp" name="web_site_icp" value="" placeholder="请输入备案信息">
+                  <small class="form-text">调用方式：<code>config('web_site_icp')</code></small>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">站点开关</label>
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="web_site_status" checked="">
+                    <label class="form-check-label" for="web_site_status"></label>
+                  </div>
+                  <small class="form-text">站点关闭后将不能访问，后台可正常登录</small>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-primary me-1">确 定</button>
+                  <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);return false;">返 回</button>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="sys" aria-labelledby="basic-sys">
+                <div class="mb-3">
+                  <label for="config_group" class="form-label">配置分组</label>
+<textarea class="form-control" id="config_group" rows="5" name="config_group" placeholder="请输入配置分组">base:基本
+system:系统
+develop:开发
+upload:上传</textarea>
+                 </div>
+                 <div class="mb-3">
+                   <label for="form_item_type" class="form-label">配置类型</label>
+<textarea class="form-control" id="form_item_type" rows="5" name="form_item_type" placeholder="请输入配置类型">text:单行文本
+textarea:多行文本
+checkbox:复选框
+radio:单选按钮
+switch:开关
+array:数组
+select:下拉框
+image:单张图片
+ueditor:UEditor 编辑器
+tags:标签</textarea>
+                 </div>
+                 <div class="mb-3">
+                   <label for="wipe_cache_type" class="form-label">清除缓存类型</label>
+                   <div class="controls-box clearfix">
+                     <div class="form-check form-check-inline">
+                       <input type="checkbox" class="form-check-input" name="wipe_cache_type[]" id="app_cache">
+                       <label class="form-check-label" for="app_cache">应用缓存</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                       <input type="checkbox" class="form-check-input" name="wipe_cache_type[]" id="app_log">
+                       <label class="form-check-label" for="app_log">应用日志</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                       <input type="checkbox" class="form-check-input" name="wipe_cache_type[]" id="template_cache">
+                       <label class="form-check-label" for="template_cache">模板缓存</label>
+                     </div>
+                   </div>
+                   <small class="help-block">清除缓存时，要删除的缓存类型</small>
+                 </div>
+                 <div class="mb-3">
+                   <label for="develop_mode" class="form-label">开发模式</label>
+                   <div class="controls-box clearfix">
+                     <div class="form-check form-check-inline">
+      	             <input type="radio" id="develop_mode_1" name="develop_mode" class="form-check-input" value="0" checked="">
+      	             <label class="form-check-label" for="develop_mode_1">关闭</label>
+      	           </div>
+      	           <div class="form-check form-check-inline">
+      	             <input type="radio" id="develop_mode_2" name="develop_mode" class="form-check-input" value="1">
+      	             <label class="form-check-label" for="develop_mode_2">开启</label>
+      	           </div>
+                   </div>
+                 </div>
+                 <div class="mb-3">
+                   <label for="app_trace" class="form-label">显示页面Trace</label>
+                   <div class="controls-box clearfix">
+                     <div class="form-check form-check-inline">
+      	             <input type="radio" id="app_trace_1" name="app_trace" class="form-check-input" value="0" checked="">
+      	             <label class="form-check-label" for="app_trace_1">否</label>
+      	           </div>
+      	           <div class="form-check form-check-inline">
+      	             <input type="radio" id="app_trace_2" name="app_trace" class="form-check-input" value="1">
+      	             <label class="form-check-label" for="app_trace_2">是</label>
+      	           </div>
+                   </div>
+                 </div>
+              </div>
+              <div class="tab-pane fade" id="upload" aria-labelledby="basic-upload">
+                <div class="mb-3">
+                  <label for="upload_file_ext" class="form-label">图片上传大小限制</label>
+                  <input class="js-tags-input form-control" type="text" id="upload_file_ext" name="upload_file_ext" value="doc,docx,xls,xlsx,ppt,pptx,pdf,wps,txt,rar,zip,gz,bz2,7z" >
+                  <small class="form-text">多个后缀用逗号隔开，不填写则不限制类型</small>
+                </div>
+                <div class="mb-3">
+                  <label for="upload_image_size" class="form-label">图片上传大小限制</label>
+                  <input class="form-control" type="text" id="upload_image_size" name="upload_image_size" value="0" placeholder="请输入图片上传大小限制" >
+                  <small class="form-text">0为不限制大小，单位：kb</small>
+                </div>
+                <div class="mb-3">
+                  <label for="upload_image_ext" class="form-label">允许上传的图片后缀</label>
+                  <input class="js-tags-input form-control" type="text" id="upload_image_ext" name="upload_image_ext" value="gif,jpg,jpeg,bmp,png" >
+                  <small class="form-text">多个后缀用逗号隔开，不填写则不限制类型</small>
+                </div>
+                <div class="mb-3">
+                  <label for="upload_file_size" class="form-label">文件上传大小限制</label>
+                  <input class="form-control" type="text" id="upload_file_size" name="upload_file_size" value="0" placeholder="请输入文件上传大小限制" >
+                  <small class="form-text">0为不限制大小，单位：kb</small>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!--tags插件-->
+<script type="text/javascript" src="../js/jquery-tagsinput/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

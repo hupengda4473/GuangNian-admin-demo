@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>关闭按钮 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">关闭按钮</div></header>
+        <div class="card-body">
+
+          <p>这是一个通用的关闭按钮（close button）组件，用于关闭诸如模态框（modal）和警告框（alert）之类的窗口。</p>
+
+          <h5>示例</h5>
+          <p>本组件通过 <code>.btn-close</code> 类提供了一个关闭其它组件的方式。默认样式不多，但可定制度高。通过修改 Sass 变量可替换默认的 <code>background-image</code>。<strong>请务必为屏幕阅读器添加说明性文字</strong>，就像下面示例中的 <code>aria-label</code> 一样。</p>
+          <div class="border-example">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <pre>&lt;button type="button" class="btn-close" aria-label="Close"&gt;&lt;/button&gt;</pre>
+
+          <h5>禁用状态</h5>
+          <p>处于禁用状态的关闭按钮（close button）会改变自己的透明度 <code>opacity</code> 属性。我们还设置了 <code>pointer-events: none</code> 和 <code>user-select: none</code> 来防止鼠标悬停和活动状态被触发。</p>
+          <div class="border-example">
+            <button type="button" class="btn-close" disabled aria-label="Close"></button>
+          </div>
+          <pre>&lt;button type="button" class="btn-close" disabled aria-label="Close"&gt;&lt;/button&gt;</pre>
+
+          <h5>白色变体</h5>
+          <p>将默认的 <code>.btn-close</code> 类修改为 <code>.btn-close-white</code> 类，可将按钮改变为白色。<code>.btn-close-white</code> 类是使用 <code>filter</code> 属性来实现 <code>background-image</code> 反色的。</p>
+          <div class="border-example bg-dark">
+            <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" disabled aria-label="Close"></button>
+          </div>
+          <pre>&lt;button type="button" class="btn-close btn-close-white" aria-label="Close"&gt;&lt;/button&gt;
+&lt;button type="button" class="btn-close btn-close-white" disabled aria-label="Close"&gt;&lt;/button&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

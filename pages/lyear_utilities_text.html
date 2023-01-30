@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>文本 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">文本</div></header>
+        <div class="card-body">
+
+          <p>用于控制对齐、换行、粗细等的常用文本实用程序的文档和示例。</p>
+
+          <h6>文本对齐</h6>
+          <p>使用文本对齐类轻松将文本重新对齐到组件。 对于开始、结束和中心对齐，可以使用与网格系统使用相同视口宽度断点的响应类。</p>
+          <div class="border-example">
+            <p class="text-start">在所有视口尺寸上向左对齐文本。</p>
+            <p class="text-center">在所有视口大小上居中对齐文本。</p>
+            <p class="text-end">在所有视口大小上向右对齐的文本。</p>
+
+            <p class="text-sm-start">在尺寸为 SM（小）或更宽的视口上向左对齐文本。</p>
+            <p class="text-md-start">在MD（中等）或更宽的视口中向左对齐文本。</p>
+            <p class="text-lg-start">在尺寸为LG（大）或更大的视口上向左对齐文本。</p>
+            <p class="text-xl-start">在尺寸为XL（超大）或更大的视口上向左对齐文本。</p>
+          </div>
+          <pre>&lt;p class="text-start"&gt;在所有视口尺寸上向左对齐文本。&lt;/p&gt;
+&lt;p class="text-center"&gt;在所有视口大小上居中对齐文本。&lt;/p&gt;
+&lt;p class="text-end"&gt;在所有视口大小上向右对齐的文本。&lt;/p&gt;
+
+&lt;p class="text-sm-start"&gt;在尺寸为 SM（小）或更宽的视口上向左对齐文本。&lt;/p&gt;
+&lt;p class="text-md-start"&gt;在MD（中等）或更宽的视口中向左对齐文本。&lt;/p&gt;
+&lt;p class="text-lg-start"&gt;在尺寸为LG（大）或更大的视口上向左对齐文本。&lt;/p&gt;
+&lt;p class="text-xl-start"&gt;在尺寸为XL（超大）或更大的视口上向左对齐文本。&lt;/p&gt;</pre>
+
+          <div class="callout callout-info mb-3">请注意，我们不为对齐文本提供实用程序类。 虽然从美学上讲，合理的文本可能看起来更有吸引力，但它确实使字间距更加随机，因此更难阅读。</div>
+
+          <h6>文本换行和溢出</h6>
+          <p>使用 <code>.text-wrap</code> 类包装文本。</p>
+          <div class="border-example">
+            <div class="badge bg-primary text-wrap" style="width: 6rem;">
+              此文本应换行。
+            </div>
+          </div>
+          <pre>&lt;div class="badge bg-primary text-wrap" style="width: 6rem;"&gt;
+  此文本应换行。
+&lt;/div&gt;</pre>
+          <p>防止文本用 <code>.text-nowrap</code> 类换行。</p>
+          <div class="border-example">
+            <div class="text-nowrap border-highlight" style="width: 8rem;">
+              为作者自黔西罢官以后的读书札记，逾十余年始刊行，以其为循陔（即奉养父母）时所辑，故名《陔余丛考》。
+            </div>
+          </div>
+          <pre>&lt;div class="text-nowrap border-highlight" style="width: 8rem;"&gt;
+  为作者自黔西罢官以后的读书札记，逾十余年始刊行，以其为循陔（即奉养父母）时所辑，故名《陔余丛考》。
+&lt;/div&gt;</pre>
+
+          <h6>断字</h6>
+          <p>通过使用 <code>.text-break</code> 设置 <code>word-wrap: break-word</code> 和 <code>word-break: break-word</code> 来防止长字符串破坏组件的布局。我们使用 <code>word-wrap</code> 而不是更常见的 <code>overflow-wrap</code> 来获得更广泛的浏览器支持，并添加不推荐使用的 <code>word-break: break-word</code> 以避免 flex 容器出现问题。</p>
+          <div class="border-example">
+            <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+          </div>
+          <pre>&lt;p class="text-break"&gt;mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm&lt;/p&gt;</pre>
+
+          <div class="callout callout-warning mb-3">请注意，阿拉伯语是最常用的 RTL 语言，无法使用断词。因此 <code>.text-break</code> 从我们的 RTL 编译的 CSS 中删除。</div>
+
+          <h6>文本变换</h6>
+          <p>使用文本大写类转换组件中的文本。</p>
+          <div class="border-example">
+            <p class="text-lowercase">Lowercased text.</p>
+            <p class="text-uppercase">Uppercased text.</p>
+            <p class="text-capitalize">CapiTaliZed text.</p>
+          </div>
+          <pre>&lt;p class="text-lowercase"&gt;Lowercased text.&lt;/p&gt;
+&lt;p class="text-uppercase"&gt;Uppercased text.&lt;/p&gt;
+&lt;p class="text-capitalize"&gt;CapiTaliZed text.&lt;/p&gt;</pre>
+
+          <p>请注意 <code>.text-capitalize</code> 如何仅更改每个单词的第一个字母，而不影响任何其他字母的大小写。</p>
+
+          <h6>字体大小</h6>
+          <p>快速更改文本的字体大小。虽然我们的标题类（例如 <code>.h1</code> – <code>.h6</code>）应用字体大小、字体粗细和行高，但这些实用程序只应用字体大小。这些实用程序的大小与 HTML 的标题元素相匹配，因此随着数量的增加，它们的大小会减小。</p>
+          <div class="border-example">
+            <p class="fs-1">.fs-1 text</p>
+            <p class="fs-2">.fs-2 text</p>
+            <p class="fs-3">.fs-3 text</p>
+            <p class="fs-4">.fs-4 text</p>
+            <p class="fs-5">.fs-5 text</p>
+            <p class="fs-6">.fs-6 text</p>
+          </div>
+          <pre>&lt;p class="fs-1"&gt;.fs-1 text&lt;/p&gt;
+&lt;p class="fs-2"&gt;.fs-2 text&lt;/p&gt;
+&lt;p class="fs-3"&gt;.fs-3 text&lt;/p&gt;
+&lt;p class="fs-4"&gt;.fs-4 text&lt;/p&gt;
+&lt;p class="fs-5"&gt;.fs-5 text&lt;/p&gt;
+&lt;p class="fs-6"&gt;.fs-6 text&lt;/p&gt;</pre>
+
+          <h6>字体粗细和斜体</h6>
+          <p>使用这些实用程序快速更改文本的字体粗细或字体样式。字体样式实用程序缩写为 <code>.fst-*</code>，字体粗细实用程序缩写为 <code>.fw-*</code>。</p>
+          <div class="border-example">
+            <p class="fw-bold">粗体文字。</p>
+            <p class="fw-bolder">粗体文本（相对于父元素）。</p>
+            <p class="fw-normal">正常粗细文本。</p>
+            <p class="fw-light">较细的文本。</p>
+            <p class="fw-lighter">较细的文本（相对于父元素）。</p>
+            <p class="fst-italic">斜体文字。</p>
+            <p class="fst-normal">具有正常字体样式的文本</p>
+          </div>
+          <pre>&lt;p class="fw-bold"&gt;粗体文字。&lt;/p&gt;
+&lt;p class="fw-bolder"&gt;粗体文本（相对于父元素）。&lt;/p&gt;
+&lt;p class="fw-normal"&gt;正常粗细文本。&lt;/p&gt;
+&lt;p class="fw-light"&gt;较细的文本。&lt;/p&gt;
+&lt;p class="fw-lighter"&gt;较细的文本（相对于父元素）。&lt;/p&gt;
+&lt;p class="fst-italic"&gt;斜体文字。&lt;/p&gt;
+&lt;p class="fst-normal"&gt;具有正常字体样式的文本&lt;/p&gt;</pre>
+
+          <h6>行高</h6>
+          <p>使用 <code>.lh-*</code> 实用程序更改行高。</p>
+          <div class="border-example">
+<p class="lh-1">隋主问道：“你是几时进宫的，怎么再不见承应？”那宫女见隋主问他，因跪道：“贱婢乃尉迟回的孙女，自投入宫，即蒙娘娘发在此处，不许擅自出入，故未曾承应皇爷。”隋主笑道：“你且起来，今日娘娘不在，便擅自出入也不妨。”正说间，只见近侍们请回宫进晚膳。隋主道：“就在此吃罢！”不多时，排上宴来，隋主就叫尉迟氏侍立同饮。尉迟氏酒量原浅，因隋主十分见爱，勉强吃了几杯，遂留在仁寿宫中宿了。</p>
+<p class="lh-sm">次日隋主早起临朝，满心畅意道：“今日方知为天子的快活！但只怕皇后得知，怎生区处？”却说独孤后虽然有病，那里放心得下，不时差心腹宫人打听。早有人来报知这个消息。独孤后听了，怒从心上起，也顾不得自家的身体，带了几十个宫人，恶狠狠的走到仁寿宫来。此时尉迟氏梳洗毕，正在那里验臂上的蜂黄，退了多少。猛看见皇后与一队宫女，蜂拥而来，吓得他面如土色，扑碌碌的小鹿儿在心头乱撞，急忙跪下在地。</p>
+<p class="lh-base">独孤后进得官来，脚也不曾站稳，便叫揣过这个妖狐来。众宫人那管他柳腰轻脆，花貌娇羞；横拖的乱挽乌云，倒拽的斜牵锦带，生辣辣扯到面前，便骂道：“你这妖奴，有何狐媚伎俩，辄敢蛊惑君心，乱我宫中雅化！”尉迟氏战兢兢答道：“奴婢乃下贱之人，岂不知娘娘法度，焉敢上希宠幸？也是命合该死，昨晚不期万岁爷，忽然到宫吃夜膳，醉了，就要在宫中留幸。</p>
+<p class="lh-lg">贱婢再三推却，万岁爷只不肯听，没奈何只得从顺。这是万岁爷的意思，与贱婢无干，望娘娘哀怜免死。”独孤后说道：“你这个妖奴，昨夜快活！不知怎么样装娇做俏，哄骗那没廉耻的皇帝。今日却花言巧语，推得这般干净！”喝宫人：‘与我痛打！”尉迟氏叩头：“望娘娘饶命！”独孤后道：“万岁爷既这般爱你，你就该求他饶命，为何昨夜不顾性命的受用，今日却来求我？你这样妖奴，我只题防疏了半点，就被你哄骗到手。</p>
+          </div>
+          <pre>&lt;p class="lh-1"&gt;隋主问道：“你是几时进宫的，怎么再不见承应？”那宫女见隋主问他，因跪道：“贱婢乃尉迟回的孙女，自投入宫，即蒙娘娘发在此处，不许擅自出入，故未曾承应皇爷。”隋主笑道：“你且起来，今日娘娘不在，便擅自出入也不妨。”正说间，只见近侍们请回宫进晚膳。隋主道：“就在此吃罢！”不多时，排上宴来，隋主就叫尉迟氏侍立同饮。尉迟氏酒量原浅，因隋主十分见爱，勉强吃了几杯，遂留在仁寿宫中宿了。&lt;/p&gt;
+&lt;p class="lh-sm"&gt;次日隋主早起临朝，满心畅意道：“今日方知为天子的快活！但只怕皇后得知，怎生区处？”却说独孤后虽然有病，那里放心得下，不时差心腹宫人打听。早有人来报知这个消息。独孤后听了，怒从心上起，也顾不得自家的身体，带了几十个宫人，恶狠狠的走到仁寿宫来。此时尉迟氏梳洗毕，正在那里验臂上的蜂黄，退了多少。猛看见皇后与一队宫女，蜂拥而来，吓得他面如土色，扑碌碌的小鹿儿在心头乱撞，急忙跪下在地。&lt;/p&gt;
+&lt;p class="lh-base"&gt;独孤后进得官来，脚也不曾站稳，便叫揣过这个妖狐来。众宫人那管他柳腰轻脆，花貌娇羞；横拖的乱挽乌云，倒拽的斜牵锦带，生辣辣扯到面前，便骂道：“你这妖奴，有何狐媚伎俩，辄敢蛊惑君心，乱我宫中雅化！”尉迟氏战兢兢答道：“奴婢乃下贱之人，岂不知娘娘法度，焉敢上希宠幸？也是命合该死，昨晚不期万岁爷，忽然到宫吃夜膳，醉了，就要在宫中留幸。&lt;/p&gt;
+&lt;p class="lh-lg"&gt;贱婢再三推却，万岁爷只不肯听，没奈何只得从顺。这是万岁爷的意思，与贱婢无干，望娘娘哀怜免死。”独孤后说道：“你这个妖奴，昨夜快活！不知怎么样装娇做俏，哄骗那没廉耻的皇帝。今日却花言巧语，推得这般干净！”喝宫人：‘与我痛打！”尉迟氏叩头：“望娘娘饶命！”独孤后道：“万岁爷既这般爱你，你就该求他饶命，为何昨夜不顾性命的受用，今日却来求我？你这样妖奴，我只题防疏了半点，就被你哄骗到手。&lt;/p&gt;</pre>
+
+          <h6>monospace字体</h6>
+          <p>使用 <code>.font-monospace</code> 将选择更改为我们的monospace字体堆栈。</p>
+          <div class="border-example">
+            <p class="font-monospace">南朝秘史</p>
+          </div>
+          <pre>&lt;p class="font-monospace"&gt;南朝秘史&lt;/p&gt;</pre>
+
+          <h6>重置颜色</h6>
+          <p>使用 <code>.text-reset</code> 重置文本或链接的颜色，以便它从其父级继承颜色。</p>
+          <div class="border-example">
+            <p class="text-muted">
+              <a href="#" class="text-reset">《北户录》</a> 是唐代岭南汉族风土录。三卷。段公路著。
+            </p>
+          </div>
+          <pre>&lt;p class="text-muted"&gt;
+  &lt;a href="#" class="text-reset"&gt;《北户录》&lt;/a&gt; 是唐代岭南汉族风土录。三卷。段公路著。
+&lt;/p&gt;</pre>
+
+          <h6>文字装饰</h6>
+          <p>使用文本装饰类装饰组件中的文本。</p>
+          <div class="border-example">
+            <p class="text-decoration-underline">此文本下方有一行。</p>
+            <p class="text-decoration-line-through">这段文字有一条线穿过它。</p>
+            <a href="#" class="text-decoration-none">此链接已删除其文本装饰。</a>
+          </div>
+          <pre>&lt;p class="text-decoration-underline"&gt;此文本下方有一行。&lt;/p&gt;
+&lt;p class="text-decoration-line-through"&gt;这段文字有一条线穿过它。&lt;/p&gt;
+&lt;a href="#" class="text-decoration-none"&gt;此链接已删除其文本装饰。&lt;/a&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

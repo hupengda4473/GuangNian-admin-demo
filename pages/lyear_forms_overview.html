@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>表单 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">表单</div></header>
+        <div class="card-body">
+
+          <p>用于创建各种表单的表单控件样式、布局选项和自定义组件的示例和使用指南。</p>
+          <h6>概述</h6>
+          <p>Bootstrap 的表单控件通过类扩展了我们的 Rebooted 表单样式。 使用这些类来选择它们的自定义显示，以便在浏览器和设备之间实现更一致的呈现。</p>
+          <p>确保在所有输入（例如，电子邮件地址的电子邮件或数字信息的数字）上使用适当的类型属性，以利用更新的输入控件，如电子邮件验证、数字选择等。</p>
+          <p>这是一个演示 Bootstrap 表单样式的快速示例。 继续阅读有关所需类、表单布局等的文档。</p>
+
+          <div class="border-example">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">邮箱地址</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">我们永远不会与任何人共享您的电子邮件。</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">密码</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">对我进行选择</label>
+              </div>
+              <button type="submit" class="btn btn-primary">提交</button>
+            </form>
+          </div>
+          <pre>&lt;form&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label for="exampleInputEmail1" class="form-label"&gt;邮箱地址&lt;/label&gt;
+    &lt;input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"&gt;
+    &lt;div id="emailHelp" class="form-text"&gt;我们永远不会与任何人共享您的电子邮件。&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label for="exampleInputPassword1" class="form-label"&gt;密码&lt;/label&gt;
+    &lt;input type="password" class="form-control" id="exampleInputPassword1"&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3 form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="exampleCheck1"&gt;
+    &lt;label class="form-check-label" for="exampleCheck1"&gt;对我进行选择&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;提交&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+          <h6>表单文本</h6>
+          <p>可以使用 <code>.form-text</code> 创建块级或内联级表单文本。</p>
+
+          <div class="callout callout-warning mb-3">
+            将表单文本与表单控件相关联<br/>
+            表单文本应该与使用 <code>aria-describeby</code> 属性相关的表单控件显式关联。 这将确保辅助技术（例如屏幕阅读器）在用户聚焦或进入控件时宣布此表单文本。
+          </div>
+
+          <p>输入下方的表单文本可以使用 .form-text 设置样式。 如果将使用块级元素，则会添加上边距以便与上面的输入保持间距。</p>
+
+          <div class="border-example">
+            <label for="inputPassword5" class="form-label">密码</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+            <div id="passwordHelpBlock" class="form-text">
+              您的密码长度必须为 8-20 个字符，包含字母和数字，并且不得包含空格、特殊字符或表情符号。
+            </div>
+          </div>
+          <pre>&lt;label for="inputPassword5" class="form-label"&gt;密码&lt;/label&gt;
+&lt;input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"&gt;
+&lt;div id="passwordHelpBlock" class="form-text"&gt;
+  您的密码长度必须为 8-20 个字符，包含字母和数字，并且不得包含空格、特殊字符或表情符号。
+&lt;/div&gt;</pre>
+
+          <p>内联文本可以使用任何典型的内联 HTML 元素（可以是 <code>&lt;span&gt;</code>、<code>&lt;small&gt;</code> 或其他东西），只需要 <code>.form-text</code> 类。</p>
+
+          <div class="border-example">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">密码</label>
+              </div>
+              <div class="col-auto">
+                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+              </div>
+              <div class="col-auto">
+                <span id="passwordHelpInline" class="form-text">
+                  长度必须为8-20个字符。
+                </span>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="row g-3 align-items-center"&gt;
+  &lt;div class="col-auto"&gt;
+    &lt;label for="inputPassword6" class="col-form-label"&gt;密码&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="col-auto"&gt;
+    &lt;input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-auto"&gt;
+    &lt;span id="passwordHelpInline" class="form-text"&gt;
+      长度必须为8-20个字符。
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+          <h6>禁用表单</h6>
+          <p>在输入上添加 <code>disabled</code> 布尔属性以防止用户交互并使其看起来更轻。</p>
+          <pre>&lt;input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled&gt;</pre>
+
+          <p>将 <code>disabled</code> 属性添加到 <code>&lt;fieldset&gt;</code> 以禁用其中的所有控件。 浏览器将 <code>&lt;fieldset disabled&gt;</code> 内的所有原生表单控件（<code>&lt;input&gt;</code>、<code>&lt;select&gt;</code> 和 <code>&lt;button&gt;</code> 元素）视为已禁用，从而阻止了键盘和鼠标在它们上的交互。</p>
+
+          <p>但是，如果您的表单还包含自定义的类似按钮的元素，例如 <code>&lt;a class="btn btn-*"&gt;...&lt;/a&gt;</code>，则这些元素只会被赋予指针事件样式：无，这意味着它们是 仍然可以使用键盘进行对焦和操作。 在这种情况下，您必须手动修改这些控件，方法是添加 <code>tabindex="-1"</code> 以防止它们接收焦点，并添加 <code>aria-disabled="disabled"</code> 以向辅助技术发送它们的状态信号。</p>
+          <div class="border-example">
+            <form>
+              <fieldset disabled>
+                <legend>禁用字段集示例</legend>
+                <div class="mb-3">
+                  <label for="disabledTextInput" class="form-label">禁用输入框</label>
+                  <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                </div>
+                <div class="mb-3">
+                  <label for="disabledSelect" class="form-label">禁用选择菜单</label>
+                  <select id="disabledSelect" class="form-select">
+                    <option>禁用下拉列表</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                    <label class="form-check-label" for="disabledFieldsetCheck">
+                      不能选择这个
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+          <pre>&lt;form&gt;
+  &lt;fieldset disabled&gt;
+    &lt;legend&gt;禁用字段集示例&lt;/legend&gt;
+    &lt;div class="mb-3"&gt;
+      &lt;label for="disabledTextInput" class="form-label"&gt;禁用输入框&lt;/label&gt;
+      &lt;input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input"&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-3"&gt;
+      &lt;label for="disabledSelect" class="form-label"&gt;禁用选择菜单&lt;/label&gt;
+      &lt;select id="disabledSelect" class="form-select"&gt;
+        &lt;option&gt;禁用下拉列表&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-3"&gt;
+      &lt;div class="form-check"&gt;
+        &lt;input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled&gt;
+        &lt;label class="form-check-label" for="disabledFieldsetCheck"&gt;
+          不能选择这个
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+
+          <h6>可访问性</h6>
+          <p>确保所有表单控件都具有适当的可访问名称，以便可以将其目的传达给辅助技术的用户。实现这一点的最简单方法是使用 <code>&lt;label&gt;</code> 元素，或者——在按钮的情况下——包含足够描述性的文本作为 <code>&lt;button&gt;...&lt;/button&gt;</code> 内容的一部分。</p>
+          <p>对于无法包含可见的 <code>&lt;label&gt;</code> 或适当的文本内容的情况，仍有其他方法可以提供可访问的名称，例如：</p>
+          <ul>
+            <li><code>&lt;label&gt;</code> 使用 <code>.visually-hidden</code> 类隐藏的元素</li>
+            <li>使用 <code>aria-labelledby</code> 指向可以充当标签的现有元素</li>
+            <li>提供标题属性</li>
+            <li>使用 <code>aria-label</code> 显式设置元素的可访问名称</li>
+          </ul>
+          <p>如果这些都不存在，辅助技术可能会求助于使用占位符属性作为 <code>&lt;input&gt;</code> 和 <code>&lt;textarea&gt;</code> 元素上可访问名称的后备。本节中的示例提供了一些建议的、特定于案例的方法。</p>
+          <p>虽然使用视觉隐藏的内容（<code>.visually-hidden</code>、<code>aria-label</code> 甚至占位符内容，一旦表单字段有内容就会消失）将使辅助技术用户受益，但对于某些用户来说，缺少可见的标签文本可能仍然是个问题。对于可访问性和可用性而言，某种形式的可见标签通常是最好的方法。</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

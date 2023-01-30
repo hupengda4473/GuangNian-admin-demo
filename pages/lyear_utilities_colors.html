@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>颜色 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">颜色</div></header>
+        <div class="card-body">
+
+          <h6>文本颜色</h6>
+          <div class="border-example">
+            <p class="text-primary">.text-primary</p>
+            <p class="text-secondary">.text-secondary</p>
+            <p class="text-success">.text-success</p>
+            <p class="text-danger">.text-danger</p>
+            <p class="text-warning bg-dark">.text-warning</p>
+            <p class="text-info bg-dark">.text-info</p>
+            <p class="text-light bg-dark">.text-light</p>
+            <p class="text-dark">.text-dark</p>
+            <p class="text-indigo">.text-indigo</p>
+            <p class="text-purple">.text-purple</p>
+            <p class="text-pink">.text-pink</p>
+            <p class="text-yellow">.text-yellow</p>
+            <p class="text-cyan">.text-cyan</p>
+            <p class="text-brown">.text-brown</p>
+            <p class="text-body">.text-body</p>
+            <p class="text-muted">.text-muted</p>
+            <p class="text-white bg-dark">.text-white</p>
+            <p class="text-black-50">.text-black-50</p>
+            <p class="text-white-50 bg-dark">.text-white-50</p>
+          </div>
+          <pre>&lt;p class="text-primary"&gt;.text-primary&lt;/p&gt;
+&lt;p class="text-secondary"&gt;.text-secondary&lt;/p&gt;
+&lt;p class="text-success"&gt;.text-success&lt;/p&gt;
+&lt;p class="text-danger"&gt;.text-danger&lt;/p&gt;
+&lt;p class="text-warning bg-dark"&gt;.text-warning&lt;/p&gt;
+&lt;p class="text-info bg-dark"&gt;.text-info&lt;/p&gt;
+&lt;p class="text-light bg-dark"&gt;.text-light&lt;/p&gt;
+&lt;p class="text-dark"&gt;.text-dark&lt;/p&gt;
+&lt;p class="text-indigo"&gt;.text-indigo&lt;/p&gt;
+&lt;p class="text-purple"&gt;.text-purple&lt;/p&gt;
+&lt;p class="text-pink"&gt;.text-pink&lt;/p&gt;
+&lt;p class="text-yellow"&gt;.text-yellow&lt;/p&gt;
+&lt;p class="text-cyan"&gt;.text-cyan&lt;/p&gt;
+&lt;p class="text-brown"&gt;.text-brown&lt;/p&gt;
+&lt;p class="text-body"&gt;.text-body&lt;/p&gt;
+&lt;p class="text-muted"&gt;.text-muted&lt;/p&gt;
+&lt;p class="text-white bg-dark"&gt;.text-white&lt;/p&gt;
+&lt;p class="text-black-50"&gt;.text-black-50&lt;/p&gt;
+&lt;p class="text-white-50 bg-dark"&gt;.text-white-50&lt;/p&gt;</pre>
+          <div class="callout callout-warning mb-3">注意：<code>.text-black-50</code> 和 <code>.text-white-50</code> 从v5开始就不推荐使用。它们将在v6中删除。</div>
+          <h6>不透明度</h6>
+          <p>v5.1.0版本中，文本颜色类是使用CSS变量通过Sass生成的。这允许实时更改颜色，而无需编译和动态alpha透明度更改。</p>
+          <p><strong>它是如何工作的</strong></p>
+          <pre>.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}</pre>
+          <p>我们使用了一个RGB版本的 <code>--bs-primary</code>（值为13, 110,253）CSS变量，并附加了第二个CSS变量 <code>--bs-text-opacity</code>，作为alpha透明度（由于本地CSS变量，默认值为1）。这意味着你可以随时使用 <code>.text-primary</code>，计算的颜色值是rgba(13,110,253,1)。每个内部的本地CSS变量。<code>text-*</code> 类避免了继承问题，因此实用程序的嵌套实例不会自动具有修改的alpha透明性。</p>
+
+          <p>要更改不透明度，请通过自定义样式或内联样式覆盖 <code>--bs-text-opacity</code>。</p>
+          <div class="border-example">
+            <div class="text-primary">这是默认的主颜色文本</div>
+            <div class="text-primary" style="--bs-text-opacity: .5;">这是50%不透明的主颜色文本</div>
+          </div>
+          <pre>&lt;div class="text-primary"&gt;这是默认的主颜色文本&lt;/div&gt;
+&lt;div class="text-primary" style="--bs-text-opacity: .5;"&gt;这是50%不透明的主颜色文本&lt;/div&gt;</pre>
+          <p>或者，从任何一个选项中选择 <code>.text-opacity</code> 相关类：</p>
+          <div class="border-example">
+            <div class="text-primary">这是默认的主颜色文本</div>
+            <div class="text-primary text-opacity-75">这是75%不透明的主颜色文本</div>
+            <div class="text-primary text-opacity-50">这是50%不透明的主颜色文本</div>
+            <div class="text-primary text-opacity-25">这是25%不透明的主颜色文本</div>
+          </div>
+          <pre>&lt;div class="text-primary"&gt;这是默认的主颜色文本&lt;/div&gt;
+&lt;div class="text-primary text-opacity-75"&gt;这是75%不透明的主颜色文本&lt;/div&gt;
+&lt;div class="text-primary text-opacity-50"&gt;这是50%不透明的主颜色文本&lt;/div&gt;
+&lt;div class="text-primary text-opacity-25"&gt;这是25%不透明的主颜色文本&lt;/div&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

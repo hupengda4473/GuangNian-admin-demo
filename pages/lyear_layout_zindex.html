@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>z-index - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">z-index</div></header>
+        <div class="card-body">
+
+          <p>虽然不是 Bootstrap 网格系统的一部分，但 <code>z-index</code> 在我们的组件如何相互叠加和交互方面发挥着重要作用。</p>
+
+          <p>一些 Bootstrap 组件使用 <code>z-index</code>，这是一个 CSS 属性，它通过提供第三个轴来排列内容来帮助控制布局。 我们在 Bootstrap 中使用默认的 <code>z-index</code> 比例，该比例旨在正确分层导航、工具提示和弹出框、模态框等。</p>
+
+          <p>这些较高的值从任意数字开始，足够高且足够具体，可以理想地避免冲突。 我们需要在我们的分层组件（工具提示、弹出框、导航栏、下拉菜单、模式）中使用这些标准集，以便我们可以在行为上保持合理一致。 我们没有理由不能使用 100+ 或 500+。</p>
+
+          <p>我们不鼓励定制这些值； 如果你改变一个，你可能需要全部改变。</p>
+
+          <pre>$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-offcanvas-backdrop:         1040;
+$zindex-offcanvas:                  1045;
+$zindex-modal-backdrop:             1050;
+$zindex-modal:                      1055;
+$zindex-popover:                    1070;
+$zindex-tooltip:                    1080;</pre>
+
+          <p>为了处理组件内的重叠边界（例如，输入组中的按钮和输入），我们使用低个位数的 <code>z-index</code> 值 1、2 和 3 来表示默认、悬停和活动状态。 在悬停/聚焦/激活时，我们将具有较高 <code>z-index</code> 值的特定元素置于最前面，以显示它们在兄弟元素上的边界。</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

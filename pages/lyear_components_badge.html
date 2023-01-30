@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>徽章 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">徽章</div></header>
+        <div class="card-body">
+
+          <p>徽章（badge）组件通过使用相对字体大小和 <code>em</code> 单位来实现缩放以匹配其直接父元素的大小。 从 Bootstrap v5 版本开始，徽章（badge）组件不再具有链接一样的焦点和鼠标悬停样式。</p>
+          <h1>浮生六记 <span class="badge bg-secondary">沈复</span></h1>
+          <h2>道德经 <span class="badge bg-secondary">老子</span></h2>
+          <h3>菜根谭 <span class="badge bg-secondary">洪应明</span></h3>
+          <h4>牡丹亭 <span class="badge bg-secondary">汤显祖</span></h4>
+          <h5>西厢记 <span class="badge bg-secondary">王实甫</span></h5>
+          <h6>纳兰词 <span class="badge bg-secondary">纳兰性德</span></h6>
+
+          <div class="lyear-divider">按钮中的徽章</div>
+          <p>徽章（badge）组件可以作为链接或按钮的一个组成部分，以提供计数功能。</p>
+          <button type="button" class="btn btn-primary">
+            未读消息 <span class="badge bg-secondary">4</span>
+          </button>
+
+          <div class="lyear-divider">定位</div>
+          <p>使用通用工具类修改一个 <code>.badge</code>。标记并将其放置在链接或按钮的角落。</p>
+          <button type="button" class="btn btn-primary position-relative">
+            收件箱
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99+
+              <span class="visually-hidden">未读邮件</span>
+            </span>
+          </button>
+          <p class="mt-3">你还可以使用其他的工具类实现下面一个红点的效果。</p>
+          <button type="button" class="btn btn-primary position-relative">
+            简介
+            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">新的警告</span>
+            </span>
+          </button>
+
+          <div class="lyear-divider">背景色</div>
+          <p>通过使用背景色（background）相关的工具类可以快速更改徽章（badge）组件的外观。请注意，使用 Bootstrap 的默认 <code>.bg-light</code> 类时，你需要使用文本颜色相关的工具类（例如 <code>.text-dark</code>）来设置适当的文本颜色。这是因为背景色相关的工具类除了设置 <code>background-color</code> 外不会更改任何其它设置。</p>
+          <span class="badge bg-primary">说好的幸福呢</span>
+          <span class="badge bg-secondary">说了再见</span>
+          <span class="badge bg-success">四面楚歌</span>
+          <span class="badge bg-danger">她的睫毛</span>
+          <span class="badge bg-warning">梯田</span>
+          <span class="badge bg-info">黄金甲</span>
+          <span class="badge bg-light text-dark">甜甜的</span>
+          <span class="badge bg-dark">听妈妈的话</span>
+          <span class="badge bg-indigo">同一种调调</span>
+          <span class="badge bg-purple">退后</span>
+          <span class="badge bg-pink">外婆</span>
+          <span class="badge bg-yellow">完美主义</span>
+          <span class="badge bg-cyan">威廉古堡</span>
+          <span class="badge bg-brown">我的地盘</span>
+          <span class="badge bg-teal">说好不哭</span>
+
+          <div class="lyear-divider">胶囊式徽章（Pill badges）</div>
+          <p>使用 <code>.rounded-pill</code> 工具类能够让徽章（badge）组件的边角变得更圆滑（这是通过设置更大的 <code>border-radius</code> 实现的）。</p>
+          <span class="badge rounded-pill bg-primary">说好的幸福呢</span>
+          <span class="badge rounded-pill bg-secondary">说了再见</span>
+          <span class="badge rounded-pill bg-success">四面楚歌</span>
+          <span class="badge rounded-pill bg-danger">她的睫毛</span>
+          <span class="badge rounded-pill bg-warning">梯田</span>
+          <span class="badge rounded-pill bg-info">黄金甲</span>
+          <span class="badge rounded-pill bg-light text-dark">甜甜的</span>
+          <span class="badge rounded-pill bg-dark">听妈妈的话</span>
+          <span class="badge rounded-pill bg-indigo">同一种调调</span>
+          <span class="badge rounded-pill bg-purple">退后</span>
+          <span class="badge rounded-pill bg-pink">外婆</span>
+          <span class="badge rounded-pill bg-yellow">完美主义</span>
+          <span class="badge rounded-pill bg-cyan">威廉古堡</span>
+          <span class="badge rounded-pill bg-brown">我的地盘</span>
+          <span class="badge rounded-pill bg-teal">说好不哭</span>
+
+          <div class="lyear-divider">边框带圆点</div>
+          <span class="badge badge-outline-primary">说好的幸福呢</span>
+          <span class="badge badge-outline-secondary">说了再见</span>
+          <span class="badge badge-outline-success">四面楚歌</span>
+          <span class="badge badge-outline-danger">她的睫毛</span>
+          <span class="badge badge-outline-warning">梯田</span>
+          <span class="badge badge-outline-info">黄金甲</span>
+          <span class="badge badge-outline-light">甜甜的</span>
+          <span class="badge badge-outline-dark">听妈妈的话</span>
+          <span class="badge badge-outline-indigo">同一种调调</span>
+          <span class="badge badge-outline-purple">退后</span>
+          <span class="badge badge-outline-pink">外婆</span>
+          <span class="badge badge-outline-yellow">完美主义</span>
+          <span class="badge badge-outline-cyan">威廉古堡</span>
+          <span class="badge badge-outline-brown">我的地盘</span>
+          <span class="badge badge-outline-teal">说好不哭</span>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

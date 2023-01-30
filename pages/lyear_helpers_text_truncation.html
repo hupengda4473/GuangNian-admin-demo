@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>文本截断 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">文本截断</div></header>
+        <div class="card-body">
+
+          <p>将长文本截断并用省略号代替。</p>
+          <p>对于超长的内容，你可以通过添加 <code>.text-truncate</code> 类将文本截断并添加省略号。<strong>需要设置 <code>display: inline-block</code> 或 <code>display: block</code> 属性。</strong></p>
+          <div class="border-example">
+            <div class="row">
+              <div class="col-2 text-truncate">
+                这段文字很长，一旦显示就会被截断。
+              </div>
+            </div>
+
+            <span class="d-inline-block text-truncate" style="max-width: 150px;">
+              这段文字很长，一旦显示就会被截断。
+            </span>
+          </div>
+          <pre>&lt;!-- Block level --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-2 text-truncate"&gt;
+    这段文字很长，一旦显示就会被截断。
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Inline level --&gt;
+&lt;span class="d-inline-block text-truncate" style="max-width: 150px;"&gt;
+  这段文字很长，一旦显示就会被截断。
+&lt;/span&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>表格 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">表格</div></header>
+        <div class="card-body">
+
+          <h6>基本示例</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>庄子</td>
+                <td>庄子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>道德经</td>
+                <td>老子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>能面杀人事件</td>
+                <td>高木彬光</td>
+                <td>悬疑小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>情景状态类</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">北京悠悠馆</th>
+                <td>陈舜臣</td>
+                <td>历史小说</td>
+              </tr>
+              <tr class="table-primary">
+                <th scope="row">甲午战争</th>
+                <td>陈舜臣</td>
+                <td>历史小说</td>
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row">神兽之爪</th>
+                <td>陈舜臣</td>
+                <td>历史小说</td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row">帝国的软肋：大汉王朝四百年</th>
+                <td>陈舜臣</td>
+                <td>历史小说</td>
+              </tr>
+              <tr class="table-danger">
+                <th scope="row">春秋战国：戈马钟鼓杀与盟</th>
+                <td>陈舜臣</td>
+                <td>历史小说</td>
+              </tr>
+              <tr class="table-warning">
+                <th scope="row">龙凤之国</th>
+                <td>陈舜臣</td>
+                <td>历史小说</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">大唐帝国之隋乱唐盛三百年</th>
+                <td>陈舜臣</td>
+                <td>历史小说</td>
+              </tr>
+              <tr class="table-light">
+                <th scope="row">一个陌生女人的来信</th>
+                <td>斯蒂芬·茨威格</td>
+                <td>国外名著</td>
+              </tr>
+              <tr class="table-dark">
+                <th scope="row">七十二朝人物演义</th>
+                <td>佚名</td>
+                <td>白话小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>条纹状表格 <code>.table-striped</code></h6>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>庄子</td>
+                <td>庄子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>道德经</td>
+                <td>老子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>能面杀人事件</td>
+                <td>高木彬光</td>
+                <td>悬疑小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>书籍名称</th>
+                <th>作者</th>
+                <th>分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>庄子</td>
+                <td>庄子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>道德经</td>
+                <td>老子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>能面杀人事件</td>
+                <td>高木彬光</td>
+                <td>悬疑小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-success table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>书籍名称</th>
+                <th>作者</th>
+                <th>分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>庄子</td>
+                <td>庄子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>道德经</td>
+                <td>老子</td>
+                <td>古文典籍</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>能面杀人事件</td>
+                <td>高木彬光</td>
+                <td>悬疑小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>鼠标悬停 <code>.table-hover</code></h6>
+          <p>添加 <code>.table-hover</code> 可在 <code>&lt;tbody&gt;</code> 中的表行上启用悬停状态。</p>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>书籍名称</th>
+                <th>作者</th>
+                <th>分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>理智与情感</td>
+                <td>简·奥斯汀</td>
+                <td>国外名著</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>浪子神鹰</td>
+                <td>陈青云</td>
+                <td>武侠小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>风中之路</td>
+                <td>川端康成</td>
+                <td>当代小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>书籍名称</th>
+                <th>作者</th>
+                <th>分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>理智与情感</td>
+                <td>简·奥斯汀</td>
+                <td>国外名著</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>浪子神鹰</td>
+                <td>陈青云</td>
+                <td>武侠小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>风中之路</td>
+                <td>川端康成</td>
+                <td>当代小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>书籍名称</th>
+                <th>作者</th>
+                <th>分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>理智与情感</td>
+                <td>简·奥斯汀</td>
+                <td>国外名著</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>浪子神鹰</td>
+                <td>陈青云</td>
+                <td>武侠小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>风中之路</td>
+                <td>川端康成</td>
+                <td>当代小说</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>状态类</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2" class="table-active">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2" class="table-active">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>表格边框</h6>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>可以使用 <code>border</code> 类定义不同颜色的边框。</p>
+          <table class="table table-bordered border-primary">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>无边框表格</h6>
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-dark table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>紧缩表格 <code>.table-sm</code></h6>
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-dark table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>垂直对齐方式</h6>
+          <p><code>&lt;thead&gt;</code> 的表格单元格始终与底部垂直对齐。<code>&lt;tbody&gt;</code> 中的表格单元格从 <code>&lt;Table&gt;</code> 继承其对齐方式，默认情况下与顶部对齐。使用垂直对齐类在需要时重新对齐。</p>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th scope="col" class="w-25">标题一</th>
+                  <th scope="col" class="w-25">标题二</th>
+                  <th scope="col" class="w-25">标题三</th>
+                  <th scope="col" class="w-25">标题四</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>此单元格从表格上继承 <code>vertical-align: middle;</code> 。</td>
+                  <td>此单元格从表格上继承 <code>vertical-align: middle;</code> 。</td>
+                  <td>此单元格从表格上继承 <code>vertical-align: middle;</code> 。</td>
+                  <td>这里是一些占位符文本，旨在占用相当多的垂直空间，以演示垂直对齐在前面的单元格中如何工作。第44回 金毛犼爱财设巧计 山西雁贪功坠牢笼</td>
+                </tr>
+                <tr class="align-bottom">
+                  <td>此单元格从表格行上继承 <code>vertical-align: bottom;</code> 。</td>
+                  <td>此单元格从表格行上继承 <code>vertical-align: bottom;</code> 。</td>
+                  <td>此单元格从表格行上继承 <code>vertical-align: bottom;</code> 。</td>
+                  <td>这里是一些占位符文本，旨在占用相当多的垂直空间，以演示垂直对齐在前面的单元格中如何工作。第45回 徐良临险地多亏好友 石仁入贼室搭救宾朋</td>
+                </tr>
+                <tr>
+                  <td>此单元格从表格上继承 <code>vertical-align: middle;</code> 。</td>
+                  <td>此单元格从表格上继承 <code>vertical-align: middle;</code> 。</td>
+                  <td class="align-top">这个单元格与顶部对齐。</td>
+                  <td>这里是一些占位符文本，旨在占用相当多的垂直空间，以演示垂直对齐在前面的单元格中如何工作。第46回 入破庙人鬼乱闹 奔古寺差解同行</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h6>嵌套</h6>
+          <p>嵌套表格不会继承边框样式、状态样式和表格情景语境。</p>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名</th>
+                <th scope="col">作者</th>
+                <th scope="col">价格</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>论语</td>
+                <td>孔子弟子及再传弟子</td>
+                <td>¥：19.80</td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">书籍名</th>
+                        <th scope="col">价格</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">A</th>
+                        <td>鲁论语</td>
+                        <td>¥：19.80</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">B</th>
+                        <td>齐论语</td>
+                        <td>¥：19.80</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C</th>
+                        <td>古论语</td>
+                        <td>¥：19.80</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>西厢记</td>
+                <td>王实甫</td>
+                <td>¥：12.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>表头</h6>
+          <p>与表和黑色表类似，使用修饰符类 <code>.table-light</code> <code>.table-dark</code>让其显示为浅灰色或黑色。</p>
+          <table class="table">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>天神下凡</td>
+                <td>烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>天神下凡</td>
+                <td>烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>表脚</h6>
+          <table class="table">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>天神下凡</td>
+                <td>烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>表脚</td>
+                <td>表脚</td>
+                <td>表脚</td>
+                <td>表脚</td>
+              </tr>
+            </tfoot>
+          </table>
+          <h6>题注</h6>
+          <p><code>&lt;caption&gt;</code> 的功能类似于表格的标题。它帮助屏幕阅读器的用户找到一个表格，了解它的内容，并决定他们是否想要阅读它。</p>
+          <table class="table">
+            <caption>书籍清单</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>您还可以使用 <code>.caption-top</code> 将 &lt;caption&gt; 放在表格顶部。</p>
+          <table class="table caption-top">
+            <caption>书籍清单</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">书籍名称</th>
+                <th scope="col">作者</th>
+                <th scope="col">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>简单爱</td>
+                <td>董晓磊</td>
+                <td>青春校园</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>主教杀人事件</td>
+                <td>范·达恩</td>
+                <td>悬疑小说</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">天神下凡 · 烽火戏诸侯</td>
+                <td>玄幻仙侠</td>
+              </tr>
+            </tbody>
+          </table>
+          <h6>始终响应式的</h6>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">书籍名</th>
+                  <th scope="col">作者</th>
+                  <th scope="col">国籍</th>
+                  <th scope="col">分类</th>
+                  <th scope="col">库存</th>
+                  <th scope="col">价格</th>
+                  <th scope="col">商店</th>
+                  <th scope="col">折扣</th>
+                  <th scope="col">是否有赠礼</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>钦差大臣</td>
+                  <td>果戈理</td>
+                  <td>俄国</td>
+                  <td>国外名族</td>
+                  <td>125</td>
+                  <td>36.00</td>
+                  <td>五玉书店</td>
+                  <td>9折</td>
+                  <td>无</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>西厢记</td>
+                  <td>王实甫</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>26</td>
+                  <td>18.00</td>
+                  <td>广场书店</td>
+                  <td>9.5折</td>
+                  <td>有</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>儒林外史</td>
+                  <td>吴敬梓</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>39</td>
+                  <td>22.00</td>
+                  <td>大点书店</td>
+                  <td>8.5折</td>
+                  <td>无</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h6>特定断点</h6>
+          <p>默认</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">书籍名</th>
+                  <th scope="col">作者</th>
+                  <th scope="col">国籍</th>
+                  <th scope="col">分类</th>
+                  <th scope="col">库存</th>
+                  <th scope="col">价格</th>
+                  <th scope="col">商店</th>
+                  <th scope="col">折扣</th>
+                  <th scope="col">是否有赠礼</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>钦差大臣</td>
+                  <td>果戈理</td>
+                  <td>俄国</td>
+                  <td>国外名族</td>
+                  <td>125</td>
+                  <td>36.00</td>
+                  <td>五玉书店</td>
+                  <td>9折</td>
+                  <td>无</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>西厢记</td>
+                  <td>王实甫</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>26</td>
+                  <td>18.00</td>
+                  <td>广场书店</td>
+                  <td>9.5折</td>
+                  <td>有</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>儒林外史</td>
+                  <td>吴敬梓</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>39</td>
+                  <td>22.00</td>
+                  <td>大点书店</td>
+                  <td>8.5折</td>
+                  <td>无</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><code>.table-responsive-sm</code></p>
+          <div class="table-responsive-sm">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">书籍名</th>
+                  <th scope="col">作者</th>
+                  <th scope="col">国籍</th>
+                  <th scope="col">分类</th>
+                  <th scope="col">库存</th>
+                  <th scope="col">价格</th>
+                  <th scope="col">商店</th>
+                  <th scope="col">折扣</th>
+                  <th scope="col">是否有赠礼</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>钦差大臣</td>
+                  <td>果戈理</td>
+                  <td>俄国</td>
+                  <td>国外名族</td>
+                  <td>125</td>
+                  <td>36.00</td>
+                  <td>五玉书店</td>
+                  <td>9折</td>
+                  <td>无</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>西厢记</td>
+                  <td>王实甫</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>26</td>
+                  <td>18.00</td>
+                  <td>广场书店</td>
+                  <td>9.5折</td>
+                  <td>有</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>儒林外史</td>
+                  <td>吴敬梓</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>39</td>
+                  <td>22.00</td>
+                  <td>大点书店</td>
+                  <td>8.5折</td>
+                  <td>无</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><code>.table-responsive-md</code></p>
+          <div class="table-responsive-md">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">书籍名</th>
+                  <th scope="col">作者</th>
+                  <th scope="col">国籍</th>
+                  <th scope="col">分类</th>
+                  <th scope="col">库存</th>
+                  <th scope="col">价格</th>
+                  <th scope="col">商店</th>
+                  <th scope="col">折扣</th>
+                  <th scope="col">是否有赠礼</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>钦差大臣</td>
+                  <td>果戈理</td>
+                  <td>俄国</td>
+                  <td>国外名族</td>
+                  <td>125</td>
+                  <td>36.00</td>
+                  <td>五玉书店</td>
+                  <td>9折</td>
+                  <td>无</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>西厢记</td>
+                  <td>王实甫</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>26</td>
+                  <td>18.00</td>
+                  <td>广场书店</td>
+                  <td>9.5折</td>
+                  <td>有</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>儒林外史</td>
+                  <td>吴敬梓</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>39</td>
+                  <td>22.00</td>
+                  <td>大点书店</td>
+                  <td>8.5折</td>
+                  <td>无</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><code>.table-responsive-lg</code></p>
+          <div class="table-responsive-lg">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">书籍名</th>
+                  <th scope="col">作者</th>
+                  <th scope="col">国籍</th>
+                  <th scope="col">分类</th>
+                  <th scope="col">库存</th>
+                  <th scope="col">价格</th>
+                  <th scope="col">商店</th>
+                  <th scope="col">折扣</th>
+                  <th scope="col">是否有赠礼</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>钦差大臣</td>
+                  <td>果戈理</td>
+                  <td>俄国</td>
+                  <td>国外名族</td>
+                  <td>125</td>
+                  <td>36.00</td>
+                  <td>五玉书店</td>
+                  <td>9折</td>
+                  <td>无</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>西厢记</td>
+                  <td>王实甫</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>26</td>
+                  <td>18.00</td>
+                  <td>广场书店</td>
+                  <td>9.5折</td>
+                  <td>有</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>儒林外史</td>
+                  <td>吴敬梓</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>39</td>
+                  <td>22.00</td>
+                  <td>大点书店</td>
+                  <td>8.5折</td>
+                  <td>无</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><code>.table-responsive-xl</code></p>
+          <div class="table-responsive-xl">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">书籍名</th>
+                  <th scope="col">作者</th>
+                  <th scope="col">国籍</th>
+                  <th scope="col">分类</th>
+                  <th scope="col">库存</th>
+                  <th scope="col">价格</th>
+                  <th scope="col">商店</th>
+                  <th scope="col">折扣</th>
+                  <th scope="col">是否有赠礼</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>钦差大臣</td>
+                  <td>果戈理</td>
+                  <td>俄国</td>
+                  <td>国外名族</td>
+                  <td>125</td>
+                  <td>36.00</td>
+                  <td>五玉书店</td>
+                  <td>9折</td>
+                  <td>无</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>西厢记</td>
+                  <td>王实甫</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>26</td>
+                  <td>18.00</td>
+                  <td>广场书店</td>
+                  <td>9.5折</td>
+                  <td>有</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>儒林外史</td>
+                  <td>吴敬梓</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>39</td>
+                  <td>22.00</td>
+                  <td>大点书店</td>
+                  <td>8.5折</td>
+                  <td>无</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><code>.table-responsive-xxl</code></p>
+          <div class="table-responsive-xxl">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">书籍名</th>
+                  <th scope="col">作者</th>
+                  <th scope="col">国籍</th>
+                  <th scope="col">分类</th>
+                  <th scope="col">库存</th>
+                  <th scope="col">价格</th>
+                  <th scope="col">商店</th>
+                  <th scope="col">折扣</th>
+                  <th scope="col">是否有赠礼</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>钦差大臣</td>
+                  <td>果戈理</td>
+                  <td>俄国</td>
+                  <td>国外名族</td>
+                  <td>125</td>
+                  <td>36.00</td>
+                  <td>五玉书店</td>
+                  <td>9折</td>
+                  <td>无</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>西厢记</td>
+                  <td>王实甫</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>26</td>
+                  <td>18.00</td>
+                  <td>广场书店</td>
+                  <td>9.5折</td>
+                  <td>有</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>儒林外史</td>
+                  <td>吴敬梓</td>
+                  <td>中国</td>
+                  <td>古文典籍</td>
+                  <td>39</td>
+                  <td>22.00</td>
+                  <td>大点书店</td>
+                  <td>8.5折</td>
+                  <td>无</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

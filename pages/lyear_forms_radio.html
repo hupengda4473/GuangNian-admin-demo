@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>单选框 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">单选框</div></header>
+        <div class="card-body">
+
+          <div class="border-example">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                默认的单选框
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                默认选中的单选框
+              </label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"&gt;
+  &lt;label class="form-check-label" for="flexRadioDefault1"&gt;
+    默认的单选框
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked&gt;
+  &lt;label class="form-check-label" for="flexRadioDefault2"&gt;
+    默认选中的单选框
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>禁用</h6>
+          <p>添加 <code>disabled</code> 属性，关联的 <code>&lt;label&gt;</code> 会自动设置样式以匹配较浅的颜色，以帮助指示输入的状态。</p>
+          <div class="border-example">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+              <label class="form-check-label" for="flexRadioDisabled">
+                禁用单选框
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+              <label class="form-check-label" for="flexRadioCheckedDisabled">
+                禁用选中的单选框
+              </label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled&gt;
+  &lt;label class="form-check-label" for="flexRadioDisabled"&gt;
+    禁用单选框
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled&gt;
+  &lt;label class="form-check-label" for="flexRadioCheckedDisabled"&gt;
+    禁用选中的单选框
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>默认（堆叠）</h6>
+          <p>默认情况下，任何数量的直接同级单选框都将垂直堆叠并以 <code>.form-check</code> 适当间隔。</p>
+          <div class="border-example">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                篮球
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                足球
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+              <label class="form-check-label" for="exampleRadios3">
+                禁用的单选框
+              </label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked&gt;
+  &lt;label class="form-check-label" for="exampleRadios1"&gt;
+    篮球
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"&gt;
+  &lt;label class="form-check-label" for="exampleRadios2"&gt;
+    足球
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled&gt;
+  &lt;label class="form-check-label" for="exampleRadios3"&gt;
+    禁用的单选框
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>内联的</h6>
+          <p>通过将 <code>.form-check-inline</code> 添加到任何 <code>.form-check</code> 将复选框或单选框分组到同一水平行。</p>
+          <div class="border-example">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+              <label class="form-check-label" for="inlineRadio3">3 (禁用)</label>
+            </div>
+          </div>
+          <pre>&lt;div class="form-check form-check-inline"&gt;
+  &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"&gt;
+  &lt;label class="form-check-label" for="inlineRadio1"&gt;1&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check form-check-inline"&gt;
+  &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"&gt;
+  &lt;label class="form-check-label" for="inlineRadio2"&gt;2&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check form-check-inline"&gt;
+  &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled&gt;
+  &lt;label class="form-check-label" for="inlineRadio3"&gt;3 (禁用)&lt;/label&gt;
+&lt;/div&gt;</pre>
+
+          <h6>不使用 <code>label</code></h6>
+          <div class="border-example">
+            <div>
+              <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+            </div>
+          </div>
+          <pre>&lt;div&gt;
+  &lt;input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."&gt;
+&lt;/div&gt;</pre>
+
+          <h6>单选切换按钮</h6>
+          <div class="border-example">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+            <label class="btn btn-secondary" for="option1">选中的</label>
+
+            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+            <label class="btn btn-secondary" for="option2">单选</label>
+
+            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+            <label class="btn btn-secondary" for="option3">禁用</label>
+
+            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+            <label class="btn btn-secondary" for="option4">单选</label>
+          </div>
+          <pre>&lt;input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked&gt;
+&lt;label class="btn btn-secondary" for="option1"&gt;选中的&lt;/label&gt;
+
+&lt;input type="radio" class="btn-check" name="options" id="option2" autocomplete="off"&gt;
+&lt;label class="btn btn-secondary" for="option2"&gt;单选&lt;/label&gt;
+
+&lt;input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled&gt;
+&lt;label class="btn btn-secondary" for="option3"&gt;禁用&lt;/label&gt;
+
+&lt;input type="radio" class="btn-check" name="options" id="option4" autocomplete="off"&gt;
+&lt;label class="btn btn-secondary" for="option4"&gt;单选&lt;/label&gt;</pre>
+
+          <h6>边框样式</h6>
+          <div class="border-example">
+            <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+            <label class="btn btn-outline-success" for="success-outlined">Success 选中单选框</label>
+
+            <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger-outlined">Danger 状态单选框</label>
+          </div>
+          <pre>&lt;input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked&gt;
+&lt;label class="btn btn-outline-success" for="success-outlined"&gt;Success 选中单选框&lt;/label&gt;
+
+&lt;input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off"&gt;
+&lt;label class="btn btn-outline-danger" for="danger-outlined"&gt;Danger 状态单选框&lt;/label&gt;</pre>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">不同颜色的单选框</div></header>
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input form-check-blue" type="radio" name="formRadioBlue" id="formRadioBlue" checked>
+            <label class="form-check-label" for="formRadioBlue">
+              蓝色的单选框
+            </label>
+          </div><div class="form-check">
+            <input class="form-check-input form-check-indigo" type="radio" name="formRadioIndigo" id="formRadioIndigo" checked>
+            <label class="form-check-label" for="formRadioIndigo">
+              靛蓝的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-purple" type="radio" name="formRadioPurple" id="formRadioPurple" checked>
+            <label class="form-check-label" for="formRadioPurple">
+              紫色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-pink" type="radio" name="formRadioPink" id="formRadioPink" checked>
+            <label class="form-check-label" for="formRadioPink">
+              粉红的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-red" type="radio" name="formRadioRed" id="formRadioRed" checked>
+            <label class="form-check-label" for="formRadioRed">
+              红色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-orange" type="radio" name="formRadioOrange" id="formRadioOrange" checked>
+            <label class="form-check-label" for="formRadioOrange">
+              橙色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-yellow" type="radio" name="formRadioYellow" id="formRadioYellow" checked>
+            <label class="form-check-label" for="formRadioYellow">
+              黄色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-green" type="radio" name="formRadioGreen" id="formRadioGreen" checked>
+            <label class="form-check-label" for="formRadioGreen">
+              绿色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-cyan" type="radio" name="formRadioCyan" id="formRadioCyan" checked>
+            <label class="form-check-label" for="formRadioCyan">
+              青色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-brown" type="radio" name="formRadioBrown" id="formRadioBrown" checked>
+            <label class="form-check-label" for="formRadioBrown">
+              棕色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-gray" type="radio" name="formRadioGray" id="formRadioGray" checked>
+            <label class="form-check-label" for="formRadioGray">
+              灰色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-dark" type="radio" name="formRadioDark" id="formRadioDark" checked>
+            <label class="form-check-label" for="formRadioDark">
+              黑色的单选框
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input form-check-teal" type="radio" name="formRadioTeal" id="formRadioTeal" checked>
+            <label class="form-check-label" for="formRadioTeal">
+              蓝绿色的单选框
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

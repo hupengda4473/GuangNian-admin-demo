@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>滑动容器 - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">滑动容器</div></header>
+        <div class="card-body">
+
+          <p>使用一些类和我们的 JavaScript 插件将隐藏的侧边栏构建到您的项目中，用于导航、购物车等。</p>
+          <h5>它是如何运作的</h5>
+          <p>Offcanvas 是一个侧边栏组件，可以通过 JavaScript 切换以从视口的左侧、右侧、顶部或底部边缘显示。 按钮或锚点用作附加到您切换的特定元素的触发器，而 <code>data</code> 属性用于调用我们的 JavaScript。</p>
+          <ul>
+            <li>Offcanvas 与 modals 共享一些相同的 JavaScript 代码。 从概念上讲，它们非常相似，但它们是独立的插件。</li>
+            <li>类似地，一些用于 offcanvas 样式和尺寸的资源 Sass 变量继承自 modal 的变量。</li>
+            <li>显示时，offcanvas 包含一个默认背景，单击该背景可以隐藏 offcanvas。</li>
+            <li>与 modals 类似，一次只能显示一个 offcanvas。</li>
+          </ul>
+          <p><strong>请注意！</strong>鉴于 CSS 处理动画的方式，您不能在 <code>.offcanvas</code> 元素上使用 <code>margin</code> 或 <code>translate</code>。 相反，将类用作独立的包装元素。</p>
+          <div class="callout callout-info mb-3">
+            该组件的动画效果依赖于 <code>prefers-reduced-motion</code> 媒体查询。 请参阅<a href="https://v5.bootcss.com/docs/getting-started/accessibility/#reduced-motion" target="_blank">辅助功能文档的减少运动部分</a>。
+          </div>
+
+          <h5>例子</h5>
+          <h6>画布外组件</h6>
+          <p>下面是一个默认显示的 offcanvas 示例（通过 <code>.offcanvas</code> 上的 <code>.show</code>）。 Offcanvas 支持带有关闭按钮的标题和一些初始 <code>padding</code> 的可选正文类。 我们建议您尽可能在关闭操作中包含 offcanvas 标头，或提供明确的关闭操作。</p>
+          <div class="border-example border-example-offcanvas p-0 bg-light overflow-hidden">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">《铁崖乐府》</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                中国古籍，杨维桢著作。尤以乐府擅名，号铁崖体，在元季文坛独领风骚40余年。
+              </div>
+            </div>
+          </div>
+          <pre>&lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasLabel"&gt;《铁崖乐府》&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    中国古籍，杨维桢著作。尤以乐府擅名，号铁崖体，在元季文坛独领风骚40余年。
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          <h6>现场演示</h6>
+          <p>使用下面的按钮通过 JavaScript 显示和隐藏 offcanvas 元素，该元素在具有 <code>.offcanvas</code> 类的元素上切换 <code>.show</code> 类。</p>
+          <ul>
+            <li><code>.offcanvas</code> 隐藏内容（默认）</li>
+            <li><code>.offcanvas.show</code> 显示内容</li>
+          </ul>
+          <p>您可以使用带有 <code>href</code> 属性的链接，或带有 <code>data-bs-target</code> 属性的按钮。 在这两种情况下，<code>data-bs-toggle=“offcanvas”</code> 都是必需的。</p>
+          <div class="border-example">
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+              使用链接的href
+            </a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              使用按钮的data-bs-target
+            </button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">《越绝书》</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="">
+                  以春秋末年至战国初期吴越争霸的历史事实为主干，上溯夏禹，下迄两汉，旁及诸侯列国，对这一历史时期吴越地区的汉民族政治、经济、军事、天文、地理、历法、语言等多有所涉及，被誉为“地方志鼻祖”。
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    古文典籍
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">《千字文》</a></li>
+                    <li><a class="dropdown-item" href="#">《孟子》</a></li>
+                    <li><a class="dropdown-item" href="#">《菜根谭》</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"&gt;
+  使用链接的href
+&lt;/a&gt;
+&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"&gt;
+  使用按钮的data-bs-target
+&lt;/button&gt;
+
+&lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasExampleLabel"&gt;《越绝书》&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    &lt;div class=""&gt;
+      以春秋末年至战国初期吴越争霸的历史事实为主干，上溯夏禹，下迄两汉，旁及诸侯列国，对这一历史时期吴越地区的汉民族政治、经济、军事、天文、地理、历法、语言等多有所涉及，被誉为“地方志鼻祖”。
+    &lt;/div&gt;
+    &lt;div class="dropdown mt-3"&gt;
+      &lt;button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"&gt;
+        古文典籍
+      &lt;/button&gt;
+      &lt;ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;《千字文》&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;《孟子》&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;《菜根谭》&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          <h5>放置方式</h5>
+          <p>offcanvas 组件没有默认放置，因此您必须添加以下修饰符类之一；</p>
+          <ul>
+            <li><code>.offcanvas-start</code> 将 offcanvas 放置在视口的左侧（如上所示）</li>
+            <li><code>.offcanvas-end</code> 将 offcanvas 放置在视口的右侧</li>
+            <li><code>.offcanvas-top</code> 将 offcanvas 放置在视口的顶部</li>
+            <li><code>.offcanvas-bottom</code> 将 offcanvas 放置在视口底部</li>
+          </ul>
+          <p>试试下面的顶部、右侧和底部示例。</p>
+          <div class="border-example">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">切换顶部offcanvas</button>
+
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasTopLabel">顶部Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                ...
+              </div>
+            </div>
+          </div>
+          <pre>&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"&gt;切换顶部offcanvas&lt;/button&gt;
+
+&lt;div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasTopLabel"&gt;顶部Offcanvas&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          <div class="border-example">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">切换右侧offcanvas</button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">右侧Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                ...
+              </div>
+            </div>
+          </div>
+          <pre>&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"&gt;切换右侧offcanvas&lt;/button&gt;
+
+&lt;div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasRightLabel"&gt;右侧Offcanvas&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          <div class="border-example">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">切换底部offcanvas</button>
+
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">底部Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body small">
+                ...
+              </div>
+            </div>
+          </div>
+          <pre>&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"&gt;切换底部offcanvas&lt;/button&gt;
+
+&lt;div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasBottomLabel"&gt;底部Offcanvas&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body small"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          <h5>背景</h5>
+          <p>当 offcanvas 及其背景可见时，滚动 <code>&lt;body&gt;</code> 元素将被禁用。 使用 <code>data-bs-scroll</code> 属性来切换 <code><body></code> 滚动，使用 <code>data-bs-backdrop</code> 来切换背景。</p>
+          <div class="border-example">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">启用正文滚动</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">启用背景（默认）</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">同时启用滚动和背景</button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">带正文滚动的 Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <p>尝试滚动页面的其余部分以查看此选项的实际效果。</p>
+              </div>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">带背景的 Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <p>.....</p>
+              </div>
+            </div>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">带滚动的背景</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <p>尝试滚动页面的其余部分以查看此选项的实际效果。</p>
+              </div>
+            </div>
+          </div>
+          <pre>&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"&gt;启用正文滚动&lt;/button&gt;
+&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"&gt;启用背景（默认）&lt;/button&gt;
+&lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"&gt;同时启用滚动和背景&lt;/button&gt;
+
+&lt;div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasScrollingLabel"&gt;带正文滚动的 Offcanvas&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    &lt;p&gt;尝试滚动页面的其余部分以查看此选项的实际效果。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"&gt;带背景的 Offcanvas&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    &lt;p&gt;.....&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"&gt;
+  &lt;div class="offcanvas-header"&gt;
+    &lt;h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"&gt;带滚动的背景&lt;/h5&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="offcanvas-body"&gt;
+    &lt;p&gt;尝试滚动页面的其余部分以查看此选项的实际效果。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          <h5>可访问性</h5>
+          <p>由于 offcanvas 面板在概念上是一个模态对话框，因此请务必将 <code>aria-labelledby="..."</code>（引用 offcanvas 标题）添加到 <code>.offcanvas</code>。 请注意，您不需要添加 <code>role="dialog"</code>，因为我们已经通过 JavaScript 添加了它。</p>
+
+          <h5>用法</h5>
+          <p>offcanvas 插件利用一些类和属性来处理繁重的工作：</p>
+          <ul>
+            <li><code>.offcanvas</code> 隐藏内容</li>
+            <li><code>.offcanvas.show</code> 显示内容</li>
+            <li><code>.offcanvas-start</code> 将 offcanvas 隐藏在左侧</li>
+            <li><code>.offcanvas-end</code> 将 offcanvas 隐藏在右侧</li>
+            <li><code>.offcanvas-top</code> 将 offcanvas 隐藏在顶部</li>
+            <li><code>.offcanvas-bottom</code> 将 offcanvas 隐藏在底部</li>
+          </ul>
+          <p>添加一个带有 <code>data-bs-dismiss="offcanvas"</code> 属性的关闭按钮，它会触发 JavaScript 功能。 请务必将 <code>&lt;button&gt;</code> 元素与它一起使用，以确保在所有设备上都能正常运行。</p>
+          <h6>通过数据属性</h6>
+          <strong>Toggle</strong>
+          <p>将 <code>data-bs-toggle=“offcanvas”</code> 和 <code>data-bs-target</code> 或 <code>href</code> 添加到元素以自动分配控制权 画布外元素。 <code>data-bs-target</code> 属性接受一个 CSS 选择器来应用 offcanvas。 请务必将类 <code>offcanvas</code> 添加到 offcanvas 元素。 如果您希望它默认打开，请添加附加类 <code>show</code>。</p>
+          <strong>Dismiss</strong>
+          <p>可以通过 <strong>offcanvas</strong> 内的按钮上的 <code>data</code> 属性来实现解雇，如下所示：</p>
+          <pre>&lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;</pre>
+          <p>或使用 <code>data-bs-target</code> 在 <strong>offcanvas 之外的按钮</strong> 上，如下所示：</p>
+          <pre>&lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#my-offcanvas" aria-label="Close"&gt;&lt;/button&gt;</pre>
+          <div class="callout callout-warning mb-3">
+            虽然支持关闭画布的两种方式，但请记住，从画布外部解除与 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal" 不匹配 target="_blank">WAI-ARIA 模式对话框设计模式</a>。 这样做需要您自担风险。
+          </div>
+
+          <h6>通过 JavaScript</h6>
+          <p>手动启用：</p>
+          <pre>var offcanvasElementList = Array.prototype.slice.call(document.querySelectorAll('.offcanvas'))
+var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+  return new bootstrap.Offcanvas(offcanvasEl)
+})</pre>
+          <h3 id="options">选项</h3>
+          <p>选项可以通过数据属性或 JavaScript 传递。 对于数据属性，将选项名称附加到 <code>data-bs-</code>，如 <code>data-bs-backdrop=""</code>。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>名称</th>
+                <th>类型</th>
+                <th>默认值</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>backdrop</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>在画布打开时在身体上应用背景</td>
+              </tr>
+              <tr>
+                <td><code>keyboard</code></td>
+                <td>boolean</td>
+                <td><code>true</code></td>
+                <td>按下退出键时关闭画布</td>
+              </tr>
+              <tr>
+                <td><code>scroll</code></td>
+                <td>boolean</td>
+                <td><code>false</code></td>
+                <td>在 offcanvas 打开时允许正文滚动</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h6>方法</h6>
+          <div class="callout callout-danger mb-3">
+          <strong>异步方法和转换</strong>
+          <p>所有 API 方法都是<strong>异步</strong>并启动<strong>transition</strong>。 它们会在过渡开始后但<strong>在过渡结束之前</strong>返回给调用者。 此外，<strong>转换组件上的方法调用将被忽略</strong>。</p>
+          <p><a href="https://v5.bootcss.com/docs/getting-started/javascript/#asynchronous-functions-and-transitions" target="_blank">查看我们的 JavaScript 文档了解更多信息</a>。</p>
+          </div>
+
+          <p>将您的内容激活为画布元素。 接受可选选项<code>object</code>。</p>
+          <p>您可以使用构造函数创建一个 offcanvas 实例，例如：</p>
+          <pre>var myOffcanvas = document.getElementById('myOffcanvas')
+var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)</pre>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>方法</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>toggle</code>
+                </td>
+                <td>
+                  将 offcanvas 元素切换为显示或隐藏。
+                  <strong>在 offcanvas 元素实际显示或隐藏之前返回给调用者</strong>（即在 <code>shown.bs.offcanvas</code> 或                    <code>hidden.bs.offcanvas</code>事件发生）。
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>show</code>
+                </td>
+                <td>
+                  显示一个 offcanvas 元素。
+                  <strong>在 offcanvas 元素实际显示之前返回调用者</strong>（即在 <code>shown.bs.offcanvas</code> 事件发生之前）。
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>hide</code>
+                </td>
+                <td>
+                  隐藏  offcanvas  元素。
+                  <strong>在 offcanvas 元素真正被隐藏之前返回给调用者</strong>（即在 <code>hidden.bs.offcanvas</code> 事件发生）。
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>getInstance</code>
+                </td>
+                <td>
+                  <em>static</em>方法，允许您获取与 DOM 元素关联的 offcanvas 实例。
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>getOrCreateInstance</code>
+                </td>
+                <td>
+                  <em>static</em>方法，允许您获取与 DOM 元素关联的 offcanvas 实例，或创建一个新实例以防它未初始化。
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h6>事件</h6>
+          <p>Bootstrap 的 offcanvas 类公开了一些用于挂钩到 offcanvas 功能的事件。</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>事件类型</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>show.bs.offcanvas</code></td>
+                <td>此事件在调用 <code>show</code> 实例方法时立即触发。</td>
+              </tr>
+              <tr>
+                <td><code>shown.bs.offcanvas</code></td>
+                <td>当 offcanvas 元素对用户可见时触发此事件（将等待 CSS 转换完成）。</td>
+              </tr>
+              <tr>
+                <td><code>hide.bs.offcanvas</code></td>
+                <td>当调用 <code>hide</code> 方法时，会立即触发此事件。</td>
+              </tr>
+              <tr>
+                <td><code>hidden.bs.offcanvas</code></td>
+                <td>当一个 offcanvas 元素对用户隐藏时触发此事件（将等待 CSS 转换完成）。</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre>var myOffcanvas = document.getElementById('myOffcanvas')
+myOffcanvas.addEventListener('hidden.bs.offcanvas', function () {
+  // do something...
+})</pre>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>

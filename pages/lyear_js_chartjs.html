@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="keywords" content="LightYear,LightYearAdmin,光年,后台模板,后台管理系统,光年HTML模板">
+<meta name="description" content="Light Year Admin V5是一个基于Bootstrap v5.1.3的后台管理系统的HTML模板。">
+<title>chart.js - 光年(Light Year Admin V5)后台管理系统模板</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="card">
+        <header class="card-header"><div class="card-title">chart.js</div></header>
+        <div class="card-body">
+
+          <div class="callout callout-info mb-3">插件使用chartjs v3.9.1，查看中文文档：<a href="https://chartjs.bootcss.com/" target="_blank">chart.js</a></div>
+
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <h6>线形图 - 1</h6>
+              <canvas id="chart-line-1" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>线形图 - 2</h6>
+              <canvas id="chart-line-2" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>线形图 - 3</h6>
+              <canvas id="chart-line-3" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>线形图 - 4</h6>
+              <canvas id="chart-line-4" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>垂直条形图</h6>
+              <canvas id="chart-vbar-1" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>条形图边框半径</h6>
+              <canvas id="chart-vbar-2" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>水平条形图</h6>
+              <canvas id="chart-hbar" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>浮动条形图</h6>
+              <canvas id="chart-float-bar" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>堆叠横条图</h6>
+              <canvas id="chart-stacked-bar" width="400" height="250"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>饼图</h6>
+              <canvas id="chart-pie" width="280" height="280"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>环形图</h6>
+              <canvas id="chart-doughnut" width="280" height="280"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>雷达图</h6>
+              <canvas id="chart-radar" width="360" height="360"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>极区图</h6>
+              <canvas id="chart-polar" width="360" height="360"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>气泡图</h6>
+              <canvas id="chart-bubble" width="280" height="280"></canvas>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <h6>离散图</h6>
+              <canvas id="chart-scatter" width="280" height="280"></canvas>
+            </div>
+            <div class="col-lg-6">
+              <h6>混合图表</h6>
+              <canvas id="chart-mixed" width="280" height="280"></canvas>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!--引入chart插件js-->
+<script type="text/javascript" src="../js/chart.min.js"></script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript">
+// 线形图 一
+new Chart($("#chart-line-1"), {
+    type: 'line',
+    data: {
+        labels: ["一月", "二月", "三月", "四月", "五月", "六月"],
+        datasets: [{
+            label: "收入",
+            backgroundColor: "#33cabb",
+            borderColor: "#33cabb",
+            fill: false,
+            data: [3000, 2500, 3500, 2300, 1950, 2900],
+        }, {
+			label: '支出',
+			fill: false,
+			backgroundColor: "#f96868",
+			borderColor: "#f96868",
+			data: [2300, 1800, 2000, 1500, 1200, 1350],
+		}]
+    },
+    options: {
+	    responsive: true,
+        plugins: {
+            legend: {
+              position: 'top',
+            },
+	        title: {
+	          display: true,
+	          text: '我的收支情况'
+	        },
+        }
+    }
+});
+// 线形图 二
+new Chart($("#chart-line-2"), {
+    type: 'line',
+    data: {
+        labels: ['第一天', '第二天', '第三天', '第四天', '第五天', '第六天'],
+        datasets: [
+            {
+                label: 'Dataset',
+                data: [93, 67, 58, 26, 13, 45],
+                borderColor: "#f96868",
+                backgroundColor: "rgba(249, 104, 104, 0.5)",
+                pointStyle: 'circle',
+                pointRadius: 10,
+                pointHoverRadius: 15
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: '点样式',
+            }
+        }
+    }
+});
+// 线形图 三
+new Chart($('#chart-line-3'), {
+    type: 'line',
+    data: {
+        labels: ['第一天', '第二天', '第三天', '第四天', '第五天', '第六天'],
+        datasets: [
+            {
+                label: '出货量(吨)',
+                data: [37, 59, 12, 89, 29, 65],
+                borderColor: "#f96868",
+                fill: false,
+                stepped: true,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        interaction: {
+            intersect: false,
+            axis: 'x'
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: '阶梯线图',
+            }
+        }
+    }
+});
+// 线形图 四
+new Chart($('#chart-line-4'), {
+    type: 'line',
+    data: {
+        labels: ['一月', '二月', '三月', '四月', '五月', '六月'],
+        datasets: [
+            {
+                label: '未填充的',
+                fill: false,
+                backgroundColor: "#33cabb",
+                borderColor: "#33cabb",
+                data: [11, 29, 46, 15, 33, 55],
+            }, {
+                label: '虚线',
+                fill: false,
+                backgroundColor: "#15c377",
+                borderColor: "#15c377",
+                borderDash: [5, 5],
+                data: [37, 39, 66, 25, 93, 75],
+            }, {
+                label: '填满的',
+                backgroundColor: "#f96868",
+                borderColor: "#f96868",
+                data: [28, 13, 85, 35, 63, 45],
+                fill: true,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: '线条的造型'
+            },
+        },
+        interaction: {
+            mode: 'index',
+            intersect: false
+        },
+        scales: {
+            x: {
+                display: true,
+                title: {
+                    display: true,
+                    text: '月份'
+                }
+            },
+            y: {
+                display: true,
+                title: {
+                    display: true,
+                    text: '数量'
+                }
+            }
+        }
+    },
+});
+// 垂直条形图
+new Chart($('#chart-vbar-1'), {
+    type: 'bar',
+    data: {
+        labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+        datasets: [
+            {
+                label: '收入',
+                data: [28, 48, 40, 19, 86, 27, 90],
+                borderColor: "#33cabb",
+                backgroundColor: "rgba(51, 202, 187, 0.5)",
+            },
+            {
+                label: '支出',
+                data: [10, 59, 80, 58, 20, 55, 40],
+                borderColor: "#f96868",
+                backgroundColor: "rgba(244, 66, 54, 0.5)",
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: '收支条形图'
+            }
+        }
+    },
+});
+// 边框圆角的条形图
+new Chart($('#chart-vbar-2'), {
+  type: 'bar',
+  data: {
+    labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+    datasets: [
+      {
+        label: '完全的圆角',
+        data: [10, 59, 80, 58, 20, 55, 40],
+        borderColor: "#33cabb",
+        backgroundColor: "rgba(51, 202, 187, 0.5)",
+        borderWidth: 2,
+        borderRadius: 100,
+        borderSkipped: false,
+      },
+      {
+        label: '很小的圆角',
+        data: [-28, 48, 40, 19, 86, 27, 90],
+        borderColor: "#f96868",
+        backgroundColor: "rgba(244, 66, 54, 0.5)",
+        borderWidth: 2,
+        borderRadius: 5,
+        borderSkipped: false,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '边框圆角的条形图'
+      }
+    }
+  },
+});
+// 水平条形图
+new Chart($('#chart-hbar'), {
+  type: 'bar',
+  data: {
+    labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+    datasets: [
+      {
+        label: '收入',
+        data: [10, 59, 80, 58, 20, 55, 40],
+        borderColor: "#33cabb",
+        backgroundColor: "rgba(51, 202, 187, 0.5)",
+      },
+      {
+        label: '支出',
+        data: [28, 48, 40, 19, 86, 27, 90],
+        borderColor: "#f96868",
+        backgroundColor: "rgba(244, 66, 54, 0.5)",
+      }
+    ]
+  },
+  options: {
+    indexAxis: 'y',
+    elements: {
+      bar: {
+        borderWidth: 2,
+      }
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'right',
+      },
+      title: {
+        display: true,
+        text: '水平条形图'
+      }
+    }
+  },
+})
+// 浮动条形图
+new Chart($('#chart-float-bar'), {
+  type: 'bar',
+  data: {
+    labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+    datasets: [
+      {
+        label: '数据一',
+        data: [[10, 18], [59, 63], [80, 98], [-58, -23], [20, 55], [55, 60], [-40, -30]],
+        backgroundColor: "#f96868",
+      },
+      {
+        label: '数据二',
+        data: [[20, 28], [-48, -35], [40, 55], [19, 25], [86, 99], [-27, -22], [90, 95]],
+        backgroundColor: "#33cabb",
+      },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '浮动条形图'
+      }
+    }
+  }
+});
+// 堆叠条形图
+new Chart($('#chart-stacked-bar'), {
+  type: 'bar',
+  data: {
+    labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+    datasets: [
+      {
+        label: '数据 1',
+        data: [10, 59, 80, 58, 20, 55, 40],
+        backgroundColor: "#f96868",
+      },
+      {
+        label: '数据 2',
+        data: [22, 56, -18, 68, 70, 33, 96],
+        backgroundColor: "#33cabb",
+      },
+      {
+        label: '数据 3',
+        data: [-5, 39, 55, 38, 27, 25, 30],
+        backgroundColor: "#15c377",
+      },
+    ]
+  },
+  options: {
+    plugins: {
+      title: {
+        display: true,
+        text: '堆叠条形图'
+      },
+    },
+    responsive: true,
+    scales: {
+      x: {
+        stacked: true,
+      },
+      y: {
+        stacked: true
+      }
+    }
+  }
+});
+// 饼图
+new Chart($('#chart-pie'), {
+  type: 'pie',
+  data: {
+    labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+    datasets: [
+      {
+        label: '数据 1',
+        data: [10, 15, 46, 8, 21],
+        backgroundColor: ["#f44236", "#faa64b", "#fcc525", "#15c377", "#007bff"],
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '饼图'
+      }
+    }
+  },
+});
+// 环形图
+new Chart($('#chart-doughnut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+    datasets: [
+      {
+        label: '数据 1',
+        data: [10, 15, 46, 8, 21],
+        backgroundColor: ["#f44236", "#faa64b", "#fcc525", "#15c377", "#007bff"],
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '环形图'
+      }
+    }
+  },
+});
+// 雷达图
+new Chart($('#chart-radar'), {
+  type: 'radar',
+  data: {
+    labels: ["饮食", "饮酒", "睡眠", "设计", "编码", "骑行", "运动"],
+    datasets: [
+      {
+        label: '张三',
+        data: [65, 59, 90, 81, 56, 55, 40],
+        borderColor: "rgba(0, 0, 0, 0)",
+        backgroundColor: "rgba(0, 123, 255, 0.7)",
+      },
+      {
+        label: '李四',
+        data: [28, 48, 40, 19, 96, 27, 100],
+        borderColor: "rgba(0, 0, 0, 0)",
+        backgroundColor: "rgba(244, 66, 54, 0.7)",
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: '雷达图'
+      }
+    }
+  },
+});
+// 极区图
+new Chart($('#chart-polar'), {
+  type: 'polarArea',
+  data: {
+    labels: ["红色", "绿色", "橙色", "灰色", "蓝色"],
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: [11, 16, 7, 3, 14],
+        backgroundColor: [
+          'rgba(244, 66, 54, 0.95)',
+          'rgba(21, 195, 119, 0.95)',
+          'rgba(250, 166, 75, 0.95)',
+          'rgba(108, 117, 125, 0.95)',
+          'rgba(0, 123, 255, 0.95)'
+        ]
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '极区图'
+      }
+    }
+  },
+});
+// 气泡图
+new Chart($('#chart-bubble'), {
+  type: 'bubble',
+  data: {
+    datasets: [
+      {
+        label: '粉红色',
+        data: [{
+            x: 8,
+            y: 24,
+            r: 18
+        },
+        {
+            x: 20,
+            y: 30,
+            r: 15
+        },
+        {
+            x: 40,
+            y: 10,
+            r: 10
+        }],
+        borderColor: "#f96197",
+        backgroundColor: "rgba(249, 97, 151, 0.5)",
+      },
+      {
+        label: '蓝色',
+        data: [{
+            x: 10,
+            y: 35,
+            r: 5
+        },
+        {
+            x: 5,
+            y: 5,
+            r: 20
+        },
+        {
+            x: 30,
+            y: 15,
+            r: 10
+        }],
+        borderColor: "#007bff",
+        backgroundColor: "rgba(0, 123, 255, 0.5)",
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '气泡图'
+      }
+    }
+  },
+});
+// 离散图
+new Chart($('#chart-scatter'), {
+  type: 'scatter',
+  data: {
+    datasets: [
+      {
+        label: '数据 1',
+        data: [{
+			x: -21,
+			y: -87,
+		}, {
+			x: 75,
+			y: -81,
+		}, {
+			x: 28,
+			y: 17,
+		}, {
+			x: -12,
+			y: 97,
+		}, {
+			x: 76,
+			y: 66,
+		}, {
+			x: 6,
+			y: -66,
+		}, {
+			x: 39,
+			y: 36,
+		}],
+        borderColor: "#f96197",
+        backgroundColor: "rgba(249, 97, 151, 0.5)",
+      },
+      {
+        label: '数据 2',
+        data: [{
+			x: -6,
+			y: -61,
+		}, {
+			x: -45,
+			y: 90,
+		}, {
+			x: 28,
+			y: -63,
+		}, {
+			x: 40,
+			y: -66,
+		}, {
+			x: 29,
+			y: -71,
+		}, {
+			x: -60,
+			y: -84,
+		}, {
+			x: -72,
+			y: 40,
+		}],
+        borderColor: "#007bff",
+        backgroundColor: "rgba(0, 123, 255, 0.5)",
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: '离散图'
+      }
+    }
+  },
+});
+// 混合图表
+new Chart($('#chart-mixed'), {
+  type: 'line',
+  data: {
+    labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+    datasets: [
+      {
+        label: '数据 1',
+        data: [10, 59, 80, 58, 20, 55, 40],
+        borderColor: "#f96197",
+        backgroundColor: "rgba(249, 97, 151, 0.5)",
+        stack: 'combined',
+        type: 'bar'
+      },
+      {
+        label: '数据 2',
+        data: [22, 56, 18, 68, 70, 33, 96],
+        borderColor: "#007bff",
+        backgroundColor: "rgba(0, 123, 255, 0.5)",
+        stack: 'combined'
+      }
+    ]
+  },
+  options: {
+    plugins: {
+      title: {
+        display: true,
+        text: '堆积折线图/条形图'
+      }
+    },
+    scales: {
+      y: {
+        stacked: true
+      }
+    }
+  },
+});
+</script>
+</body>
+</html>
